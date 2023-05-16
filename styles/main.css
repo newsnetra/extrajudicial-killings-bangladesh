@@ -1030,12 +1030,12 @@ h1 {
 }
 
 .pageFooter--left-logo.mobile {
-  display: none
+  display:;
 }
 
 @media (max-width: 480px) {
   .pageFooter--left-logo {
-    display: none
+    display: ;
   }
 
   .pageFooter--left-logo.mobile {
