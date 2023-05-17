@@ -842,9 +842,11 @@ h1 {
 
 /* CUSTOM FONT STARTS */
 
- @font-face {
+@font-face {
   font-family: 'custom';
-  src:  url('custom.ttf') format('truetype');
+  src:  url('custom.woff2') format('woff2'),
+  url('custom.woff') format('woff'),
+  url('custom.ttf') format('truetype');
 }
 
   @font-face {
