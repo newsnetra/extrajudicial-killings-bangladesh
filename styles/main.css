@@ -53,7 +53,7 @@ header {
 
 .nav-right a {
   text-decoration: none;
-  color: #eeece7;
+  color: #000000;
 }
 
 
@@ -75,7 +75,7 @@ header {
 .grids {
   max-width: 45%;
   margin: 4rem auto;
-  background-color: black;
+  background-color: white;
 }
 
 .peopleyeartitle {
@@ -83,7 +83,7 @@ header {
   font-size: 1.6em;
   line-height: 1.2;
   text-align: center;
-  color: #eeece7;
+  color: #000000;
   margin-top: 2rem;
 }
 
@@ -94,7 +94,7 @@ header {
   margin: 2rem auto 2rem;
   max-width: 100%;
   text-align: left;
-  color: #eeece7;
+  color: #000000;
 }
 
 .gridrow {
@@ -113,7 +113,7 @@ header {
   line-height: 2rem;
   overflow-wrap: break-word;
   font-size: 1.5rem;
-  color: #eeece7;
+  color: #000000;
   border: 0.1rem solid #555;
 }
 
@@ -244,7 +244,7 @@ figure {
 
 .step {
   margin: 0 auto 2rem auto;
-  color: #eeece7;
+  color: #000000;
   background-color: transparent;
 }
 
@@ -254,7 +254,7 @@ figure {
 
 .step.is-active p {
   background-color: #0e1324;
-  color: #eeece7;
+  color: white;
   max-width: 100%;
   font-size: 1rem;
   text-align: center;
@@ -307,7 +307,7 @@ p {
   margin-right: auto;
   margin-left: auto;
   margin-top: 1.45rem;
-  color: #eeece7;
+  color: #000000;
   line-height: 1.5;
   font-weight: 300%;
 }
@@ -328,13 +328,13 @@ h2 {
   margin: 3rem auto;
   line-height: 1.45;
   font-size: 2rem;
-  color: #eeece7;
+  color: #000000;
   text-shadow: 2px 2px 10px rgba(76, 70, 50, 50);
 }
 
 h3 {
   font-family: "museo-sans", Helvetica, sans-serif;
-  color: #eeece7;
+  color: #000000;
   text-align: center;
   margin-bottom: 1rem;
   font-style: normal;
@@ -356,7 +356,7 @@ article::first-letter {
 }
 
 .ejk_subtitle {
-  color: #eeece7;
+  color: #000000;
   font-family: "museo-sans", Helvetica, sans-serif;
   font-size: 2.5rem;
   line-height: 1.44;
@@ -395,7 +395,7 @@ article::first-letter {
 }
 
 .byline {
-  color: #eeece7;
+  color: #000000;
   display: block;
   font-family: 'Publico Text Web', Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
@@ -498,7 +498,7 @@ a:visited {
 
 
 .hero {
-  color: #eeece7;
+  color: #000000;
   position: relative;
   text-align: center;
   width: 100%;
@@ -529,7 +529,7 @@ a:visited {
 
 svg {
   display: block;
-  background-color: black;
+  background-color: white;
 
 }
 
@@ -544,7 +544,7 @@ svg {
 #frame4,
 #frame5 {
   fill: none;
-  stroke: #eeece7;
+  stroke: #000000;
   stroke-miterlimit: 10;
   stroke-width: 0.15rem;
   stroke-dasharray: 135;
@@ -601,7 +601,7 @@ h1 {
   opacity: 1;
   letter-spacing: 0.5rem;
   text-align: center;
-  color: #eeece7;
+  color: #000000;
   text-shadow: 2px 2px 10px rgba(76, 70, 50, 50);
   padding-bottom: 0;
   padding-top: 0;
@@ -634,8 +634,8 @@ h1 {
 .numbers {
   max-width: 100%;
   margin: 3.5rem auto;
-  background-color: black;
-  color: #eeece7;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .numeric,
@@ -965,7 +965,7 @@ h1 {
 }
 
 .credits-content a {
-  color: #eeece7 !important;
+  color: #000000 !important;
   font-weight: 500;
   text-decoration: underline;
   text-decoration-line: underline;
@@ -1151,7 +1151,7 @@ ul {
 }
 
 .pageFooter--right-links li a {
-  color: #eeece7;
+  color: white;
   text-decoration: none
 }
 
@@ -1283,7 +1283,7 @@ ul {
 
 .pageFooter .footer-title {
   -webkit-font-smoothing: antialiased;
-  color: #eeece7;
+  color: white;
   font-variant-numeric: lining-nums;
   font-weight: 700;
   letter-spacing: 1px
@@ -1325,12 +1325,12 @@ ul {
 
 /* TABLE STARTS */
 .table1 {
-  max-width: 80%;
+  max-width: 65%;
   margin: 4rem auto;
   font-family: 'Inter', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
-  color: #eeece7;
+  color: #000000;
   background-color: #fff;
 }
 
@@ -1392,6 +1392,7 @@ table.dataTable tbody tr {
 
 table.dataTable tbody tr {
   border-bottom: 1px solid #909090;
+  font-variant: tabular-nums;
 }
 
 table.dataTable tbody th,
@@ -1446,16 +1447,16 @@ div.info-container p span {
 }
 
 div.multiple_c {
-  background-color: black;
+  background-color: white;
 }
 
 div.single_c {
-  background-color: black;
+  background-color: white;
 }
 
 .selectFilter {
-  background-color: black;
-  color: #eeece7;
+  background-color: #f4f4f4;
+  color: #000000;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
