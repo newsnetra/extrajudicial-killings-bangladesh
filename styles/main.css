@@ -916,7 +916,10 @@ h1 {
   font-stretch: normal;
 }
 
-
+@font-face {
+  font-family: 'National';
+  src: url('test-national-book.woff2') format('woff2');
+}
 
 
 /* CUSTOM FONT ENDS */
@@ -1327,25 +1330,26 @@ ul {
 .table1 {
   max-width: 65%;
   margin: 4rem auto;
-  font-family: 'Inter', Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 0.8rem;
+  font-family: 'National', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
   color: #000000;
   background-color: #fff;
+  font-variant: tabular-nums;
 }
 
 .table1 p {
   max-width: none;
-  font-family: 'Inter', Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1.4rem;
+  font-family: 'National', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
   ;
 }
 
 .info-container p {
-  font-family: Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: small;
+  font-family: 'National',Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
 }
 
 table.dataTable td span.arrow-icon:before {
@@ -1441,17 +1445,22 @@ div.info-container {
   padding: 10px 20px;
 }
 
+div.info-container p {
+  padding: 0 0 5px;
+  display: flex;
+}
+
 div.info-container p span {
-  font-weight: 600;
+  font-weight: 800;
 
 }
 
 div.multiple_c {
-  background-color: white;
+  background-color: #eff5fa;
 }
 
 div.single_c {
-  background-color: white;
+  background-color:  #fcf4ee;
 }
 
 .selectFilter {
@@ -1478,7 +1487,7 @@ div.single_c {
 
 .optionsField label,
 .table-search label {
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'National', Helvetica, sans-serif;
   font-weight: 600;
   line-height: 30px;
   margin: 0 5px 3px 0;
@@ -1495,7 +1504,7 @@ div.single_c {
 .table-search input {
   border: 1px solid #3e3e3e;
   border-radius: 3px;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'National', Helvetica, sans-serif;
   font-size: 15px;
   height: 30px;
   overflow: hidden;
