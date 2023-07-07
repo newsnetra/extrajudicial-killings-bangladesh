@@ -161,9 +161,9 @@ function format(data) {
   return (
     `<div class="info-container ${data.status}">
             <p>${data.description}</p>
-            <p><span>Alleged or reported connotation: </span> ${data.connotation}</p>
-            <p><span>Dominant identity </span> ${data.identity}</p>
-            <p><span>Reported by </span> ${data.source}</p>
+            <p><span>Alleged or reported connotation: \xa0</span> ${data.connotation}</p>
+            <p><span>Dominant identity: \xa0</span> ${data.identity}</p>
+            <p><span>Reported by \xa0 </span> ${data.source}</p>
         </div>`
   );
 }

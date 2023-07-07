@@ -919,7 +919,15 @@ h1 {
 @font-face {
   font-family: 'National';
   src: url('test-national-book.woff2') format('woff2');
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: 'National';
+  src: url('test-national-bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
 
 
 /* CUSTOM FONT ENDS */
@@ -1352,29 +1360,40 @@ ul {
   margin: 0;
 }
 
+.arrow-icon {
+  margin: 3px 7px 3px 0px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
 table.dataTable td span.arrow-icon:before {
-  height: 1em;
-  width: 1em;
+  height: 7px;
+  width: 7px;
   margin-top: 0px;
-  display: inline-block;
-  color: #fff;
-  box-sizing: content-box;
-  text-align: center;
-  text-indent: 0 !important;
+  display: block;
+  color: #000;
+  box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
-  line-height: 1em;
-  content: "›";
+  line-height: 1.2;
+  content: "";
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  top: 3px;
+  left: 2px;
 
 
 }
 
 table.dataTable tr.dt-hasChild td span.arrow-icon:before {
-  transform: rotate(90deg);
+  transform: rotate(45deg);
+  
 }
 
 table.dataTable th {
   cursor: pointer;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'National', Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 700;
 }
@@ -1426,7 +1445,7 @@ table.dataTable td span.multiple_c {
 
 table.dataTable td span.type_c {
   border-radius: 3px;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'National', Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 600;
   line-height: 17px;
@@ -1548,7 +1567,7 @@ div.single_c {
 .single-indicator .type_c {
   border-radius: 3px;
   float: right;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'National', Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 600;
   height: 17px;
@@ -1627,8 +1646,8 @@ div#searchResults {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
