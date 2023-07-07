@@ -290,7 +290,7 @@ main {
   padding: 0;
   width: 100%;
   margin: auto;
-  background-color: #000;
+  background-color: #fff;
 
 }
 
@@ -925,7 +925,7 @@ h1 {
 
 
 .credits-wrapper {
-  background-color: #000;
+  background-color: #fff;
   width: 100%;
   box-sizing: border-box;
   margin-top: 4rem;
@@ -1331,7 +1331,7 @@ ul {
   font-weight: 400;
   font-size: 0.8rem;
   color: #eeece7;
-  background-color: #000;
+  background-color: #fff;
 }
 
 .table1 p {
@@ -1353,7 +1353,7 @@ table.dataTable td span.arrow-icon:before {
   width: 1em;
   margin-top: 0px;
   display: inline-block;
-  color: #000;
+  color: #fff;
   box-sizing: content-box;
   text-align: center;
   text-indent: 0 !important;
@@ -1376,7 +1376,7 @@ table.dataTable th {
 }
 
 table.dataTable thead th {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
 }
 
 table.dataTable thead th,
@@ -1397,14 +1397,14 @@ table.dataTable tbody tr {
 table.dataTable tbody th,
 table.dataTable tbody td {
   background-color: transparent;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   box-shadow: none !important;
 }
 
 table.dataTable td span.status {
   height: 12px;
   width: 12px;
-  background-color: #000;
+  background-color: #fff;
   position: relative;
   display: inline-block;
   border-radius: 50%;
@@ -1520,7 +1520,7 @@ div.single_c {
 .single-indicator .status {
   height: 12px;
   width: 12px;
-  background-color: #000;
+  background-color: #fff;
   position: relative;
   display: inline-block;
   border-radius: 50%;
