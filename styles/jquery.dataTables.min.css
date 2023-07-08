@@ -729,7 +729,7 @@ table.dataTable td {
     .dataTables_wrapper .dataTables_filter {
         margin-top: .5em
     }
-    table.dataTable tbody th, table.dataTable tbody td {padding: 2.5px;}
+    table.dataTable tbody th, table.dataTable tbody td {padding: 3px;}
 }
 
 @media screen and (max-width: 320px) {

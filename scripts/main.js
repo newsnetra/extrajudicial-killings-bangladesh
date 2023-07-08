@@ -107,7 +107,7 @@ Table STARTS
           targets: 0,
           render: function (data, type, row, meta) {
             // console.log(row);
-            return '<span class="arrow-icon"></span><span class="status ' + row.status + '"></span>' + row.name + '<span class="type_c ' + row.type + ' ">    </span>'
+            return '<span class="arrow-icon"></span><span class="type_c ' + row.type + ' ">    </span><span class="rowname">' + row.name + '</span>'   //<span class="status ' + row.status + '"></span>
           }
         }
       ],
