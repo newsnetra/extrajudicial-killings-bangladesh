@@ -92,16 +92,17 @@ Table STARTS
         info: ''
       },
       ajax: 'data.json',
+
       columns: [
 
-        { data: 'name' },
+        { data: 'name'},
         { data: 'agency' },
         { data: 'location' },
         { data: 'date' },
       ],
       columnDefs: [
-        { targets: [2], orderable: true },
-        { targets: '_all', orderable: false },
+        { targets: [1], orderable: true },
+        { targets: '_all', orderable: true },
         {
           targets: 0,
           render: function (data, type, row, meta) {
@@ -110,6 +111,11 @@ Table STARTS
           }
         }
       ],
+
+      "order": [[2, 'asc']],
+
+ 
+
       drawCallback: function (settings) {
         var api = this.api();
         var pageInfo = api.page.info();
@@ -125,6 +131,20 @@ Table STARTS
     $('#myTable_search').on('keyup', function () {
       table.search(this.value).draw();
     });
+
+     // Disable fourth column on screens below 600px
+     if ($(window).width() < 600) {
+      table.column(3).visible(false);
+    }
+
+    $(window).on('resize', function () {
+      if ($(window).width() < 600) {
+        table.column(3).visible(false);
+      } else {
+        table.column(3).visible(true);
+      }
+    });
+
 
     // Add event listener for opening and closing details
     $('#example tbody').on('click', 'tr', function () {

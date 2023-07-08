@@ -688,6 +688,10 @@ h1 {
     max-width: 60%;
   }
 
+  .table1 {
+    max-width: 95% !important;
+  }
+
   .chart1 {
     width: 80%;
   }
@@ -696,11 +700,10 @@ h1 {
 
 @media (max-width: 820px) {
 
-
-
-  .table1 {
-    max-width: 95% !important;
+  p {
+    font-size: 18px;
   }
+
 
   .chart1 {
     width: 95%;
@@ -745,7 +748,7 @@ h1 {
 
 
   p {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 
   h2 {
@@ -785,7 +788,7 @@ h1 {
 
   .table1 {
     font-size: 0.7rem !important;
-    margin: 0 !important;
+    margin: auto !important;
   }
 
   .step p,
@@ -964,8 +967,8 @@ h1 {
 }
 
 .credits-content p {
-  color: #c4c5c8;
-  font-family: "objektiv-mk2", Helvetica, sans-serif !important;
+  color: #727272;
+  font-family: "National", Helvetica, sans-serif !important;
   font-size: 1rem;
   line-height: 1.4rem;
 }
