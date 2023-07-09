@@ -5,7 +5,7 @@ html {
 body {
   width: 100%;
   margin: auto;
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: 'museo-sans', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   --nav-height: 39px;
@@ -93,7 +93,7 @@ header {
 }
 
 .peopleyeardescription {
-  font-family: "objektiv-mk2", Helvetica, sans-serif;
+  font-family: "National", Helvetica, sans-serif;
   font-size: 1.1rem;
   line-height: 1.5;
   margin: 2rem auto 2rem;
@@ -120,6 +120,7 @@ header {
   font-size: 1.5rem;
   color: #000000;
   border: 0.1rem solid #555;
+  font-family: "museo-sans", monospace;
 }
 
 .y2013 {
@@ -285,7 +286,7 @@ figure {
   box-sizing: border-box;
   border-radius: 0;
   box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, .16);
-  color: #a6acaf;
+  color: #727272;
 
 }
 
@@ -365,7 +366,7 @@ article::first-letter {
 
 .ejk_subtitle {
   color: #000000;
-  font-family: "museo-sans", Helvetica, sans-serif;
+  font-family: "objektiv-mk2", Helvetica, sans-serif;
   font-size: 2.5rem;
   line-height: 1.44;
   font-weight: normal;
@@ -438,17 +439,17 @@ time {
   display: block;
   font-family: "museo-sans", Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 0.8rem;
+  font-size: 13px;
   margin-top: 0.15rem;
-  color: #a6acaf;
+  color: #727272;
 }
 
 figcaption {
-  font-family: "Museo Sans", Helvetica, sans-serif;
-  font-size: 0.7rem;
+  font-family: "museo-sans", Helvetica, sans-serif;
+  font-size: 13px;
   line-height: 1.5;
   text-align: center;
-  color: #a6acaf;
+  color: #727272;
   font-weight: 100;
   max-width: 100%;
   padding: 0 0.5rem;
@@ -457,8 +458,8 @@ figcaption {
 
 
 .caption {
-  font-family: "Museo Sans", Helvetica, sans-serif;
-  font-size: 12px;
+  font-family: "museo-sans", Helvetica, sans-serif;
+  font-size: 13px;
   line-height: 1.5;
   margin: 1rem;
   text-align: center;
@@ -667,7 +668,7 @@ h1 {
 .text {
   font-size: 1rem;
   font-weight: 300;
-  font-family: "museo-sans", Helvetica, sans-serif;
+  font-family: "objektiv-mk2", Helvetica, sans-serif;
 
 }
 
@@ -1149,7 +1150,7 @@ h1 {
 }
 
 #footer div.logo p {
-	font-family: 'Gelasio', Georgia, serif;
+	font-family: 'Publico Text Web', Georgia, serif;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 32px;
@@ -1212,7 +1213,7 @@ h1 {
 }
 
 #footer .list h3 {
-	font-family: "Graphik Web", "Helvetica", sans-serif;
+	font-family: "museo-sans", "Helvetica", sans-serif;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 700;
@@ -1235,7 +1236,7 @@ h1 {
 }
 
 #footer .list ul {
-	font-family: "Gelasio", 'Georgia', serif;
+	font-family: "Publico Text Web", 'Georgia', serif;
 	font-size: 15px;
 	line-height: 20px;
 	list-style: none;
@@ -1259,7 +1260,7 @@ h1 {
 #footer div.statement {
 	float: right;
 	width: 31%;
-	font-family: "Gelasio", 'Georgia', serif;
+	font-family: "Publico Text Web", 'Georgia', serif;
 	color: #999;
 	font-size: 15px;
 	margin-top: 30px;
