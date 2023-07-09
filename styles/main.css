@@ -1,3 +1,7 @@
+html {
+  overflow-anchor: none;
+}
+
 body {
   width: 100%;
   margin: auto;
@@ -32,6 +36,7 @@ header {
   border-bottom: 1px solid #e1e1e1;
   box-shadow: 0 1px 5px 0 #00000014;
   z-index: 1;
+
 
 }
 
@@ -180,16 +185,14 @@ header {
 }
 
 figure {
-  position: -webkit-sticky;
   position: sticky;
-  left: 0;
-  width: 100%;
   margin: 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   /* background-color: #8a8a8a; */
   z-index: 0;
+  overflow: hidden;
 }
 
 /* background-color: #8a8a8a; 
@@ -200,6 +203,7 @@ figure {
 }
 
 */
+
 
 
 #map-image {
@@ -218,14 +222,18 @@ figure {
   background-position: center;
   background-size: cover;
   transition: opacity 1s ease;
+  overflow: hidden;
 }
 
 #map-image .image-container.inactive {
   opacity: 0;
+  overflow: hidden;
+
 }
 
 #map-image .image-container.active {
   opacity: 1;
+  overflow: hidden;
 }
 
 /* figure p {

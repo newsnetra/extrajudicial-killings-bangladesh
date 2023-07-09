@@ -112,7 +112,7 @@ Table STARTS
         }
       ],
 
-      "order": [[2, 'asc']],
+      "order": [[3, 'desc']],
 
  
 
@@ -132,18 +132,18 @@ Table STARTS
       table.search(this.value).draw();
     });
 
-     // Disable fourth column on screens below 600px
-     if ($(window).width() < 600) {
-      table.column(3).visible(false);
-    }
+    //  // Disable fourth column on screens below 600px
+    //  if ($(window).width() < 600) {
+    //   table.column(3).visible(false);
+    // }
 
-    $(window).on('resize', function () {
-      if ($(window).width() < 600) {
-        table.column(3).visible(false);
-      } else {
-        table.column(3).visible(true);
-      }
-    });
+    // $(window).on('resize', function () {
+    //   if ($(window).width() < 600) {
+    //     table.column(3).visible(false);
+    //   } else {
+    //     table.column(3).visible(true);
+    //   }
+    // });
 
 
     // Add event listener for opening and closing details

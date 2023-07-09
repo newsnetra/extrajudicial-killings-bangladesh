@@ -637,23 +637,30 @@
   var figure = scrolly.select("figure");
   var article = scrolly.select("#article");
   var step = article.selectAll(".step");
-
   // initialize the scrollama
   var scroller = scrollama();
 
   // generic window resize listener event
+
+
+
   function handleResize() {
     // 1. update height of step elements
     var stepH = Math.floor(window.innerHeight * 1);
     step.style("height", stepH + "px");
 
-    var figureHeight = Math.floor(window.innerWidth * 0.625);
+    var figureHeight;
+    if (window.innerWidth < 550) {
+        figureHeight = Math.floor(window.innerWidth * 1.2) // figureHeight is equivalent to window.innerWidth
+    } else {
+        figureHeight = Math.floor(window.innerWidth * .62);
+    }
+
     var figureMarginTop = Math.floor(window.innerHeight / window.innerWidth);
     var figureWidth = window.innerWidth;
-
-    // Calculate the top and left values to center the figure
     var figureTop = Math.floor((window.innerHeight - figureHeight) / 2);
     var figureLeft = Math.floor((window.innerWidth - figureWidth) / 2);
+
 
 
 
@@ -663,8 +670,6 @@
       .style("left", figureLeft + "px")
       .style("width", figureWidth + "px")
       .style("height", figureHeight + "px");
-
-
 
     // 3. tell scrollama to update new element dimensions
     scroller.resize();
