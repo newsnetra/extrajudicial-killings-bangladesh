@@ -1,0 +1,178 @@
+body {
+    font-family:'National','Helvetica',sans-serif;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  }
+  .wrapper {width:100%;position:relative; background:#fff;}
+  section {width:100%; float:left;height:auto; text-align:center;}
+  p,h2 {padding:0;margin:0;}
+  section#graph {
+      min-height: 100%;
+      text-align: center;
+
+      background-color:#fff;
+  }
+  
+  .highlight {
+    fill: gray;
+    opacity: 0.3;
+  }
+  .annotation {
+    fill: black; /* Font color */
+    font-size: 14px; /* Font size */
+  }
+
+  .arrowHead {
+    fill: #000;
+  }
+
+  .chart-tooltip {
+              line-height: 1.5;
+              visibility: hidden;
+              width: auto;
+              text-align:left;
+              padding: 10px 20px;
+              font-size:140%;
+              position: absolute;
+              background-color:rgba(0,0,0,0.55);
+              pointer-events: none;
+              z-index: 1060;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+              border-radius: 3px;
+          }
+  .chart-tooltip span {
+    text-align:right;float:right;}
+  .slider .handle , .slider .line {position:absolute;}
+  
+  .slider .handle {
+    background-image:url("https://github.com/goeuro/static_content/blob/master/web/Design/ball_indicator.svg");
+    width:40px;
+    height:40px;
+    background-color:red;
+    z-index:9999999;
+    position:fixed;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #A4CFDD;
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+  }
+  .x.axis line {display:none;}
+  .x.axis text {fill:#000;}
+    /*#92C7E2;}*/
+  #line1 , #line2{
+      width: 100%;
+      margin: 0px 0;
+      height:280px;
+      color:white;
+      font-size:10px;
+      position:relative;
+      float:left;
+      z-index:999999;
+    }
+  
+  #line1 {overflow-y:visible; height:470px;}
+  #line1 path, .cube .graph path {
+      stroke-width: 2;
+      fill:transparent;
+      z-index:99999;
+    }
+  
+  g.tick {
+    fill:#000;
+  }
+  
+  
+  .moves {
+    will-change: transform;
+    transform: translateZ(0);  
+    -webkit-transform: translateZ(0);  
+    -ms-transform: translateZ(0);  
+  }
+  
+  #line1 svg#travel-chart {
+    position:absolute; left:0; max-width:100%; overflow:visible;}
+  
+  
+    .transline {
+      animation: draw 8s ease-in-out forwards;
+  }
+  
+  @keyframes draw {
+      to {
+          stroke-dashoffset: 0;
+      }
+  }
+  
+  
+  /*SLIDER*/
+  .axis {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .domain {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .3;
+    stroke-width: 10px;
+    stroke-linecap: round;
+  }
+  
+  
+  .months li {float:left; display:inline;margin:0 0.5% 0 0;}
+  
+  /*end slider*/
+  
+  .transportStats {
+    display:inline-block;width:100%;
+    color:#2B84B7;
+  }
+  
+  .transportStats li {
+    background-size:100%;
+    cursor:pointer;
+    z-index:999999;
+    display:inline;
+      float: left;
+      width: 25%;
+      color: #000;
+  }
+  
+  
+  .transpicked {
+    fill:#000!important;
+    background-color:rgba(43, 132, 183, 0.4)!important;
+  }
+  
+  .transportStats .icon {width:30px;height:30px;background-size:30px; display:inline-block; margin-right:10px;vertical-align: middle;}
+  
+  span[data="victim"] {background-image:url("https://www.svgrepo.com/download/159070/bus-icon.svg");  /*border-right:1px white solid;*/}
+  span[data="incident"] {background-image:url("https://github.com/goeuro/static_content/blob/master/web/Design/train-icon.svg");}
+  
+  
+  .transline#incident , .textP {
+    stroke:#fd8d3c;
+    color:#fd8d3c;
+  }
+    
+  .transline#victim , .textB {
+    stroke:#d94801;
+    color:#d94801;
+  }
+  
+.line_color {
+  stroke-width: 4px;
+  stroke-linecap:round;
+  vertical-align: middle;
+}
+
+.text_graph {
+
+  text-align: left;
+}
