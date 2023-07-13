@@ -26,6 +26,13 @@ body {
     fill: #000;
   }
 
+  @font-face {
+    font-family: 'National';
+    src: url('../assets/fonts/test-national-regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+
   .chart-tooltip {
               line-height: 1.5;
               visibility: hidden;
