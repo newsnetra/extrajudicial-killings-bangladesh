@@ -826,11 +826,12 @@ $(document).ready(function () {
   //data function return names.
 
   var handleLine = svg.append("rect")
-    .attr("class", "line")
-    .attr("height", (height + 20))
-    .attr("transform", "translate(0,-5)")
-    .attr("width", 1)
-    .attr("fill", "#000");
+  .attr("class", "line")
+  .attr("height", (height + 20))
+  .attr("transform", "translate(0,-5)")
+  .attr("width", 1)
+  .attr("fill", "#000");
+
 
   var handle = svg.append("svg:image")
     .attr("xlink:href", "../assets/icons/pistol.svg")//christmas ball handle
@@ -876,64 +877,83 @@ $(document).ready(function () {
 
  
 
+
+  
   var toolTip = d3.select("#line1").append('div')
     .attr('class', 'chart-tooltip');
 
-  function mouseMove() {
-    var mouse = d3.mouse(this),
-      mouseX = mouse[0],
-      mouseY = mouse[1],
-      value = x.invert(mouseX);
+    var circle1 = svg.append("circle")
+    .style("fill", "#d94801")
+    .style("stroke", "#d94801")
+    .style("opacity", 0) // set to 0 as default
+    .attr("r", 4); // radius of the circle
+  
+  var circle2 = svg.append("circle")
+    .style("fill", "#fd8d3c")
+    .style("stroke", "#fd8d3c")
+    .style("opacity", 0) // set to 0 as default
+    .attr("r", 4); // radius of the circle
 
-    // Set the day and time to the start of the month
-    value.setUTCDate(1);
-    value.setUTCHours(0, 0, 0, 0);
-
-    var date = d3.time.format.utc("%B %Y")(value);
-
-
-    // Find the closest month in the data
-    var closestMonth = data.reduce((prev, curr) => Math.abs(curr.month - value) < Math.abs(prev.month - value) ? curr : prev);
-
-    if (closestMonth) {
-      var monthVictim = closestMonth.victim;
-      var monthIncident = closestMonth.incident;
-
-    }
-
-    //** Display tool tip
-
-    toolTip
-      .style('visibility', 'visible')
-      .style("left", (20 + mouseX + "px"))
-      .style("top", (mouseY + "px"))
-      .html("In " + date + ", security forces killed <span class='textB'></span> people in <span class='textP'></span> deadly incidents.");
-
-
-
-
-    handle
-      .attr("x", (mouseX + "px"));
-    handleText.attr("x", (mouseX + "px")).html(date);
-
-
-    handleLine
-      .attr("x", (mouseX + "px")); //
-
-    //Don't smush tooltip on right edge:
-    var leftLimit = width - 180;
-    if (mouseX >= leftLimit) {
-      toolTip.style("left", (mouseX - 140 + "px"));
-    }
-    //get daily values and print
-    $(".textB").text(monthVictim.toLocaleString()),
-      $(".textP").text(monthIncident.toLocaleString());
-  }//end mousemove
-
+    function mouseMove() {
+      handleLine.style("opacity", 1);
+      var mouse = d3.mouse(this),
+        mouseX = mouse[0],
+        mouseY = mouse[1],
+        value = x.invert(mouseX);
+    
+      // Set the day and time to the start of the month
+      value.setUTCDate(1);
+      value.setUTCHours(0, 0, 0, 0);
+    
+      var date = d3.time.format.utc("%B %Y")(value);
+    
+      // Find the closest month in the data
+      var closestMonth = data.reduce((prev, curr) => Math.abs(curr.month - value) < Math.abs(prev.month - value) ? curr : prev);
+    
+      if (closestMonth) {
+        var monthVictim = closestMonth.victim;
+        var monthIncident = closestMonth.incident;
+    
+        // Set circle1 position
+        circle1.attr("cx", mouseX)  // x position is same as the mouse's x position
+               .attr("cy", y(monthVictim))  // y position is the corresponding y-value of the data point for line 1
+               .style("opacity", 1);  // make the circle visible
+    
+        // Set circle2 position
+        circle2.attr("cx", mouseX)  // x position is same as the mouse's x position
+               .attr("cy", y(monthIncident))  // y position is the corresponding y-value of the data point for line 2
+               .style("opacity", 1);  // make the circle visible
+    
+        //** Display tool tip
+        toolTip
+          .style('visibility', 'visible')
+          .style("left", (20 + mouseX + "px"))
+          .style("top", (mouseY + "px"))  // the top position is the mouse's y position
+          .html("In " + date + ", security forces killed <span class='textB'>" + monthVictim.toLocaleString() + "</span> people in <span class='textP'>" + monthIncident.toLocaleString() + "</span> deadly incidents.");
+    
+        handle.attr("x", (mouseX + "px"));
+        handleText.attr("x", (mouseX + "px")).html(date);
+    
+        handleLine.attr("x", (mouseX + "px")); //
+      }
+      
+      var leftLimit = width - 180;
+      if (mouseX >= leftLimit) {
+        toolTip.style("left", (mouseX - 140 + "px"));
+      }
+    } // end mouseMove
+    
+  
   function mouseOut() {
-    toolTip.style('visibility', 'hidden');
-    var totalVictim = 0,
-      totalIncident = 0;//reset values
+      toolTip.style('visibility', 'hidden');
+      circle1.style("opacity", 0); // hide circle1
+      circle2.style("opacity", 0); // hide circle2
+      var totalVictim = 0,
+        totalIncident = 0;//reset values
+         // Hide the handle line
+  handleLine.style("opacity", 0);
+    
   }
+  
 
 });
