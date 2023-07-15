@@ -84,22 +84,14 @@ header {
 }
 
 .peopleyeartitle {
-  font-family: "Inter", Helvetica, sans-serif;
-  font-size: 1.6em;
-  line-height: 1.2;
-  text-align: center;
-  color: #000000;
-  margin-top: 2rem;
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 300;
 }
 
 .peopleyeardescription {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 2rem auto 2rem;
-  max-width: 100%;
-  text-align: left;
-  color: #000000;
+  font-size: 16px;
 }
 
 .gridrow {
@@ -449,29 +441,25 @@ time {
   font-size: 13px;
   margin-top: 0.15rem;
   color: #727272;
+
 }
 
 figcaption {
-  font-family: "museo-sans", Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
-  text-align: center;
-  color: #727272;
-  font-weight: 100;
-  max-width: 100%;
-  padding: 0 0.5rem;
+  font-family: 'Inter', Helvetica, sans-serif;
+  color: rgb(102,102,102);
+  font-size: 10px;
+  margin: 5px 0 5px 0;
+
 
 }
 
 
 .caption {
-  font-family: "museo-sans", Helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
+  font-family: 'Inter', Helvetica, sans-serif;
+  color: rgb(102,102,102);
+  font-size: 10px;
   margin: 1rem;
-  text-align: center;
-  color: #727272;
-  font-weight: 100;
+
 }
 
 .illustrations {
