@@ -708,9 +708,7 @@ h1 {
     max-width: 95% !important;
   }
 
-  .chart1 {
-    width: 80%;
-  }
+
 
 }
 
@@ -721,8 +719,9 @@ h1 {
   }
 
 
-  .chart1 {
+  .iframe_c {
     width: 95%;
+    margin: auto;
   }
 
 }
