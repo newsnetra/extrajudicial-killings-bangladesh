@@ -6,12 +6,13 @@ $(document).ready(function () {
 
 
 
+
   //IE can't animate stroke - needs this disabled.
 
   var ww = $(".wrapper").width();
   var margin = { top: 20, right: 20, bottom: 50, left: 20 },
     width = ww - margin.right - margin.left,
-    height = 360 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom;
 
   var x = d3.time.scale().range([0, width]);
 
@@ -23,8 +24,8 @@ $(document).ready(function () {
 
   var xAxis = d3.svg.axis()
     .scale(x)
-    .tickFormat(d3.time.format("%m-%Y")) // Change the date format here
-    .tickSize(10, 0)
+    .tickFormat(d3.time.format("%Y")) // Change the date format here
+    .tickSize(10, 1)
     .orient("bottom");
 
 
@@ -32,13 +33,14 @@ $(document).ready(function () {
     var xAxis = d3.svg.axis()
       .scale(x)
       .ticks(5)
-      .tickSize(10, 0)
+      .tickSize(10, 5)
       .orient("bottom");
   }
 
   var yAxis = d3.svg.axis()
     .scale(y)
-    .orient("left");
+    .orient("left")
+    .tickSize(-width, 0); // Make it cover the full width of the chart
 
   var line = d3.svg.line()
     .interpolate("step-after")
@@ -64,8 +66,8 @@ $(document).ready(function () {
 
 
   var data = [
-    
-   
+
+
     {
       "month": monthNumToDate(1),
       "victim": 10,
@@ -728,7 +730,6 @@ $(document).ready(function () {
     }
   ];
 
-
   color.domain(d3.keys(data[0]).filter(function (key) { return key !== "month"; }));
 
 
@@ -760,30 +761,49 @@ $(document).ready(function () {
     .call(xAxis);
 
 
-var dateRanges = [
-  { start: new Date(2013, 1, 1), end: new Date(2013, 3, 1), text: 'The 2013-14 pre-election period' },
-  { start: new Date(2018, 3, 1), end: new Date(2018, 8, 1), text: 'The 2018-19 post-election period' }
-];
+  // Create yAxis first
+  svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
 
-dateRanges.forEach(function(range) {
-  svg.append("rect")
-    .attr("class", "highlight") 
-    .attr("x", x(range.start))
-    .attr("width", x(range.end) - x(range.start))
-    .attr("height", height);
+  // Then create gridlines and apply styles directly
+  svg.append("g")
+    .attr("class", "grid")
+    .call(yAxis.tickSize(-width, 0, 0).tickFormat(""))
+    .selectAll(".tick line");
 
-  // Define text position
-  var textX = x(range.start) - 10; // Adjust this as needed
-  var textY = height/2; // Adjust this as needed
+  var dateRanges = [
+    { start: new Date(2012, 12, 1), end: new Date(2013, 5, 1), text: 'The 2013-14 pre-election period' },
+    { start: new Date(2018, 3, 1), end: new Date(2018, 8, 1), text: 'The 2018-19 post-election period' }
+  ];
 
-  // Add annotation
-  var text = svg.append("text")
-    .attr("x", textX)
-    .attr("y", textY)
-    .attr("text-anchor", "end") // align text right
-    .text(range.text)
-    .attr("class", "annotation");
-});
+  dateRanges.forEach(function (range) {
+    svg.append("rect")
+      .attr("class", "highlight")
+      .attr("x", x(range.start))
+      .attr("width", x(range.end) - x(range.start))
+      .attr("height", height);
+
+    // Define text position
+    var textX = x(range.end) + 10; // Move the text to the right of the highlight rectangle
+    var textY = height / 2; // Adjust this as needed
+
+    // Add annotation
+    var annotationWidth = 100; // set the width you want for your annotation
+
+    svg.append("foreignObject")
+      .attr("x", textX)
+      .attr("y", textY)
+      .attr("width", annotationWidth)
+      .attr("height", 100) // Set to an arbitrary height, as long as it's enough to contain your text
+      .append("xhtml:div")
+      .attr("class", "annotation")
+      .style("word-wrap", "break-word") // Enable word-wrap
+      .style("color", "black") // Set the color of the text to black
+      .html(range.text);
+  });
+
+
 
 
 
@@ -809,7 +829,7 @@ dateRanges.forEach(function(range) {
     .attr("class", "line")
     .attr("height", (height + 20))
     .attr("transform", "translate(0,-5)")
-    .attr("width", 2)
+    .attr("width", 1)
     .attr("fill", "#000");
 
   var handle = svg.append("svg:image")
@@ -819,7 +839,7 @@ dateRanges.forEach(function(range) {
     .attr("transform", "translate(-15," + (height + 15) + ")");
 
   var handleText = svg.append("text")
-    .style({ "fill": "#000", "font-size": "14px", "text-anchor": "middle", "display":"none" })
+    .style({ "fill": "#000", "font-size": "14px", "text-anchor": "middle", "display": "none" })
     .attr("transform", "translate(1," + (height + 40) + ")");
 
 
@@ -854,6 +874,8 @@ dateRanges.forEach(function(range) {
 
   //** Init Tooltip
 
+ 
+
   var toolTip = d3.select("#line1").append('div')
     .attr('class', 'chart-tooltip');
 
@@ -867,7 +889,7 @@ dateRanges.forEach(function(range) {
     value.setUTCDate(1);
     value.setUTCHours(0, 0, 0, 0);
 
-    var date = d3.time.format.utc("%m-%Y")(value);
+    var date = d3.time.format.utc("%B %Y")(value);
 
 
     // Find the closest month in the data
@@ -885,7 +907,7 @@ dateRanges.forEach(function(range) {
       .style('visibility', 'visible')
       .style("left", (20 + mouseX + "px"))
       .style("top", (mouseY + "px"))
-      .html("<br/>" + date + "<br/>Number of Victims: <span class='textB'></span><br/>Number of Incidents: <span class='textP'></span>");
+      .html("In " + date + ", security forces killed <span class='textB'></span> people in <span class='textP'></span> deadly incidents.");
 
 
 
@@ -915,4 +937,3 @@ dateRanges.forEach(function(range) {
   }
 
 });
-

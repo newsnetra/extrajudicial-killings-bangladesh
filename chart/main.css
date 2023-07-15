@@ -1,5 +1,5 @@
 body {
-    font-family:'National','Helvetica',sans-serif;
+    font-family:'Helvetica',sans-serif;
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
   }
@@ -13,13 +13,45 @@ body {
       background-color:#fff;
   }
   
+.subheadings {margin-bottom: 15px;}
+
+
+.line_color {
+  stroke-width: 3px;
+  stroke-linecap:round;
+  vertical-align: middle;
+  display: flex;
+  margin-right: 5px
+}
+
+.line_color p {color:gray;}
+
+.text_graph {
+
+  text-align: left;
+}
+.labels {display: flex;} 
+.label {margin-right: 5px;}
+
+
+  .grid .tick {
+    stroke: #d3d3d3 !important;
+    stroke-width: 1;
+    opacity: 0.5;
+  }
+  .grid path {
+    stroke-width: 0;
+  }
+  
+  
   .highlight {
     fill: gray;
-    opacity: 0.3;
+    opacity: 0.2;
   }
   .annotation {
+    font-weight: 500;
     fill: black; /* Font color */
-    font-size: 14px; /* Font size */
+    font-size: 13px; /* Font size */
   }
 
   .arrowHead {
@@ -36,19 +68,22 @@ body {
   .chart-tooltip {
               line-height: 1.5;
               visibility: hidden;
-              width: auto;
+              max-width: 10%;
               text-align:left;
               padding: 10px 20px;
-              font-size:140%;
+              font-size:110%;
               position: absolute;
               background-color:rgba(0,0,0,0.55);
               pointer-events: none;
               z-index: 1060;
               box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
               border-radius: 3px;
+              overflow-wrap: break-word;
           }
   .chart-tooltip span {
-    text-align:right;float:right;}
+    float:none;
+    }
+    
   .slider .handle , .slider .line {position:absolute;}
   
   .slider .handle {
@@ -60,13 +95,20 @@ body {
     position:fixed;
   }
   
-  .axis path,
-  .axis line {
+  /* .axis path {
     fill: none;
     stroke: #A4CFDD;
     stroke-width: 2;
     shape-rendering: crispEdges;
-  }
+  } */
+
+  .axis line {
+    fill: none;
+    stroke: #d8d8d8;
+    stroke-width: 1;
+    shape-rendering: crispEdges;}
+
+
   .x.axis line {display:none;}
   .x.axis text {fill:#000;}
     /*#92C7E2;}*/
@@ -75,22 +117,25 @@ body {
       margin: 0px 0;
       height:280px;
       color:white;
-      font-size:10px;
+      font-size:12px;
       position:relative;
       float:left;
       z-index:999999;
+      font-family: monospace;
     }
+
+
   
   #line1 {overflow-y:visible; height:470px;}
   #line1 path, .cube .graph path {
-      stroke-width: 2;
+      stroke-width: 1;
       fill:transparent;
       z-index:99999;
     }
   
-  g.tick {
+  /* g.tick {
     fill:#000;
-  }
+  } */
   
   
   .moves {
@@ -129,6 +174,7 @@ body {
     stroke-opacity: .3;
     stroke-width: 10px;
     stroke-linecap: round;
+    display: none;
   }
   
   
@@ -173,13 +219,4 @@ body {
     color:#d94801;
   }
   
-.line_color {
-  stroke-width: 4px;
-  stroke-linecap:round;
-  vertical-align: middle;
-}
 
-.text_graph {
-
-  text-align: left;
-}
