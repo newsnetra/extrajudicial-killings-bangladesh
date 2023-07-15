@@ -12,9 +12,10 @@ body {
 
 section {
   width: 100%;
-  float: left;
+ 
   height: auto;
   text-align: center;
+
 }
 
 p,
@@ -24,9 +25,9 @@ h2 {
 }
 
 section#graph {
-  min-height: 100%;
+ 
   text-align: center;
-
+display: inline-block;
   background-color: #fff;
 }
 
@@ -103,6 +104,18 @@ p {
   font-weight: 400;
 }
 
+.credit_c {display:block;
+position: relative;
+text-align: left;
+padding-top: 10px;
+}
+
+.credit_c p {
+  font-family:'Inter', Helvetica, sans-serif ;
+  color: rgb(102,102,102);
+  font-size: 10px;
+}
+
 
 .chart-tooltip {
   line-height: 1.5;
@@ -177,7 +190,7 @@ p {
   color: white;
   font-size: 12px;
   position: relative;
-  float: left;
+
   z-index: 999999;
   font-family: monospace;
 }

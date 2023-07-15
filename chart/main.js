@@ -5,7 +5,12 @@ $(document).ready(function () {
   }
 
 
-
+  function adjustGraphHeight() {
+    var graph = document.getElementById('graph');
+    var chartHeight = document.getElementById('line1').clientHeight;
+    graph.style.height = chartHeight + 'px';
+  }
+  
 
   //IE can't animate stroke - needs this disabled.
 
@@ -13,7 +18,10 @@ $(document).ready(function () {
   var margin = { top: 20, right: 20, bottom: 50, left: 20 },
     width = ww - margin.right - margin.left,
     height = 500 - margin.top - margin.bottom;
-
+  
+  // Update the parent container's height to match the SVG's
+  $(".wrapper").height(height + margin.top + margin.bottom);
+  
   var x = d3.time.scale().range([0, width]);
 
 
