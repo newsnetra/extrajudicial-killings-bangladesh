@@ -813,6 +813,12 @@ $(document).ready(function () {
 
 
 
+  var strokeWidth;
+if (window.innerWidth < 800) {
+    strokeWidth = 1; // Reduced stroke width for smaller screens
+} else {
+    strokeWidth = 3; // Normal stroke width for larger screens
+}
 
 
   var city = svg.selectAll(".city")
@@ -820,7 +826,7 @@ $(document).ready(function () {
     .enter().append("g")
     .attr("class", "city");
 
-  var p1 = city.append("path") //Add the 3 coloured lines for transport type
+    var p1 = city.append("path") //Add the 3 coloured lines for transport type
     .attr("class", "transline")
     .attr("id", function (d) { return d.name; }) // ID of transport type
     .attr("d", function (d) { return line(d.values); }) //data of all Y values
@@ -830,8 +836,7 @@ $(document).ready(function () {
         .attr("stroke-dasharray", totalLength + " " + totalLength)
         .attr("stroke-dashoffset", totalLength);
     })
-    .style("stroke-width", 3); // Set the stroke width to 3, change this value to set your desired line thickness
-  //data function return names.
+    .style("stroke-width", strokeWidth); // Use the variable instead of a fixed value
 
   var handleLine = svg.append("rect")
   .attr("class", "line")
