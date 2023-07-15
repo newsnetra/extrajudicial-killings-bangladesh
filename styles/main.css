@@ -84,7 +84,7 @@ header {
 }
 
 .peopleyeartitle {
-  font-family: "museo-sans", Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif;
   font-size: 1.6em;
   line-height: 1.2;
   text-align: center;
@@ -93,7 +93,7 @@ header {
 }
 
 .peopleyeardescription {
-  font-family: "National", Helvetica, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.1rem;
   line-height: 1.5;
   margin: 2rem auto 2rem;
