@@ -90,7 +90,7 @@ header {
 }
 
 .peopleyeardescription {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'National', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -776,10 +776,7 @@ h1 {
 
 
 
-  .peopleyeardescription,
-  .year {
-    font-size: 0.8rem;
-  }
+ 
 
   .year {
     line-height: 1rem;
