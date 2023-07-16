@@ -1,3 +1,10 @@
+$(window).resize(function() {
+  var ww = $(".wrapper").width();
+  var width = ww - margin.right - margin.left;
+  // Redraw SVG with new width...
+});
+
+
 $(document).ready(function () {
 
   if (navigator.userAgent.search("MSIE") >= 0) {
@@ -55,12 +62,13 @@ $(document).ready(function () {
     .x(function (d) { return x(d.month); })
     .y(function (d) { return y(+d.people); });
 
-  var svg = d3.select("#line1").append("svg")
+    var svg = d3.select("#line1").append("svg")
     .attr("id", "travel-chart")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
 
 
   var transports;
