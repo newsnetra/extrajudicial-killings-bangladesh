@@ -76,6 +76,9 @@ p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.tooltip {
+  position: absolute;
+}
 .grid .tick {
   stroke: #d3d3d3 !important;
   stroke-width: 1;

@@ -1,10 +1,3 @@
-$(window).resize(function() {
-  var ww = $(".wrapper").width();
-  var width = ww - margin.right - margin.left;
-  // Redraw SVG with new width...
-});
-
-
 $(document).ready(function () {
 
   if (navigator.userAgent.search("MSIE") >= 0) {
