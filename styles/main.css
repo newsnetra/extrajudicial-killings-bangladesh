@@ -184,22 +184,10 @@ header {
 figure {
   position: sticky;
   margin: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  /* background-color: #8a8a8a; */
   z-index: 0;
   overflow: hidden;
 }
-
-/* background-color: #8a8a8a; 
-#map-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-}
-
-*/
 
 
 
@@ -218,8 +206,9 @@ figure {
   height: 100%;
   background-position: center;
   background-size: cover;
-  transition: opacity 1s ease;
+  transition: opacity 0.5s ease;
   overflow: hidden;
+  will-change: opacity;
 }
 
 #map-image .image-container.inactive {
@@ -233,24 +222,6 @@ figure {
   overflow: hidden;
 }
 
-/* figure p {
-  text-align: center;
-  padding: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 8rem;
-  font-weight: 900;
-  color: #fff;
-} */
-
-.transition{
-  height:200px;  
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194, 200, 202, 1)), color-stop(100%,rgba(242, 243, 240, 1))), #f2f3f0; 
-}
 
 .step {
   margin: 0 auto 2rem auto;
@@ -301,6 +272,14 @@ figure {
 }
 
 /* SCROLLAMA ENDS */
+
+
+
+
+.transition{
+  height:200px;  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194, 200, 202, 1)), color-stop(100%,rgba(242, 243, 240, 1))), #f2f3f0; 
+}
 
 
 /*OTHER */
