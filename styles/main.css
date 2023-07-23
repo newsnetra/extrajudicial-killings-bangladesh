@@ -384,7 +384,7 @@ article::first-letter {
 .ejk_subtitle {
   color: #000000;
   font-family: "Inter", Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 1.44;
   font-weight: normal;
   max-width: 45%;
@@ -707,7 +707,7 @@ h1 {
 
 
   .author_date,
-  .grids,
+  .grids, 
   h2,
   p {
     max-width: 60%;
@@ -717,6 +717,7 @@ h1 {
     max-width: 95% !important;
   }
 
+  .ejk_subtitle {max-width: 75%;}
 
 
 }
@@ -727,6 +728,10 @@ h1 {
     font-size: 18px;
   }
 
+  .ejk_subtitle {
+    font-size: 19px;
+    line-height: 25px;
+  }
 
   .iframe_c {
     width: 95%;
@@ -742,9 +747,7 @@ h1 {
     font-size: 4rem;
   }
 
-  .ejk_subtitle {
-    font-size: 2rem;
-  }
+
 
   .ejk_meta {
     margin-top: auto !important;
@@ -764,10 +767,6 @@ h1 {
     font-size: 3rem;
     line-height: 3rem;
 
-  }
-
-  .ejk_subtitle {
-    font-size: 1.5rem !important;
   }
 
 
@@ -841,7 +840,7 @@ h1 {
   }
 
   .author_date,
-  .grids,
+  .grids, .ejk_subtitle,
   h2,
   p {
     max-width: 90%;
@@ -862,7 +861,7 @@ h1 {
   }
 
   .ejk_subtitle {
-    font-size: 1.3rem;
+    font-size: 16px;
   }
 
   .share-button {
@@ -877,7 +876,7 @@ h1 {
   .credits-content p,
   .step.is-active p,
   p {
-    font-size: 0.9rem !important;
+    font-size: 13px !important;
   }
 
 
