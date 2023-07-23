@@ -166,8 +166,10 @@ header {
 
 #scrolly {
   position: relative;
-  background-color: #f2f3f0;
-  margin: 4rem 0;
+  background: -webkit-linear-gradient(top, rgba(242, 243, 240, 1) 0%, rgba(242, 243, 240, 1) 50%, rgba(194, 200, 202, 1) 50%, rgba(194, 200, 202, 1) 100%);
+  background: linear-gradient(to bottom, rgba(242, 243, 240, 1) 0%, rgba(242, 243, 240, 1) 50%, rgba(194, 200, 202, 1) 50%, rgba(194, 200, 202, 1) 100%);
+  background-attachment: fixed;
+  margin: 4rem 0px 0px;
 }
 
 #article {
@@ -242,6 +244,11 @@ figure {
   font-weight: 900;
   color: #fff;
 } */
+
+.transition{
+  height:200px;  
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194, 200, 202, 1)), color-stop(100%,rgba(242, 243, 240, 1))), #f2f3f0; 
+}
 
 .step {
   margin: 0 auto 2rem auto;
