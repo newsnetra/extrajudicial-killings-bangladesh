@@ -382,54 +382,42 @@
         Khulna division, saw the killings of those allegedly associated with armed leftist groups.</p>
 
 
-      <aside class="scrollindicator">
-        <div class="scroll-down">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </aside>
+
 
       <!-- start scrollytelling section -->
-
       <section id="scrolly">
-
-
         <figure>
-          <div id="map-image">
-            <div class="image-container active" style="background-image: url(./assets/maps/2013.png)"></div>
-            <div class="image-container inactive"></div>
-          </div>
+            <img src="./assets/maps/2013.jpg" alt="your_image_description" />
         </figure>
+    
+        <article>
+            <div class="step" data-step="1">
+                <p>2013</p>
+            </div>
+            <div class="step" data-step="2">
+                <p>2014</p>
+            </div>
+            <div class="step" data-step="3">
+                <p>2015</p>
+            </div>
+            <div class="step" data-step="4">
+                <p>2016</p>
+            </div>
+            <div class="step" data-step="4">
+                <p>2017</p>
+            </div>
+            <div class="step" data-step="4">
+                <p>2018</p>
+            </div>
+            <div class="step" data-step="4">
+                <p>2019</p>
+            </div>
+            <div class="step" data-step="4">
+                <p>2020</p>
+            </div>
+          </article>
+    </section>
 
-        <div id="article">
-          <div class="step" data-step="1">
-            <p>2013 marked an escalation of deadly use of force by security agencies in Bangladesh</p>
-          </div>
-          <div class="step" data-step="2">
-            <p>2014 — the election year — saw fewer deaths but was still marred by a high number of casualties. </p>
-          </div>
-          <div class="step" data-step="3">
-            <p>2015 — when Jony was killed — was almost as deadly as 2014. </p>
-          </div>
-          <div class="step" data-step="4">
-            <p>So was the year of 2016</p>
-          </div>
-          <div class="step" data-step="5">
-            <p>2017 saw a decline in killings but it was as if the calm before the storm.</p>
-          </div>
-          <div class="step" data-step="6">
-            <p>With 465 deaths, the year of 2018 — when the govt launched a "war on drug" — was the deadliest ever
-              recorded.</p>
-          </div>
-          <div class="step" data-step="7">
-            <p>In 2019, the govt turned its focus to Teknaf, Cox’s Bazar. </p>
-          </div>
-          <div class="step" data-step="8">
-            <p>In 2020, the war on drug subsided in the rest of the country but was still raging in Teknaf.</p>
-          </div>
-        </div>
-      </section>
       <div class=transition></div>
 
       <!-- end scrollytelling section -->
@@ -670,51 +658,30 @@
 </body>
 
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script src="./scripts/scrollama.min.js"></script>
-
+<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+<script src="https://russellsamora.github.io/scrollama/scrollama.min.js"></script>
 <script>
-
-
   // using d3 for convenience
   var main = d3.select("main");
   var scrolly = main.select("#scrolly");
   var figure = scrolly.select("figure");
-  var article = scrolly.select("#article");
+  var article = scrolly.select("article");
   var step = article.selectAll(".step");
+
   // initialize the scrollama
   var scroller = scrollama();
 
   // generic window resize listener event
-
-
-
   function handleResize() {
     // 1. update height of step elements
     var stepH = Math.floor(window.innerHeight * 1);
     step.style("height", stepH + "px");
+          var figureHeight = window.innerHeight;
+var figureMarginTop = 0;
 
-    var figureHeight;
-    if (window.innerWidth < 550) {
-        figureHeight = Math.floor(window.innerWidth * 1.2) // figureHeight is equivalent to window.innerWidth
-    } else {
-        figureHeight = Math.floor(window.innerWidth * .62);
-    }
-
-    var figureMarginTop = Math.floor(window.innerHeight / window.innerWidth);
-    var figureWidth = window.innerWidth;
-    var figureTop = Math.floor((window.innerHeight - figureHeight) / 2);
-    var figureLeft = Math.floor((window.innerWidth - figureWidth) / 2);
-
-
-
-
-    figure
-      // .style("height", figureHeight + "px")
-      .style("top", figureTop + "px")
-      .style("left", figureLeft + "px")
-      .style("width", figureWidth + "px")
-      .style("height", figureHeight + "px");
+figure
+  .style("height", figureHeight + "px")
+  .style("top", figureMarginTop + "px");
 
     // 3. tell scrollama to update new element dimensions
     scroller.resize();
@@ -722,10 +689,8 @@
 
   // scrollama event handlers
   function handleStepEnter(response) {
-
+    console.log(response);
     // response = { element, direction, index }
-
-
 
     // add color to current step only
     step.classed("is-active", function (d, i) {
@@ -733,20 +698,8 @@
     });
 
     // update graphic based on step
-
-    const mapImage = document.getElementById('map-image');
-    const nextImageIndex = response.index + 2013;
-    const nextImageSrc = `./assets/maps/${nextImageIndex}.png`;
-    const currentImage = mapImage.querySelector('.image-container.active');
-    const nextImage = mapImage.querySelector('.image-container.inactive');
-
-    nextImage.style.backgroundImage = `url(${nextImageSrc})`;
-    nextImage.classList.add('active');
-    nextImage.classList.remove('inactive');
-    currentImage.classList.add('inactive');
-    currentImage.classList.remove('active');
-  }
-
+      figure.select("img").attr("src", `./assets/maps/${2013 + response.index}.jpg`);
+}
 
   function init() {
 
@@ -758,7 +711,7 @@
     // 3. bind scrollama event handlers (this can be chained like below)
     scroller
       .setup({
-        step: "#scrolly #article .step",
+        step: "#scrolly article .step",
         offset: 1,
         debug: false
       })
@@ -767,11 +720,6 @@
 
   // kick things off
   init();
-
-
-
-
-
 </script>
 
 
