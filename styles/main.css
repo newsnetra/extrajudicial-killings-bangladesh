@@ -8,8 +8,7 @@ body {
   font-family: 'Publico Text Web', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  --nav-height: 39px;
-  padding-top: var(--nav-height);
+  --nav-height: 30px;
 }
 
 header {
@@ -40,10 +39,10 @@ header {
 
 }
 
-.nav--hidden {
+/* .nav--hidden {
   transform: translateY(calc(-1 * var(--nav-height)));
   box-shadow: none;
-}
+} */
 
 
 .nav-right {
@@ -237,31 +236,69 @@ figure p {
   margin-bottom: 0;
 }
 
-.step.is-active p {
+.step p, .step.is-active p {
   max-width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 100;
-  font-family: "Publico Text Web", georgia, "times new roman", times, serif;
-  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
-  padding: 18px 22px;
-  margin: 0 20px;
+  line-height: 1.4;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'National', Arial, Helvetica, sans-serif;
 }
 
-.step p {
-  max-width: 100%;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 100;
-  font-family: "Publico Text Web", georgia, "times new roman", times, serif;
-  border-radius: 0;
-  font-size: 18px;
-  line-height: 25px;
-  padding: 18px 22px;
-  margin: 0 20px
+.cards {
+  max-width: 392px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: rgba(255,255,255,.95);
+  margin: auto;
+  border: 1px solid #000;
 }
+
+.cards h4 {
+  font-weight: 700;
+    font-size: 22px;
+    line-height: 1.24;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+    font-family: 'Inter', Helvetica, sans-serif;
+}
+
+
+
+.cards p {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'National', Arial, Helvetica, sans-serif;
+}
+
+p.note {
+  
+  border-top: 1px solid #777;
+    padding: 12px 0;
+    margin-top: 12px;
+}
+
+  p.note b {
+    color: #e24821;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    font-family: 'National', Helvetica, sans-serif;
+  }
+
+  p.note s {
+    color: #fdbaaa;
+  }
 
 /* SCROLLAMA ENDS */
 
@@ -269,7 +306,7 @@ figure p {
 
 
 .transition{
-  height:40px;  
+  height: 45px;  
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194, 200, 202, 1)), color-stop(100%,rgba(242, 243, 240, 1))), #f2f3f0; 
 }
 
@@ -782,10 +819,7 @@ h1 {
     margin: auto !important;
   }
 
-  .step p,
-  .step.is-active p {
-    font-size: 0.8rem;
-  }
+ 
 
   .numeric {
     font-size: 3rem;
