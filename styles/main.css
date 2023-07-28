@@ -269,7 +269,7 @@ figure p {
 
 
 .transition{
-  height:200px;  
+  height:40px;  
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194, 200, 202, 1)), color-stop(100%,rgba(242, 243, 240, 1))), #f2f3f0; 
 }
 
