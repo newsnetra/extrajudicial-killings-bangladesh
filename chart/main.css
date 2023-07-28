@@ -2,6 +2,7 @@ body {
   font-family: 'Helvetica', sans-serif;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  display: block;
 }
 
 .wrapper {
@@ -60,6 +61,7 @@ font-weight: 300;}
 
 .text_graph {
 
+  display: block;
   text-align: left;
 }
 
@@ -117,7 +119,7 @@ p {
 .credit_c {display:block;
 position: relative;
 text-align: left;
-padding-top: 10px;
+margin-top: 20px;
 }
 
 .credit_c p {
