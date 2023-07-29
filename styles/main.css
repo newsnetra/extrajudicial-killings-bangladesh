@@ -175,7 +175,6 @@ header {
 article {
   position: relative;
   padding: 0;
-  max-width: 20rem;
   margin: 0 auto;
 }
 
@@ -236,7 +235,7 @@ figure p {
   margin-bottom: 0;
 }
 
-.step p, .step.is-active p {
+/* .step p, .step.is-active p {
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -246,7 +245,7 @@ figure p {
   color: #000;
   -webkit-font-smoothing: antialiased;
   font-family: 'National', Arial, Helvetica, sans-serif;
-}
+} */
 
 .cards {
   max-width: 392px;
@@ -260,7 +259,7 @@ figure p {
 
 .cards h4 {
   font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.24;
     margin-bottom: 0.2em;
     margin-top: 0;
@@ -306,7 +305,7 @@ p.note {
 
 
 .transition{
-  height: 45px;  
+  height: 60px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(194, 200, 202, 1)), color-stop(100%,rgba(242, 243, 240, 1))), #f2f3f0; 
 }
 
