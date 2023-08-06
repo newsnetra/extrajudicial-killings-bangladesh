@@ -750,13 +750,14 @@ h1 {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
   h1 {
     font-size: 4rem;
   }
 
-
+p {font-size: 18px;
+  line-height: 27px;}
 
   .ejk_meta {
     margin-top: auto !important;
@@ -779,11 +780,6 @@ h1 {
   }
 
 
-
-  p {
-    font-size: 18px;
-  }
-
   h2 {
     font-size: 1.5rem;
   }
@@ -796,8 +792,6 @@ h1 {
 }
 
 @media (max-width: 540px) {
-
-
 
 
 
