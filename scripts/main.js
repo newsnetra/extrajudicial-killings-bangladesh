@@ -183,10 +183,14 @@ function format(data) {
             <p>${data.description}</p>
             <p><span>Alleged or reported connotation: \xa0</span> ${data.connotation}</p>
             <p><span>Dominant identity: \xa0</span> ${data.identity}</p>
-            <p><span>Reported by \xa0 </span> ${data.source}</p>
+            <p><span>Reported by \xa0 </span> <a href="${data.archived_url}" target="_blank">${data.published}</a></p>
         </div>`
   );
 }
+
+
+
+
 
 /***************************************
 Table ENDS
