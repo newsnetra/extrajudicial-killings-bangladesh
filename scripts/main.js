@@ -94,11 +94,10 @@ Table STARTS
       ajax: 'data.json',
 
       columns: [
-
-        { data: 'name'},
-        { data: 'agency' },
-        { data: 'location' },
-        { data: 'date' },
+        { data: 'name', "width": "35%" }, // Added width here
+        { data: 'agency', "width": "15%" }, // Added width here
+        { data: 'location', "width": "30%" }, // Added width here
+        { data: 'date', "width": "20%" }, // Added width here
       ],
       columnDefs: [
         { targets: [1], orderable: true },
@@ -183,7 +182,7 @@ function format(data) {
             <p>${data.description}</p>
             <p><span>Alleged or reported connotation: \xa0</span> ${data.connotation}</p>
             <p><span>Dominant identity: \xa0</span> ${data.identity}</p>
-            <p><span>Reported by \xa0 </span> <a href="${data.archived_url}" target="_blank">${data.published}</a></p>
+            <p><span>Source: \xa0 </span> <a href="${data.archived_url}" target="_blank">${data.published}</a></p>
         </div>`
   );
 }

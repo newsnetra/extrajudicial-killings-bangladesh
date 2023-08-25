@@ -1,0 +1,251 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; 
+  width: 100vw; 
+
+}
+
+.frame {
+ 
+  flex-direction: row;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 100vw; 
+  height: 100vh;
+  
+}
+
+.frame .div {
+
+  width: 100vw; 
+  height: 200vh;
+  position: relative;
+ /* Add this line */
+
+}
+
+.frame .overlap {
+  position: absolute;
+  width: 100vw; 
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+
+}
+
+.frame .overlap-group {
+  position: absolute;
+  width: 57vw; 
+  height: 89.44vh; 
+  top: 10.56vh;
+  left: 33.54vw;
+}
+
+.overlap-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;  /* to ensure it stays behind all other content */
+}
+
+.frame .layer {
+  position: absolute;
+  width: 32.92vw;
+  height: 42.5vh;
+  top: 46.94vh;
+  left: 0;
+  object-fit: cover;
+}
+
+.frame .overlap-2 {
+  position: absolute;
+  width: 49.58vw;
+  height: 83.43vh;
+  top: 0;
+  left: 7.4vw;
+}
+
+.frame .overlap-3 {
+  position: absolute;
+  width: 32.4vw;
+  height: 31.94vh;
+  top: 0.74vh;
+  left: 0;
+}
+
+.frame .group {
+  position: absolute;
+  width: 16.82vw;
+  height: 31.94vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.frame .ecj-ss-group {
+  position: absolute;
+  width: 16vw;
+  height: 15.37vh;
+  top: 10.46vh;
+  left: 16.41vw;
+  object-fit: cover;
+}
+
+.frame .overlap-4 {
+  position: absolute;
+  width: 22.5vw;
+  height: 83.43vh;
+  top: 0;
+  left: 27.08vw;
+}
+
+.frame .img {
+  position: absolute;
+  width: 10.42vw;
+  height: 28.89vh;
+  top: 54.54vh;
+  left: 10.83vw;
+  object-fit: cover;
+}
+
+.frame .group-2 {
+  position: absolute;
+  width: 15.83vw;
+  height: 37.5vh;
+  top: 29.63vh;
+  left: 0;
+  object-fit: cover;
+}
+
+.frame .group-3 {
+  position: absolute;
+  width: 15.36vw;
+  height: 33.24vh;
+  top: 0;
+  left: 7.14vw;
+  object-fit: cover;
+}
+
+.frame .group-4 {
+  position: absolute;
+  width: 31.67vw;
+  height: 26.39vh;
+  top: 13.89vh;
+  left: 8.07vw;
+  object-fit: cover;
+}
+
+.frame .group-5 {
+  position: absolute;
+  width: 10.31vw;
+  height: 10.28vh;
+  top: 40.65vh;
+  left: 22.86vw;
+  object-fit: cover;
+}
+
+.frame .group-6 {
+  position: absolute;
+  width: 11.82vw;
+  height: 39.54vh;
+  top: 51.11vh;
+  left: 11.3vw;
+  object-fit: cover;
+}
+
+.frame .group-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 100vh;
+  left: 0;
+
+}
+
+.frame .group-7 {
+  position: relative;
+  width: 78.44vw;
+  height: 82.69vh;
+  top: 7.87vh;
+  left: 10.31vw;
+}
+
+.frame .group-8 {
+  position: absolute;
+  width: 16.04vw;
+  height: 32.5vh;
+  top: 3.98vh;
+  left: 0.94vw;
+  object-fit: cover;
+}
+
+.frame .group-9 {
+  position: absolute;
+  width: 22.19vw;
+  height: 10.93vh;
+  top: 41.94vh;
+  left: 1.93vw;
+  object-fit: cover;
+}
+
+.frame .group-10 {
+  position: absolute;
+  width: 16.98vw;
+  height: 27.04vh;
+  top: 55.37vh;
+  left: 60.07vw;
+  object-fit: cover;
+}
+
+.frame .group-11 {
+  position: absolute;
+  width: 16.98vw;
+  height: 27.78vh;
+  top: 54.91vh;
+  left: 0;
+  object-fit: cover;
+}
+
+.frame .overlap-group-2 {
+  position: absolute;
+  width: 19.48vw;
+  height: 50.93vh;
+  top: 0;
+  left: 58.85vw;
+}
+
+.frame .group-12 {
+  position: absolute;
+  width: 13.49vw;
+  height: 25.93vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.frame .group-13 {
+  position: absolute;
+  width: 14.11vw;
+  height: 31.57vh;
+  top: 19.35vh;
+  left: 5.36vw;
+  object-fit: cover;
+}
+
+.frame .BODY-COUNT {
+  position: relative;
+
+  font-family: "Matiz-Regular", Helvetica;
+  font-weight: 400;
+  color: white;
+  font-size: 138px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 200px;
+}
