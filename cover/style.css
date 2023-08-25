@@ -244,8 +244,9 @@ html, body {
   font-family: "Matiz-Regular", Helvetica;
   font-weight: 400;
   color: white;
-  font-size: 138px;
+  font-size: 7vw;
   text-align: center;
   letter-spacing: 0;
-  line-height: 200px;
+  line-height: 10.35vw;
 }
+
