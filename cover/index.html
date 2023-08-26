@@ -41,15 +41,15 @@
         </div>
         <div class="group-wrapper">
           <div class="group-7">
-            <img class="group-8" src="img/ecj3-3ss-0009-group-7.png" />
-            <img class="group-9" src="img/ecj3-3ss-0010-group-12.png" />
-            <img class="group-10" src="img/ecj3-3ss-0011-group-10.png" />
-            <img class="group-11" src="img/ecj3-3ss-0012-group-8.png" />
+            <img class="group-8" data-speed="0.4" src="img/ecj3-3ss-0009-group-7.png" />
+            <img class="group-9" data-speed="0.4" src="img/ecj3-3ss-0010-group-12.png" />
+            <img class="group-10" data-speed="0.5" src="img/ecj3-3ss-0011-group-10.png" />
+            <img class="group-11" data-speed="0.7" src="img/ecj3-3ss-0012-group-8.png" />
             <div class="overlap-group-2">
-              <img class="group-12" src="img/ecj3-3ss-0014-group-9.png" />
-              <img class="group-13" src="img/ecj3-3ss-0013-group-13.png" />
+              <img class="group-12" data-speed="0.4" src="img/ecj3-3ss-0014-group-9.png" />
+              <img class="group-13" data-speed="0.6" src="img/ecj3-3ss-0013-group-13.png" />
             </div>
-            <div class="BODY-COUNT">BODY<br />COUNT</div>
+            <div data-speed="0.6" class="BODY-COUNT">BODY<br/>COUNT</div>
           </div>
         </div>
       </div>
@@ -58,15 +58,18 @@
 
 
   <script>
-    
-    window.addEventListener('scroll', function() {
-    // Get all images inside .overlap, except the .layer
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+window.addEventListener('scroll', function() {
+    // Get all images inside .overlap, except the .layer and .overlap-background
     const overlapImages = document.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
 
     // Apply the translation based on the speed factor
     overlapImages.forEach(img => {
-        let speed = img.getAttribute('data-speed') || 1;  // Get the speed factor or default to 1 if not set
-        let translateYValue = -window.scrollY * speed;    // Calculate the translation based on the speed factor
+        let speed = parseFloat(img.getAttribute('data-speed')) || 1;
+        let translateYValue = -window.scrollY * speed;
         img.style.transform = `translateY(${translateYValue}px)`;
     });
 
@@ -76,12 +79,13 @@
         layerImg.style.transform = `translateY(${window.scrollY}px)`;
     }
 
-    // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below
+    // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below with varying speeds
     const groupWrapperElements = document.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
-    const emergenceFactor = 0.5;  // Adjust this value to control the speed at which they emerge. Higher values mean they'll emerge faster.
-    const emergenceTranslate = window.scrollY * emergenceFactor;
     
     groupWrapperElements.forEach(element => {
+        let speed = parseFloat(element.getAttribute('data-speed')) || 1;
+        let emergenceTranslate = window.scrollY * speed;
+        emergenceTranslate = clamp(emergenceTranslate, 0, window.innerHeight * 0.75);  // Clamping the value to ensure it doesn't go above 75% of the viewport height.
         element.style.transform = `translateY(${emergenceTranslate}px)`;
     });
 });
