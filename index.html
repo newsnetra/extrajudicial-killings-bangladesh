@@ -60,29 +60,58 @@
 
   </header>
 
+
+  <div class="frame">
+
+    <div class="div">
+
+      <div class="overlap">
+        <img src="/assets/cover/ecj3-3ss-0016-layer-25-2.png" class="overlap-background" alt="Background">
+        <div class="overlap-group">
+          <img class="layer" src="/assets/cover/ecj3-3ss-0000-layer-26.png" />
+          <div class="overlap-2">
+            <div class="overlap-3">
+              <img class="group" data-speed="0.9" src="/assets/cover/ecj3-3ss-0002-group-3.png" />
+              <img class="ecj-ss-group" data-speed="0.5" src="/assets/cover/ecj3-3ss-0005-group-14.png" />
+            </div>
+            <div class="overlap-4">
+              <img class="img" data-speed="0.2" src="/assets/cover/ecj3-3ss-0006-group-6.png" />
+              <img class="group-2" data-speed="0.6" src="/assets/cover/ecj3-3ss-0007-group-16.png" />
+              <img class="group-3" data-speed="0.7" src="/assets/cover/ecj3-3ss-0003-group-4.png" />
+            </div>
+          </div>
+        </div>
+        <img class="group-4" data-speed="0.8" src="/assets/cover/ecj3-3ss-0001-group-2.png" />
+        <img class="group-5" data-speed="0.4" src="/assets/cover/ecj3-3ss-0004-group-15.png" />
+        <img class="group-6" data-speed="0.3" src="/assets/cover/ecj3-3ss-0008-group-17.png" />
+
+      </div>
+      <div class="group-wrapper">
+        <div class="group-7">
+          <img class="group-8" data-speed="0.4" src="/assets/cover/ecj3-3ss-0009-group-7.png" />
+          <img class="group-9" data-speed="0.4" src="/assets/cover/ecj3-3ss-0010-group-12.png" />
+          <img class="group-10" data-speed="0.5" src="/assets/cover/ecj3-3ss-0011-group-10.png" />
+          <img class="group-11" data-speed="0.7" src="/assets/cover/ecj3-3ss-0012-group-8.png" />
+          <div class="overlap-group-2">
+            <img class="group-12" data-speed="0.4" src="/assets/cover/ecj3-3ss-0014-group-9.png" />
+            <img class="group-13" data-speed="0.6" src="/assets/cover/ecj3-3ss-0013-group-13.png" />
+          </div>
+          <div data-speed="0.4" class="BODY-COUNT">BODY<br />CoUNT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <main>
 
+
     <div class="hero">
-      <!-- <figure class="hero-video">
-        <video autoplay="autoplay" muted="muted" preload="auto">
-          <source src="/assets/body_count_cover_photo.gif" type="video/mp4">
-          <p>Sorry, your browser does not support the HTML5 video tag.</p>
-        </video>
-      </figure> -->
-
-      <figure class="hero-video">
-        <img src="./assets/body_count_cover_photo.gif" alt="A GIF animation on extrajudicial executions in Bangladesh">
-
-      </figure>
-
 
 
 
 
       <div class="ejk_text">
-        <div class="ejk_title">
-          <h1>BODY<br>CoUNT<br></h1>
-        </div>
         <div class="ejk_meta">
           <h2 class="ejk_subtitle">Data documented over 13 years captures the staggering extent of the Sheikh Hasina
             government’s campaign of extrajudicial killings, targeting alleged criminals and drug traders but also
@@ -704,9 +733,52 @@
 </body>
 
 
+
+
 <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
 <script src="https://russellsamora.github.io/scrollama/scrollama.min.js"></script>
 <script>
+
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+
+// Select the frame element
+const frameElement = document.querySelector('.frame');
+
+frameElement.addEventListener('scroll', function () {
+    const frameScrollY = this.scrollTop;  // Using the scrollTop of the .frame element
+
+    // Get all images inside .overlap, except the .layer and .overlap-background
+    const overlapImages = this.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
+
+    // Apply the translation based on the speed factor
+    overlapImages.forEach(img => {
+        let speed = parseFloat(img.getAttribute('data-speed')) || 1;
+        let translateYValue = -frameScrollY * speed;
+        img.style.transform = `translateY(${translateYValue}px)`;
+    });
+
+    // Counteract the movement for .layer image to keep it static relative to the viewport
+    const layerImg = this.querySelector('.overlap .layer');
+    if (layerImg) {
+        layerImg.style.transform = `translateY(${frameScrollY}px)`;
+    }
+
+    // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below with varying speeds
+    const groupWrapperElements = this.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
+
+    groupWrapperElements.forEach(element => {
+        let speed = parseFloat(element.getAttribute('data-speed')) || 1;
+        let emergenceTranslate = frameScrollY * speed;
+        emergenceTranslate = clamp(emergenceTranslate, 0, frameElement.clientHeight * 0.75);  // Clamping the value to ensure it doesn't go above 75% of the .frame's height.
+        element.style.transform = `translateY(${emergenceTranslate}px)`;
+    });
+});
+
+
+
   // using d3 for convenience
   var main = d3.select("main");
   var scrolly = main.select("#scrolly");

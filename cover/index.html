@@ -55,36 +55,36 @@
 
 <script>
 
-  function clamp(value, min, max) {
-    return Math.min(Math.max(value, min), max);
-  }
-  window.addEventListener('scroll', function () {
-    // Get all images inside .overlap, except the .layer and .overlap-background
-    const overlapImages = document.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
+const frameElement = document.querySelector('.frame');
 
-    // Apply the translation based on the speed factor
-    overlapImages.forEach(img => {
-      let speed = parseFloat(img.getAttribute('data-speed')) || 1;
-      let translateYValue = -window.scrollY * speed;
-      img.style.transform = `translateY(${translateYValue}px)`;
+if (frameElement) {
+    frameElement.addEventListener('scroll', function() {
+        // Get all images inside .overlap, except the .layer and .overlap-background
+        const overlapImages = frameElement.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
+
+        // Apply the translation based on the speed factor
+        overlapImages.forEach(img => {
+            let speed = img.getAttribute('data-speed') || 1;  // Get the speed factor or default to 1 if not set
+            let translateYValue = -frameElement.scrollTop * speed;    // Calculate the translation based on the speed factor
+            img.style.transform = `translateY(${translateYValue}px)`;
+        });
+
+        // Counteract the movement for .layer image to keep it static relative to the viewport
+        const layerImg = frameElement.querySelector('.overlap .layer');
+        if (layerImg) {
+            layerImg.style.transform = `translateY(${frameElement.scrollTop}px)`;
+        }
+
+        // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below
+        const groupWrapperElements = frameElement.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
+        const emergenceFactor = 0.5;  // Adjust this value to control the speed at which they emerge. Higher values mean they'll emerge faster.
+        const emergenceTranslate = frameElement.scrollTop * emergenceFactor;
+
+        groupWrapperElements.forEach(element => {
+            element.style.transform = `translateY(${emergenceTranslate}px)`;
+        });
     });
-
-    // Counteract the movement for .layer image to keep it static relative to the viewport
-    const layerImg = document.querySelector('.overlap .layer');
-    if (layerImg) {
-      layerImg.style.transform = `translateY(${window.scrollY}px)`;
-    }
-
-    // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below with varying speeds
-    const groupWrapperElements = document.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
-
-    groupWrapperElements.forEach(element => {
-      let speed = parseFloat(element.getAttribute('data-speed')) || 1;
-      let emergenceTranslate = window.scrollY * speed;
-      emergenceTranslate = clamp(emergenceTranslate, 0, window.innerHeight * 0.75);  // Clamping the value to ensure it doesn't go above 75% of the viewport height.
-      element.style.transform = `translateY(${emergenceTranslate}px)`;
-    });
-  });
+}
 
 
 </script>

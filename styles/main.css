@@ -72,6 +72,438 @@ header {
 /* NAV ENDS */
 
 
+/* COVER STARTS */
+
+.frame {
+
+  height: 100vh; /* or another specific value */
+  overflow-y: auto;
+  position: relative; 
+
+}
+
+.frame .div {
+
+  width: 100vw;
+  height: 200vh;
+  position: relative;
+  /* Add this line */
+
+}
+
+.frame .overlap {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+
+}
+
+.frame .overlap-group {
+  position: absolute;
+  max-width: 60vw;
+  height: 89.44vh;
+  top: 10.56vh;
+  left: 33.54vw;
+}
+
+
+.overlap-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  
+}
+
+.frame .layer {
+  position: absolute;
+  max-width: 30vw;
+  height: 40vh;
+  bottom: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.frame .overlap-2 {
+  position: absolute;
+  max-width: 50vw;
+  height: 80vh;
+  top: 0;
+  left: 7vw;
+}
+
+.frame .overlap-3 {
+  position: absolute;
+  max-width: 35vw;
+  height: 30vh;
+  top: 0.7vh;
+  left: 0;
+}
+
+.frame .group {
+  position: absolute;
+  max-width: 20vw;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.frame .ecj-ss-group {
+  position: absolute;
+  max-width: 20vw;
+  height: 15vh;
+  top: 10vh;
+  left: 15vw;
+  object-fit: contain;
+}
+
+.frame .overlap-4 {
+  position: absolute;
+  max-width: 25vw;
+  height: 80vh;
+  top: 0;
+  left: 25vw;
+}
+
+.frame .img {
+  position: absolute;
+  max-width: 15vw;
+  height: 25vh;
+  top: 50vh;
+  left: 10vw;
+  object-fit: contain;
+}
+
+.frame .group-2 {
+  position: absolute;
+  max-width: 20vw;
+  height: 35vh;
+  top: 25vh;
+  left: 0;
+  object-fit: contain;
+}
+
+.frame .group-3 {
+  position: absolute;
+  max-width: 20vw;
+  height: 30vh;
+  top: 0;
+  left: 7vw;
+  object-fit: contain;
+}
+
+.frame .group-4 {
+  position: absolute;
+  max-width: 35vw;
+  height: 25vh;
+  top: 10vh;
+  left: 8vw;
+  object-fit: contain;
+}
+
+.frame .group-5 {
+  position: absolute;
+  max-width: 15vw;
+  height: 10vh;
+  top: 40vh;
+  left: 20vw;
+  object-fit: contain;
+}
+
+.frame .group-6 {
+  position: absolute;
+  max-width: 15vw;
+  height: 35vh;
+  top: 50vh;
+  left: 10vw;
+  object-fit: contain;
+}
+
+.frame .group-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 100vh;
+  left: 0;
+
+}
+
+.frame .group-7 {
+  position: relative;
+  max-width: 80vw;
+  height: 80vh;
+  top: 5vh;
+  left: 10vw;
+}
+
+.frame .group-8 {
+  position: absolute;
+  max-width: 20vw;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.frame .group-9 {
+  position: absolute;
+  max-width: 25vw;
+  height: 10vh;
+  top: 40vh;
+  left: 1vw;
+  object-fit: contain;
+}
+
+.frame .group-10 {
+  position: absolute;
+  max-width: 20vw;
+  height: 25vh;
+  top: 55vh;
+  left: 60vw;
+  object-fit: contain;
+}
+
+.frame .group-11 {
+  position: absolute;
+  max-width: 20vw;
+  height: 25vh;
+  top: 50vh;
+  left: 0;
+  object-fit: contain;
+}
+
+.frame .overlap-group-2 {
+  position: absolute;
+  max-width: 20vw;
+  height: 50vh;
+  top: 0;
+  left: 55vw;
+}
+
+.frame .group-12 {
+  position: absolute;
+  max-width: 15vw;
+  height: 25vh;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.frame .group-13 {
+  position: absolute;
+  max-width: 15vw;
+  height: 30vh;
+  top: 15vh;
+  left: 5vw;
+  object-fit: contain;
+}
+
+.frame .BODY-COUNT {
+  position: relative;
+  font-family: "bodycount", self-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 7vw;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 10vw;
+}
+
+
+
+@media only screen and (max-width: 912px) {
+
+  .frame .overlap-2,
+  .frame .overlap-3,
+  .frame .overlap-4,
+  .frame .overlap-group,
+  .frame .group-7,
+  .frame .overlap-group-2 {
+    position: unset;
+    max-width: unset;
+    height: auto;
+  }
+
+  .frame .group-4 {
+    height: auto;
+    max-width: 50vw;
+    top: 5vh;
+    left: 5vw;
+  }
+
+  .frame .ecj-ss-group {
+    height: auto;
+    top: 4vh;
+    max-width: 30vw;
+    left: 60vw;
+  }
+
+  .frame .group {
+    height: auto;
+    top: 20vh;
+    left: 33vw;
+    max-width: 25vw;
+  }
+
+  .frame .group-3 {
+    height: auto;
+    max-width: 22vw;
+    top: 15vh;
+    left: 65vw;
+  }
+
+  .frame .group-2 {
+    height: auto;
+    top: 35vh;
+    left: 65vw;
+    max-width: 22vw;
+  }
+
+  .frame .img {
+    height: auto;
+    top: 55vh;
+    left: 65vw;
+    max-width: 20vw;
+  }
+
+  .frame .group-5 {
+    height: auto;
+    top: 22vh;
+    left: 5vw;
+    max-width: 25vw;
+  }
+
+  .frame .group-6 {
+    height: auto;
+    top: 35vh;
+    left: 3vw;
+    max-width: 22vw;
+  }
+
+  .frame .layer {
+    height: auto;
+    max-width: 55vw;
+    left: 20vw;
+  }
+
+  .frame .group-8 {
+    height: auto;
+    top: 15vh;
+    left: 5vw;
+    max-width: 20vw;
+  }
+
+  .frame .group-12 {
+    height: auto;
+    top: 40vh;
+    left: 6vw;
+    max-width: 18vw;
+  }
+
+  .frame .group-13 {
+    height: auto;
+    top: 25vh;
+    left: 40vw;
+    max-width: 20vw;
+  }
+
+  .frame .group-9 {
+    height: auto;
+    top: 14vh;
+    left: 55vw;
+    max-width: 35vw;
+  }
+
+  .frame .group-11 {
+    height: auto;
+    top: 8vh;
+    left: 50vw;
+    max-width: 20vw;
+  }
+
+  .frame .group-10 {
+    height: auto;
+    top: 25vh;
+    left: 67vw;
+    max-width: 26vw;
+  }
+
+  .frame .group-wrapper {
+    height: 150vh;
+  }
+}
+
+
+@media only screen and (max-width: 414px) {
+  .frame .group-4 {
+    max-width: 55vw;
+  }
+
+  .frame .ecj-ss-group {
+    max-width: 35vw;
+  }
+
+  .frame .group {
+    max-width: 28vw;
+    top: 18vh;
+  }
+
+  .frame .group-3 {
+    max-width: 28vw;
+  }
+
+  .frame .group-2 {
+    max-width: 28vw;
+  }
+
+  .frame .img {
+    max-width: 25vw;
+  }
+
+  .frame .group-6 {
+    max-width: 23vw;
+  }
+
+  .frame .layer {
+    max-width: 70vw;
+    left: 15vw;
+  }
+
+  .frame .group-8 {
+    max-width: 25vw;
+  }
+
+  .frame .group-12 {
+    top: 34vh;
+    max-width: 23vw;
+  }
+
+  .frame .group-13 {
+    top: 19vh;
+    max-width: 23vw;
+  }
+
+  .frame .group-9 {
+    left: 40vw;
+  }
+
+  .frame .group-11 {
+    top: 7vh;
+    left: 60vw;
+    max-width: 25vw;
+  }
+}
+
+
+/* COVER ENDS */
+
+
 
 /* WEEPEOPLE STARTS */
 
