@@ -15,26 +15,28 @@
 
 
     <div class="frame">
+      
       <div class="div">
+       
         <div class="overlap">
-          <img src="./img/ecj3-3ss-0016-layer-25-2.png" class="overlap-background" alt="Background">
+          <img src="./img/ecj3-3ss-0016-layer-25-2.png" class="overlap-background" alt="Background">    
           <div class="overlap-group">
             <img class="layer" src="img/ecj3-3ss-0000-layer-26.png" />
             <div class="overlap-2">
               <div class="overlap-3">
-                <img class="group" src="img/ecj3-3ss-0002-group-3.png" />
-                <img class="ecj-ss-group" src="img/ecj3-3ss-0005-group-14.png" />
+                <img class="group" data-speed="0.9" src="img/ecj3-3ss-0002-group-3.png" />
+                <img class="ecj-ss-group" data-speed="0.5" src="img/ecj3-3ss-0005-group-14.png" />
               </div>
               <div class="overlap-4">
-                <img class="img" src="img/ecj3-3ss-0006-group-6.png" />
-                <img class="group-2" src="img/ecj3-3ss-0007-group-16.png" />
-                <img class="group-3" src="img/ecj3-3ss-0003-group-4.png" />
+                <img class="img" data-speed="0.2" src="img/ecj3-3ss-0006-group-6.png" />
+                <img class="group-2" data-speed="0.6" src="img/ecj3-3ss-0007-group-16.png" />
+                <img class="group-3" data-speed="0.7" src="img/ecj3-3ss-0003-group-4.png" />
               </div>
             </div>
           </div>
-          <img class="group-4" src="img/ecj3-3ss-0001-group-2.png" />
-          <img class="group-5" src="img/ecj3-3ss-0004-group-15.png" />
-          <img class="group-6" src="img/ecj3-3ss-0008-group-17.png" />
+          <img class="group-4" data-speed="0.8" src="img/ecj3-3ss-0001-group-2.png" />
+          <img class="group-5" data-speed="0.4" src="img/ecj3-3ss-0004-group-15.png" />
+          <img class="group-6" data-speed="0.3" src="img/ecj3-3ss-0008-group-17.png" />
          
         </div>
         <div class="group-wrapper">
@@ -56,23 +58,23 @@
 
 
   <script>
-window.addEventListener('scroll', function() {
-    // Calculate the distance to move images based on the scroll position
-    let translateYValue = -window.scrollY;
-
+    
+    window.addEventListener('scroll', function() {
     // Get all images inside .overlap, except the .layer
-    const overlapImages = document.querySelectorAll('.overlap img:not(.layer)');
+    const overlapImages = document.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
 
-    // Apply the translation to those images
+    // Apply the translation based on the speed factor
     overlapImages.forEach(img => {
+        let speed = img.getAttribute('data-speed') || 1;  // Get the speed factor or default to 1 if not set
+        let translateYValue = -window.scrollY * speed;    // Calculate the translation based on the speed factor
         img.style.transform = `translateY(${translateYValue}px)`;
     });
 
-    // Counteract the movement for .layer image and overlap-background to keep them static relative to the viewport
-    const staticImages = document.querySelectorAll('.overlap .layer, .overlap .overlap-background');
-    staticImages.forEach(img => {
-        img.style.transform = `translateY(${window.scrollY}px)`;
-    });
+    // Counteract the movement for .layer image to keep it static relative to the viewport
+    const layerImg = document.querySelector('.overlap .layer');
+    if (layerImg) {
+        layerImg.style.transform = `translateY(${window.scrollY}px)`;
+    }
 
     // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below
     const groupWrapperElements = document.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
@@ -83,6 +85,7 @@ window.addEventListener('scroll', function() {
         element.style.transform = `translateY(${emergenceTranslate}px)`;
     });
 });
+
 
         </script>
 
