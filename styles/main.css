@@ -291,7 +291,7 @@ header {
   max-width: 15vw;
   height: 25vh;
   top: 0;
-  left: 0;
+  left: 5vw;
   object-fit: contain;
 }
 
@@ -436,6 +436,10 @@ header {
 
   .frame .group-wrapper {
     height: 150vh;
+  }
+
+  .frame .BODY-COUNT {
+font-size: 9vw;
   }
 }
 
@@ -829,24 +833,14 @@ h3 {
   line-height: 1.44;
   font-weight: normal;
   max-width: 45%;
-  animation: subtitle 3s;
+
   overflow-wrap: break-word;
   margin: 1rem auto;
   text-align: center;
 
 }
 
-@keyframes subtitle {
-  0% {
-    margin-top: -100px;
-    opacity: 0;
-  }
 
-  25% {
-    margin-top: -100px;
-    opacity: 0;
-  }
-}
 
 .author_date {
   /* animation: author_date 4s; */
@@ -966,7 +960,7 @@ a:visited {
   position: relative;
   text-align: center;
   width: 100%;
-  margin-top: 0;
+  padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
