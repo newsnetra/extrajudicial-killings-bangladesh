@@ -305,11 +305,11 @@ header {
   object-fit: contain;
 }
 
-.frame .BODY-COUNT {
+.BODY-COUNT {
   position: relative;
   font-family: "bodycount", self-serif;
   font-weight: 400;
-  color: white;
+  color: black;
   font-size: 7vw;
   text-align: center;
   letter-spacing: 0;
