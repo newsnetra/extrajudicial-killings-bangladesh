@@ -75,10 +75,12 @@ header {
 /* COVER STARTS */
 
 .frame {
-
+  
+    transition: opacity 0.5s;
   height: 100vh; /* or another specific value */
   overflow-y: auto;
   position: relative; 
+  overflow:hidden;
 
 }
 
@@ -313,6 +315,7 @@ header {
   text-align: center;
   letter-spacing: 0;
   line-height: 10vw;
+ 
 }
 
 

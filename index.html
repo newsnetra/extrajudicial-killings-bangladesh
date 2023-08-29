@@ -714,7 +714,6 @@
 <script src="https://russellsamora.github.io/scrollama/scrollama.min.js"></script>
 <script>
 
-
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
 }
@@ -722,11 +721,19 @@ function clamp(value, min, max) {
 // Select the frame element
 const frameElement = document.querySelector('.frame');
 
-frameElement.addEventListener('scroll', function () {
-    const frameScrollY = this.scrollTop;  // Using the scrollTop of the .frame element
+// Adjusting the height of the body based on the frame's content
+document.body.style.height = `${frameElement.scrollHeight}px`;
+
+window.addEventListener('scroll', function () {
+    const windowHeight = window.innerHeight;
+    const docHeight = document.body.offsetHeight;
+    const windowScrollTop = window.scrollY;
+
+    const scrollPercentage = windowScrollTop / (docHeight - windowHeight);
+    const frameScrollY = frameElement.scrollHeight * scrollPercentage;
 
     // Get all images inside .overlap, except the .layer and .overlap-background
-    const overlapImages = this.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
+    const overlapImages = frameElement.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
 
     // Apply the translation based on the speed factor
     overlapImages.forEach(img => {
@@ -736,13 +743,13 @@ frameElement.addEventListener('scroll', function () {
     });
 
     // Counteract the movement for .layer image to keep it static relative to the viewport
-    const layerImg = this.querySelector('.overlap .layer');
+    const layerImg = frameElement.querySelector('.overlap .layer');
     if (layerImg) {
         layerImg.style.transform = `translateY(${frameScrollY}px)`;
     }
 
     // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below with varying speeds
-    const groupWrapperElements = this.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
+    const groupWrapperElements = frameElement.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
 
     groupWrapperElements.forEach(element => {
         let speed = parseFloat(element.getAttribute('data-speed')) || 1;
