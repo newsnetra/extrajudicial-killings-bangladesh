@@ -77,8 +77,7 @@ header {
 .frame {
   
     transition: opacity 0.5s;
-  height: 100vh; /* or another specific value */
-  overflow-y: auto;
+  height: 200vh; /* or another specific value */
   position: relative; 
   overflow:hidden;
 

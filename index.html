@@ -713,51 +713,47 @@
 <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
 <script src="https://russellsamora.github.io/scrollama/scrollama.min.js"></script>
 <script>
-
-function clamp(value, min, max) {
+  function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
 }
 
-// Select the frame element
 const frameElement = document.querySelector('.frame');
+const frameOffsetTop = frameElement.offsetTop;
+const frameHeight = frameElement.scrollHeight;
 
-// Adjusting the height of the body based on the frame's content
-document.body.style.height = `${frameElement.scrollHeight}px`;
-
-window.addEventListener('scroll', function () {
-    const windowHeight = window.innerHeight;
-    const docHeight = document.body.offsetHeight;
+window.addEventListener('scroll', function() {
     const windowScrollTop = window.scrollY;
+    const relativeScroll = Math.max(0, windowScrollTop - frameOffsetTop);
 
-    const scrollPercentage = windowScrollTop / (docHeight - windowHeight);
-    const frameScrollY = frameElement.scrollHeight * scrollPercentage;
+    // Calculate the percentage of how much of the frame's content has been scrolled through
+    const scrollPercentage = relativeScroll / (frameHeight + window.innerHeight - frameOffsetTop);
+    const frameScrollY = (frameElement.scrollHeight - window.innerHeight) * scrollPercentage;
 
-    // Get all images inside .overlap, except the .layer and .overlap-background
+    // For images inside .overlap
     const overlapImages = frameElement.querySelectorAll('.overlap img:not(.layer):not(.overlap-background)');
-
-    // Apply the translation based on the speed factor
     overlapImages.forEach(img => {
         let speed = parseFloat(img.getAttribute('data-speed')) || 1;
-        let translateYValue = -frameScrollY * speed;
+        let translateYValue = -frameScrollY * (speed * 0.5);  // Reducing the speed effect for smoother movement
         img.style.transform = `translateY(${translateYValue}px)`;
     });
 
-    // Counteract the movement for .layer image to keep it static relative to the viewport
+    // For the .layer image
     const layerImg = frameElement.querySelector('.overlap .layer');
     if (layerImg) {
         layerImg.style.transform = `translateY(${frameScrollY}px)`;
     }
 
-    // Adjust the position of the images and the .BODY-COUNT text inside .group-wrapper so they appear to emerge from below with varying speeds
+    // For images and text inside .group-wrapper
     const groupWrapperElements = frameElement.querySelectorAll('.group-wrapper img, .group-wrapper .BODY-COUNT');
-
     groupWrapperElements.forEach(element => {
         let speed = parseFloat(element.getAttribute('data-speed')) || 1;
         let emergenceTranslate = frameScrollY * speed;
-        emergenceTranslate = clamp(emergenceTranslate, 0, frameElement.clientHeight * 0.75);  // Clamping the value to ensure it doesn't go above 75% of the .frame's height.
+        emergenceTranslate = clamp(emergenceTranslate, 0, frameElement.clientHeight * 0.75);
         element.style.transform = `translateY(${emergenceTranslate}px)`;
     });
 });
+
+
 
 
 
