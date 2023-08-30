@@ -2394,13 +2394,14 @@ g .domain {
 }
 
 .barVisual .container {
-  max-width: 960px;
+  width: 100%;  /* Or any other desired percentage/fixed width */
+   
   display: block;
   margin: 0 auto;
 }
 
 .barVisual {
-  max-width: 960px;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
   font-family: "gordita", helvetica, helvetica-neue, arial, sans-serif;
