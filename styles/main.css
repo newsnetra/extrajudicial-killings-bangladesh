@@ -802,7 +802,7 @@ h2 {
   margin: 3rem auto;
   line-height: 1.45;
   font-size: 2rem;
-  color: #000000;
+  color: #e24821;
 }
 
 h3 {
@@ -2356,3 +2356,175 @@ div#searchResults {
   width: 2rem;
   padding: 0.5rem;
 }
+
+
+/* CHART2 STARTS */
+
+g .domain {
+  stroke: none;
+}
+
+.barVisual .tick line {
+  stroke: none;
+}
+
+.barVisual .text {
+  font-size: 12px;
+  fill: #000000;
+}
+
+.barVisual text {
+  font-size: 12px;
+  fill: #000000;
+  font-family: 'National',Helvetica, sans-serif;
+}
+
+#text {
+  font-size: 12px;
+  fill: #000000;
+  font-family: 'National',Helvetica, sans-serif;
+}
+
+.barVisual .bar {
+  fill: #e24821;
+}
+
+.bar:first-child {
+  fill: #e24821;
+}
+
+.barVisual .container {
+  max-width: 960px;
+  display: block;
+  margin: 0 auto;
+}
+
+.barVisual {
+  max-width: 960px;
+  display: block;
+  margin: 0 auto;
+  font-family: "gordita", helvetica, helvetica-neue, arial, sans-serif;
+}
+
+.barVisual .chart_meta {
+  margin: 15px 0;
+}
+
+.chart_meta h2 {
+  font-family: 'Inter', Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: inherit;
+  line-height: 1.3;
+  text-rendering: optimizelegibility;
+  margin: 0;
+    max-width: unset;
+}
+
+.chart_meta h3 {
+  font-size: 0.8125rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #848484;
+  line-height: 1.62;
+  width: 100%;
+  margin-top: 0;
+  text-align:left;
+    margin-bottom: 0;
+}
+
+.barVisual p {
+  font-size: 12px;
+  color: #848484;
+  line-height: 1.62;
+  padding: 10px 2px;
+  width: 100%;
+  max-width: unset;
+}
+
+.barVisual .notes::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #efefef;
+}
+
+.barVisual .notes p {
+  font-size: 0.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.barVisual .hidden {
+  display: none;
+}
+
+
+.barVisual button {
+  background-color: #e24821;
+  /* Color taken from your bar fill */
+  color: #FFFFFF;
+  /* White text color */
+  border: none;
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px 15px;
+  /* Top-bottom and left-right padding */
+  font-family: 'National',Helvetica, sans-serif;
+  /* Font family */
+  font-size: 0.9rem;
+  /* Font size */
+  margin-right: 10px;
+  /* Spacing between buttons */
+  cursor: pointer;
+  /* Change cursor to hand icon on hover */
+  transition: background-color 0.3s;
+  /* Transition effect */
+}
+
+.barVisual button:hover {
+  background-color: #fdbaaa;
+  /* Slightly darker shade on hover */
+}
+
+.barVisual button.active {
+  background-color: #fdbaaa;
+  /* Slightly darker shade for the active chart's button */
+}
+
+.tooltip {
+
+  border: 1px solid #000;
+  padding: 4px;
+  background-color: white;
+  font-size: 12px;
+  /* Makes sure tooltip content stays in a single line */
+}
+
+.tooltip p {
+  text-transform: none;
+  color: #e24821;
+  line-height: 1;
+  padding: 0;
+  border-bottom: #000 1px solid;
+  font-family: 'National',Helvetica, sans-serif;
+  font-size: 12px;
+  max-width: unset;
+  margin: unset;
+}
+
+.barVisual .axis path,
+.barVisual .axis line {
+  fill: none;
+  stroke: grey;
+  shape-rendering: crispEdges;
+}
+
+.barVisual .axis text {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  fill: black;
+}
+
+/* CHART2 ENDS */
