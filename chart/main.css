@@ -327,6 +327,6 @@ span[data="incident"] {
 
 .transline#victim,
 .textB {
-  stroke: #d94801;
-  color: #d94801;
+  stroke: crimson;
+  color: crimson;
 }
