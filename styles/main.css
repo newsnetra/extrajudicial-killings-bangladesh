@@ -1922,10 +1922,7 @@ g .domain {
   margin-bottom: 5px;
 }
 
-.barVisual button:hover {
-  background-color: #fdbaaa;
-  /* Slightly darker shade on hover */
-}
+
 
 .barVisual button.active {
   background-color: crimson;
@@ -1938,6 +1935,10 @@ g .domain {
   color: #000; /* Black text color */
 }
 
+.barVisual button:hover {
+  background-color: #fdbaaa;
+  /* Slightly darker shade on hover */
+}
 
 .tooltip {
 
@@ -2084,7 +2085,7 @@ g .domain {
     padding: 10px 20px;
     border-radius: 3.5px;
     transition: all 0.1s linear;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 600;
     background-color: rgba(0, 0, 40, 0.05)
   }
