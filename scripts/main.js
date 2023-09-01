@@ -13,7 +13,33 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//
+// show more tab //
+document.addEventListener('DOMContentLoaded', function() {
+  const expandingBox = document.getElementById('expandingBox');
+  const boxContent = document.getElementById('boxContent');
+  const toggleBtn = document.getElementById('toggleBtn');
+  
+  let isOpen = false; // Initial state: closed
+  const closedHeight = getComputedStyle(boxContent).getPropertyValue("--closed-height").trim();
+  
+  // Set initial closed state
+  boxContent.style.setProperty("--max-height", closedHeight);
+
+  toggleBtn.addEventListener('click', toggle);
+
+  function toggle() {
+      if (!isOpen) {
+          boxContent.style.setProperty("--max-height", `${boxContent.scrollHeight}px`);
+          toggleBtn.textContent = "- Collapse";
+      } else {
+          boxContent.style.setProperty("--max-height", closedHeight);
+          toggleBtn.textContent = "+ Expand";
+      }
+
+      isOpen = !isOpen;
+  }
+});
+
 
 
 
