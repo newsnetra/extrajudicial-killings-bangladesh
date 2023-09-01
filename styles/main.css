@@ -1796,12 +1796,13 @@ g .domain {
 }
 
 .barVisual .text {
-  font-size: 12px;
+  font-size: 13.5px;
   fill: #000000;
+  font-weight: 600;
 }
 
 .barVisual text {
-  font-size: 12px;
+  font-size: 13.5px;
   fill: #000000;
   font-family: 'National', Helvetica, sans-serif;
 }
@@ -1835,9 +1836,9 @@ g .domain {
 }
 
 .barVisual {
-  max-width: 70%;
+  max-width: 75%;
   display: block;
-  margin: 25px auto;
+  margin: 45px auto;
   font-family: "gordita", helvetica, helvetica-neue, arial, sans-serif;
 }
 
@@ -1850,20 +1851,19 @@ g .domain {
 .chart_meta h2 {
   font-family: 'Inter', Helvetica, sans-serif;
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 500;
   color: inherit;
-  line-height: 1.3;
   text-rendering: optimizelegibility;
-  margin: 25px auto;
+  margin: 20px auto;
   max-width: unset;
 }
 
 .chart_meta h3 {
   font-size: 16px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #848484;
+  color: #000000;
   line-height: 1.62;
-  width: 100%;
+  max-width: 100%;
   margin-top: 0;
   text-align: left;
   margin-bottom: 0;
@@ -1888,10 +1888,9 @@ g .domain {
 }
 
 .barVisual .notes p {
-  font-size: 0.5rem;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+  font-family: 'Inter', Helvetica, sans-serif;
+  color: rgb(102,102,102);
+  font-size: 10px;
 }
 
 .barVisual .hidden {
@@ -1929,9 +1928,16 @@ g .domain {
 }
 
 .barVisual button.active {
-  background-color: #fdbaaa;
+  background-color: crimson;
+  color: white;
   /* Slightly darker shade for the active chart's button */
 }
+
+.barVisual button.inactive {
+  background-color: transparent; 
+  color: #000; /* Black text color */
+}
+
 
 .tooltip {
 
@@ -1947,7 +1953,7 @@ g .domain {
   color: crimson;
   line-height: 1;
   padding: 0;
-  border-bottom: #000 1px solid;
+  
   font-family: 'National', Helvetica, sans-serif;
   font-size: 12px;
   max-width: unset;

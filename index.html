@@ -549,8 +549,9 @@
 
       <div class="tooltip" style="position: absolute; visibility: hidden;"></div>
       <div class="barVisual">
-        <button onclick="showChart('chart1')">Actual Numbers</button>
-        <button onclick="showChart('chart2')">Per 100,000 Population</button>
+        <button id="btn-chart1" onclick="showChart('chart1')">Actual Numbers</button>
+        <button id="btn-chart2" onclick="showChart('chart2')">Per 100,000 Population</button>
+        
 
         <div id="chart1">
           <div class="chart_meta">
@@ -560,18 +561,18 @@
           </div>
           <div class="container"></div>
           <div class="notes">
-            <p>Source: Netra News</p>
+            <p>By Nazmul Ahasan · Source: Asian Human Rights Commission</p>
           </div>
         </div>
 
         <div id="chart2" style="display: none;">
           <div class="chart_meta">
-            <h2 class="barchart2">Top 10 Districts by Deaths Per 100k Population</h2>
-            <h3 class="barchart2">Some districts were affected disproportionately by the number of fatalities.</h3>
+            <h2 class="barchart2">Top 10 Districts by Deaths Per 100,000 Population</h2>
+            <h3 class="barchart2">Some districts were affected disproportionately in comparison to their respective populations.</h3>
           </div>
           <div class="container2"></div>
           <div class="notes">
-            <p>Source: Netra News</p>
+            <p>By Nazmul Ahasan · Source: Asian Human Rights Commission</p>
           </div>
         </div>
       </div>
@@ -1070,21 +1071,32 @@
       rate: 2.76
     }
   ];
-  var margin = { top: 0, right: 50, bottom: 30, left: 70 };
+  var margin = { top: 0, right: 50, bottom: 30, left: 80 };
   var containerWidth = d3.select(".barVisual").node().getBoundingClientRect().width;
   var width = containerWidth - margin.left - margin.right;
   var height = 250 - margin.top - margin.bottom;
   var tooltip = d3.select(".tooltip");
 
   function drawChart(data, containerClass, domainMax) {
-    var barHeight = 25; // Adjust this value as desired
+    var barHeight = 22; // Adjust this value as desired
     var barSpace = 10; // Adjust this value for the space between bars
     var totalHeight = data.length * (barHeight + barSpace);
 
     height = totalHeight - margin.top - margin.bottom;
 
     var x = d3.scaleLinear().range([0, width]);
-    var xAxis = d3.axisBottom(x).ticks(5).tickValues([0, 100, 200, 300, 400, 500]);
+
+    var tickValues;
+    if (domainMax === 350) {
+        tickValues = [0, 100, 200, 300, 400, 500];
+    } else if (domainMax === 15) {
+        tickValues = [0, 3, 6, 9, 12, 15];
+    } else {
+        tickValues = x.ticks();  // Default tick generation
+    }
+
+    var xAxis = d3.axisBottom(x).ticks(5).tickValues(tickValues);
+
     var y = d3.scaleBand().range([height, 0]).padding(0.01);
 
     var svg = d3.select(`.${containerClass}`)
@@ -1118,7 +1130,10 @@
       .attr("height", barHeight)
       .on("mouseover", function (d) {
         tooltip.style("visibility", "visible");
-        tooltip.html("<p>District: </p>" + d.district + "<br><p>" + (d.rate ? "Killed per 100k population: " : "Total Killed: ") + (d.rate || d.enrollment) + "</p>");
+        tooltip.html("<p>In " + d.district + " district,</p><p>" + (d.rate || d.enrollment) + (d.rate ? " people were killed per 100,000 population." : " people were killed in total.") + "</p>");
+
+
+
 
         verticalLine
           .attr("x1", x(d.rate || d.enrollment))
@@ -1177,14 +1192,29 @@
   drawChart(enrollmentRate, 'container2', 15);
 
   function showChart(chartId) {
+    var btnChart1 = document.getElementById('btn-chart1');
+    var btnChart2 = document.getElementById('btn-chart2');
+    
     if (chartId === 'chart1') {
-      document.getElementById('chart1').style.display = 'block';
-      document.getElementById('chart2').style.display = 'none';
+        document.getElementById('chart1').style.display = 'block';
+        document.getElementById('chart2').style.display = 'none';
+        btnChart1.classList.add("active");    // Set active style
+        btnChart1.classList.remove("inactive");
+        btnChart2.classList.add("inactive");  // Set inactive style
+        btnChart2.classList.remove("active");
     } else if (chartId === 'chart2') {
-      document.getElementById('chart1').style.display = 'none';
-      document.getElementById('chart2').style.display = 'block';
+        document.getElementById('chart1').style.display = 'none';
+        document.getElementById('chart2').style.display = 'block';
+        btnChart1.classList.add("inactive");  // Set inactive style
+        btnChart1.classList.remove("active");
+        btnChart2.classList.add("active");    // Set active style
+        btnChart2.classList.remove("inactive");
     }
-  }
+}
+
+// Set the initial state 
+showChart('chart1');
+
 
   showChart('chart1');
 
