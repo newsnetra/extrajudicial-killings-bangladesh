@@ -313,10 +313,11 @@ header {
   font-family: "bodycount", self-serif;
   font-weight: 400;
   color: black;
-  font-size: 7vw;
+  font-size: 10vh;
   text-align: center;
   letter-spacing: 0;
   margin: 30px auto;
+  line-height: unset;
   
 
 }
@@ -444,9 +445,7 @@ header {
     height: 150vh;
   }
 
-  .frame .BODY-COUNT {
-    font-size: 9vw;
-  }
+ 
 }
 
 
@@ -454,7 +453,6 @@ header {
   .frame .group-4 {
     max-width: 55vw;
   }
-
   .frame .ecj-ss-group {
     max-width: 35vw;
   }
@@ -508,6 +506,9 @@ header {
     left: 60vw;
     max-width: 25vw;
   }
+
+
+
 }
 
 
@@ -734,13 +735,57 @@ p.note s {
 
 /* SCROLLAMA ENDS */
 
-
-
-
-.transition {
+.transition-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove any default spacing between table cells */
   height: 90px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(194, 200, 202, 1)), color-stop(100%, rgba(242, 243, 240, 1))), #f2f3f0;
 }
+
+.left-side, .central-core, .right-side {
+  padding: 0; /* No padding in table cells */
+  height: 90px;
+}
+
+.left-side {
+  width: 11.5%;
+  background-color: transparent;
+}
+
+.central-core {
+  width: 57%;
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Hide the overflow of the pseudo-elements */
+  background-image: linear-gradient(to bottom, rgba(194, 200, 202, 1), rgba(242, 243, 240, 1));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.central-core::before, .central-core::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* Adjust the width as needed */
+  background-image: linear-gradient(to right, rgba(194, 200, 202, 0.5), transparent);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+}
+
+.central-core::before {
+  left: 0;
+}
+
+.central-core::after {
+  right: 0;
+  transform: scaleX(-1); /* Flips the gradient horizontally */
+}
+
+.right-side {
+  width: 31.5%;
+  background-color: transparent;
+}
+
 
 
 /*OTHER */
@@ -776,7 +821,7 @@ p {
 }
 
 .iframe_c {
-  width: 80%;
+  width: 75%;
   margin-left: 10%
 }
 
@@ -1062,22 +1107,14 @@ svg {
 h1 {
 
   font-family: 'bodycount';
-  font-weight: normal;
-  line-height: 5rem;
-  font-size: 5rem;
-  opacity: 1;
-  letter-spacing: 0.5rem;
+  position: relative;
+  font-family: "bodycount", self-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 7vw;
   text-align: center;
-  color: #ffffff;
-  text-shadow: 2px 2px 10px rgba(76, 70, 50, 50);
-  padding-bottom: 0;
-  padding-top: 0;
-  mix-blend-mode: normal;
-  font-style: normal;
-  position: static;
-  margin: 0;
-  animation: title 2s;
-  overflow-wrap: break-word;
+  letter-spacing: 0;
+  margin: 30px auto;
 }
 
 
@@ -1980,7 +2017,7 @@ g .domain {
 /* FORCE IMAGE-TABLE STARTS */
 
 .force_image-table {
-  max-width: 70%;
+  max-width: 75%;
   border-collapse: collapse;
   margin: auto;
 }
@@ -2170,6 +2207,8 @@ g .domain {
     font-size: 18px;
   }
 
+ 
+
   .toggle button {
     font-size: 0.8rem;
   }
@@ -2186,9 +2225,7 @@ g .domain {
 }
 
 @media screen and (max-width: 767px) {
-  h1 {
-    font-size: 4rem;
-  }
+  
 
   p {
     font-size: 18px;
@@ -2205,10 +2242,7 @@ g .domain {
     margin: 0 auto 2rem auto;
   }
 
-  h1 {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
+
 
   h2 {
     font-size: 1.5rem;
@@ -2255,11 +2289,7 @@ g .domain {
     max-width: 55%;
   }
 
-  h1 {
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    letter-spacing: 0.35rem;
-  }
+
 
   h2,
   .ejk_subtitle,
@@ -2286,11 +2316,7 @@ g .domain {
     margin: 0 auto 1rem auto;
   }
 
-  h1 {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.15rem;
-  }
+
 
   .ejk_subtitle {
     font-size: 16px;
