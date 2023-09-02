@@ -2222,9 +2222,28 @@ g .domain {
     width: 100%;
     margin: auto;
   }
+
+
+  .left-side, .right-side {
+    display: none; /* Hide the left and right sides completely */
+  }
+  
+  .central-core {
+    width: 100%; /* Extend central-core to 100% */
+    
+    /* Since you're hiding the left and right side, you can safely remove pseudo-elements for the gradient effect as well */
+    background-image: linear-gradient(to bottom, rgba(194, 200, 202, 1), rgba(242, 243, 240, 1));
+  }
+  
+  /* Remove pseudo-elements for smaller screens */
+  .central-core::before, .central-core::after {
+    content: none;
+  }
+  
+  
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   
 
   p {
@@ -2235,6 +2254,9 @@ g .domain {
   .ejk_meta {
     margin-top: auto !important;
   }
+
+
+  
 }
 
 @media screen and (max-width: 720px) {
@@ -2277,7 +2299,7 @@ g .domain {
   .numeric {
     font-size: 2rem;
   }
-}
+
 
 @media screen and (max-width: 414px) {
   .ejk_title {
@@ -2288,7 +2310,6 @@ g .domain {
 
     max-width: 55%;
   }
-
 
 
   h2,
@@ -2309,6 +2330,8 @@ g .domain {
   .force_image-table {
     max-width: 95%;
   }
+
+
 }
 
 @media screen and (max-width: 320px) {
