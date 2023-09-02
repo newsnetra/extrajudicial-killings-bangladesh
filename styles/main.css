@@ -2103,17 +2103,6 @@ g .domain {
     outline-width: 0;
   }
   
-  code {
-    display: inline-block;
-    font-size: inherit;
-    background-color: rgba(0, 0, 40, 0.05);
-    color: rgba(20, 20, 100, 1);
-    padding: 0 4px;
-    line-height: 2;
-    border-radius: 3.5px;
-    letter-spacing: 1px;
-    font-weight: 500;
-  }
 
   
 
@@ -2125,26 +2114,37 @@ g .domain {
 }
 
        .footnote {
-        font-size: 0.8em;
+        font-size: 1em;
+        line-height: 0.1em;
         text-decoration: none;
-        vertical-align: super;  /* This is specific for .footnote */
+        vertical-align: super;
+        position: relative;
+        top: -0.1em;
     }
-    .footnotes {
-        border-top: 1px solid #aaa;
-        font-size: 0.8em;
-        margin-top: 30px;
-        padding-top: 15px;
-    }
-
     
+  
 
-    .return-link {
-        font-size: 0.8em;
-        text-decoration: none;
-    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #666;
+      box-shadow: inset 1px 1px 2.5px rgba(0, 0, 0, 0.2), inset -1px -1px 2.5px rgba(255, 255, 255, 0.2);
+      line-height: unset;
+      font-weight: unset;
+      letter-spacing: unset;
+  }
 
+  .footnotes a, .footnote a, .footnotes a:visited, .footnote a:visited, .footnotes a:hover, .footnote a:hover {
+    text-decoration: none;
+  }
+  
     
        /* FOOTNOTE ENDS */
+
+
+
 
 
 /* RESPONSIVE STARTS */
