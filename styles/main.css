@@ -90,7 +90,7 @@ header {
 
 .frame::after {
   animation: noise 9s steps(10) infinite;
-  background: url(/assets/cover/noise-transparent.png);
+  background: url(./assets/cover/noise-transparent.png);
   content: '';
   opacity: 0.6;
   position: fixed;
