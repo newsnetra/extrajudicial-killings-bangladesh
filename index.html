@@ -550,7 +550,7 @@
     </table>
       <!-- end scrollytelling section -->
       <p>Before 2018, the pattern of killings was distributed throughout the country, although some regional patterns
-        emerged. In the Awami League government's initial years, western and southwestern districts, particularly within
+        emerged. In the Awami League government’s initial years, western and southwestern districts, particularly within
         the Khulna division, experienced the deaths of individuals reportedly linked to armed leftist factions. The
         trend of targeting leftist extremist groups had begun during the BNP regime when the RAB was formed.</p>
 
@@ -651,7 +651,7 @@
 
       <p>But it&rsquo;s difficult to accept police claims without scepticism.</p>
 
-      <p>Many journalists didn't challenge the narratives that subjects had a previous criminal history. When some did
+      <p>Many journalists didn’t challenge the narratives that subjects had a previous criminal history. When some did
         probe deeper, they discovered that, on occasion, law enforcement would file charges against these individuals on
         the day of the incident itself.</p>
 
@@ -689,7 +689,7 @@
       <p>However, as early as 2011, Prime Minister Sheikh Hasina <a ref="nofollow"
           href="https://web.archive.org/web/20230902043716/https://webcache.googleusercontent.com/search?q=cache:https://bdnews24.com/bangladesh/pm-speaks-against-cross-fire">acknowledged</a> the actions of her
         forces. In February 2011, she told reporters, &ldquo;It cannot be changed overnight,&rdquo; referring to extrajudicial killings. &ldquo;If people had spoken out
-        against it as fervently as they do now, the practice wouldn't have persisted for so long.&rdquo;</p>
+        against it as fervently as they do now, the practice wouldn’t have persisted for so long.&rdquo;</p>
 
       <p>In early April, when approached for comments by Netra News and Deutsche Welle for a story on extrajudicial
         killings, Bangladesh&rsquo;s Ministry of Home Affairs responded, &ldquo;Upon receiving any such allegations, the
@@ -698,7 +698,7 @@
 
       <p>However, the magistrates are neither &ldquo;independent&rdquo; nor do they &ldquo;investigate&rdquo; the
         killings. These magistrates are junior executive bureaucrats or public servants operating directly under the
-        government's stringent control. Multiple rights investigators have pointed out that these magistrates frequently
+        government’s stringent control. Multiple rights investigators have pointed out that these magistrates frequently
         rubber-stamp the so-called investigative reports even before the actual killings occur.</p>
 
       <p>Even then, the Bangladesh government provides no evidence to back up its own claims of conducting independent
@@ -1013,7 +1013,11 @@
     });
 
     // update graphic based on step
-    figure.select("img").attr("src", `./assets/maps/${2013 + response.index}.jpg`);
+    var imgElement = figure.select("img");
+    imgElement.attr("src", `./assets/maps/${2013 + response.index}.jpg`);
+    
+    // Trigger resize when the image is fully loaded
+    imgElement.on("load", handleResize);
   }
 
   function init() {
@@ -1036,7 +1040,11 @@
   // kick things off
   init();
 
-
+  let resizeTimeout;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(handleResize, 150); // adjust the delay as needed
+});
 
 
   //chart2
