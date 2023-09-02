@@ -312,7 +312,7 @@ header {
   position: relative;
   font-family: "bodycount", self-serif;
   font-weight: 400;
-  color: black;
+  color: #000050;
   font-size: 10vh;
   text-align: center;
   letter-spacing: 0;
@@ -842,7 +842,7 @@ h2 {
   margin: 3rem auto;
   line-height: 1.45;
   font-size: 2rem;
-  color: crimson;
+  color: #000050;
 }
 
 h3 {
@@ -970,13 +970,14 @@ a
  {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: crimson;
+  text-decoration-color: #000050;
   text-underline-offset: 6px;
   text-decoration-thickness: 3.5px;
 }
 
 a:hover {
-  text-decoration-color: #ff0033;
+  text-decoration-color: rgba(0, 0, 80, 0.7);
+
 }
 
 a:visited {
@@ -1172,7 +1173,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: crimson;
+  color: #000050;
 }
 
 
@@ -1262,7 +1263,6 @@ h1 {
   font-weight: 500;
   text-decoration: underline;
   text-decoration-line: underline;
-  text-decoration-color: crimson;
   text-underline-offset: 0.25rem;
 }
 
@@ -1855,12 +1855,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: crimson;
+  fill: #000050;
   
 }
 
 .bar:first-child {
-  fill: crimson;
+  fill: #000050;
 }
 
 .barVisual .container {
@@ -1939,7 +1939,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #000;
   /* White text color */
-  border: solid 2px crimson;
+  border: solid 2px #000050;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -1961,7 +1961,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: crimson;
+  background-color: #000050;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -1972,7 +1972,8 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #fdbaaa;
+  background-color: #000050;
+  opacity: 0.7;
   /* Slightly darker shade on hover */
 }
 
@@ -1987,7 +1988,7 @@ g .domain {
 
 .tooltip p {
   text-transform: none;
-  color: crimson;
+  color: #000050;
   line-height: 1;
   padding: 0;
   
@@ -2277,7 +2278,7 @@ g .domain {
 
 @media screen and (max-width: 540px) {
   .barVisual {
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
   }
 
