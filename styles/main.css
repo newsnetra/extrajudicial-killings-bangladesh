@@ -2265,6 +2265,7 @@ g .domain {
   .ejk_subtitle,
   .peopleyeartitle {
     font-size: 1.3rem !important;
+    max-width: 100%;
   }
 
   .author_date,
