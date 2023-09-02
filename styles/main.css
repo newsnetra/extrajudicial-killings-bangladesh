@@ -2064,7 +2064,6 @@ g .domain {
   
   .box:not(.open) .toggle {
     border-top-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 -30px 40px #f2f3f0;
     position: relative;
     background-color: #f2f3f0;
     max-width: 200px;
