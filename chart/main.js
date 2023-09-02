@@ -1,78 +1,5 @@
 $(document).ready(function () {
 
-  if (navigator.userAgent.search("MSIE") >= 0) {
-    $(".transline").css({ "stroke-dasharray": "0px", "stroke-dashoffset": "0px" });
-  }
-
-
-  function adjustGraphHeight() {
-    var graph = document.getElementById('graph');
-    var chartHeight = document.getElementById('line1').clientHeight;
-    graph.style.height = chartHeight + 'px';
-  }
-  
-
-  //IE can't animate stroke - needs this disabled.
-
-  var ww = $(".wrapper").width();
-  var margin = { top: 20, right: 20, bottom: 50, left: 20 },
-    width = ww - margin.right - margin.left,
-    height = 500 - margin.top - margin.bottom;
-  
-  // Update the parent container's height to match the SVG's
-  $(".wrapper").height(height + margin.top + margin.bottom);
-  
-  var x = d3.time.scale().range([0, width]);
-
-
-  var y = d3.scale.linear()
-    .range([height, 0]);
-
-  var color = d3.scale.category10();
-
-  var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickFormat(d3.time.format("%Y")) // Change the date format here
-    .tickSize(10, 1)
-    .orient("bottom");
-
-
-  if (ww < 700) {
-    var xAxis = d3.svg.axis()
-      .scale(x)
-      .ticks(5)
-      .tickSize(10, 5)
-      .orient("bottom");
-  }
-
-  var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .tickSize(-width, 0); // Make it cover the full width of the chart
-
-  var line = d3.svg.line()
-    .interpolate("step-after")
-    .x(function (d) { return x(d.month); })
-    .y(function (d) { return y(+d.people); });
-
-    var svg = d3.select("#line1").append("svg")
-    .attr("id", "travel-chart")
-    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
-    .attr("preserveAspectRatio", "xMinYMin meet")
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-  
-
-
-  var transports;
-
-
-
-  function monthNumToDate(monthNum) {
-    return new Date(2011, monthNum - 1, 1); // monthNum - 1 because in JS, months start from 0
-  }
-
-
 
   var data = [
 
@@ -738,6 +665,81 @@ $(document).ready(function () {
       "incident": 7
     }
   ];
+
+  if (navigator.userAgent.search("MSIE") >= 0) {
+    $(".transline").css({ "stroke-dasharray": "0px", "stroke-dashoffset": "0px" });
+  }
+
+
+  function adjustGraphHeight() {
+    var graph = document.getElementById('graph');
+    var chartHeight = document.getElementById('line1').clientHeight;
+    graph.style.height = chartHeight + 'px';
+  }
+  
+
+  //IE can't animate stroke - needs this disabled.
+
+  var ww = $(".wrapper").width();
+  var margin = { top: 20, right: 20, bottom: 50, left: 20 },
+    width = ww - margin.right - margin.left,
+    height = 500 - margin.top - margin.bottom;
+  
+  // Update the parent container's height to match the SVG's
+  $(".wrapper").height(height + margin.top + margin.bottom);
+  
+  var x = d3.time.scale().range([0, width]);
+
+
+  var y = d3.scale.linear()
+    .range([height, 0]);
+
+  var color = d3.scale.category10();
+
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .tickFormat(d3.time.format("%Y")) // Change the date format here
+    .tickSize(10, 1)
+    .orient("bottom");
+
+
+  if (ww < 700) {
+    var xAxis = d3.svg.axis()
+      .scale(x)
+      .ticks(5)
+      .tickSize(10, 5)
+      .orient("bottom");
+  }
+
+  var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickSize(-width, 0); // Make it cover the full width of the chart
+
+  var line = d3.svg.line()
+    .interpolate("step-after")
+    .x(function (d) { return x(d.month); })
+    .y(function (d) { return y(+d.people); });
+
+    var svg = d3.select("#line1").append("svg")
+    .attr("id", "travel-chart")
+    .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+
+
+  var transports;
+
+
+
+  function monthNumToDate(monthNum) {
+    return new Date(2011, monthNum - 1, 1); // monthNum - 1 because in JS, months start from 0
+  }
+
+
+
 
   color.domain(d3.keys(data[0]).filter(function (key) { return key !== "month"; }));
 
