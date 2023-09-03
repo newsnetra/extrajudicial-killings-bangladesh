@@ -95,6 +95,7 @@ header {
   max-width: 30vw;
   left: 35vw;
   object-fit: contain;
+  height: auto;
 }
 
 .body-count-placeholder {
@@ -2296,23 +2297,22 @@ code {
     max-width: 25vw;
   }
 
-  .frame .group-2 {
-    left: 40vw;
-  }
+.frame .group-3 {
+top: 58vh;
+}
 
   .frame .group-4 {
 
-    left: 60vw;
+    left: 70vw;
     max-width: 25vw;
   }
 
   .frame .group-5 {
-    top: 34vh;
     max-width: 23vw;
   }
 
   .frame .group-6 {
-    top: 34vh;
+    top: 44vh;
     max-width: 23vw;
   }
 
