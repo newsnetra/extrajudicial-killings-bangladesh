@@ -1909,8 +1909,14 @@ g .domain {
   vertical-align: super;
   position: relative;
   top: -0.1em;
+  
 }
 
+.return-link, sup {
+  color: #f43305;
+  font-family: 'National', 'Arial Narrow', Arial, sans-serif;
+
+}
 
 
 code {
