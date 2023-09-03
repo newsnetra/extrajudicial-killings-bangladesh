@@ -6,19 +6,26 @@ body {
 
 .framer {
     position: relative; /* Ensure children with position:sticky work correctly */
+    background-color: black;
 }
 
 .RAB {
   position: fixed;
   bottom: 0;
   max-width: 30vw;
-  height: auto;
   left: 35vw;
   object-fit: contain;
 }
-
+.body-count-placeholder {
+  display: none;
+  height: 0;
+}
 .BODY-COUNT {
-    will-change: position; /* Optimizes for changes in position */
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
     font-family: "Matiz-Regular", Helvetica;
     font-weight: 400;
     color: red;
@@ -26,6 +33,18 @@ body {
     text-align: center;
     letter-spacing: 0;
     line-height: 10vw;
+    position: fixed;
+    z-index: 1;
+}
+
+.rab-container {
+  height: 200px; /* adjust this value */
+  width: 100%;
+}
+
+.body-count-container {
+  height: 200px; /* adjust this value */
+  width: 100%;
 }
 
 
@@ -185,6 +204,11 @@ body {
   object-fit: contain;
 }
 
+article {
+  z-index: 2;  /* Ensures that the article will stack above .BODY-COUNT when it's relative */
+  position: relative; 
+  margin-top: 300px;
+}
 
 article p {
   width: 100%;
