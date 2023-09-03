@@ -86,7 +86,7 @@ header {
   overflow: hidden;
   background: #111111;
 }
-
+/* 
 .frame::after {
   animation: noise 9s steps(10) infinite;
   background: transparent url('https://newsnetra.github.io/ejk/assets/cover/noise-transparent.png');
@@ -97,36 +97,10 @@ header {
   width: 500%;
   height: 500%;
   left: -100%;
-}
+} */
 
 
-.frame .div {
-  width: 100vw;
-  height: 200vh;
-  position: relative;
-}
-
-.frame .overlap {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-}
-
-.frame .overlap-group {
-  position: absolute;
-  max-width: 60vw;
-  height: 89.44vh;
-  top: 10.56vh;
-  left: 33.54vw;
-}
-
-
-.overlap-background {}
-
-
-
+/* 
 @keyframes noise {
   0% {
     transform: translate(0, 0);
@@ -171,7 +145,35 @@ header {
   100% {
     transform: translate(0, 0);
   }
+} */
+
+
+
+.frame .div {
+  width: 100vw;
+  height: 200vh;
+  position: relative;
 }
+
+.frame .overlap {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.frame .overlap-group {
+  position: absolute;
+  max-width: 60vw;
+  height: 89.44vh;
+  top: 10.56vh;
+  left: 33.54vw;
+}
+
+
+.overlap-background {}
+
 
 
 .frame .layer {
@@ -810,7 +812,7 @@ main {
   padding: 0;
   width: 100%;
   margin: auto;
-  background-color: #f2f3f0;
+  background-color: #f2f3f0 !important;
 
 }
 
@@ -1055,7 +1057,7 @@ article a[href^="https://netra.news"]::after {
 
 svg {
   display: block;
-  background-color: #f2f3f0;
+  background-color: transparent;
 
 }
 
@@ -1763,10 +1765,10 @@ div#searchResults {
 
 
 /* TABLE ENDS */
+/* 
+SCROLL-INDICATOR STARTS */
 
-/* SCROLL-INDICATOR STARTS */
-
-
+/* 
 .scrollindicator {
   display: inline-block;
   height: auto;
@@ -1814,7 +1816,7 @@ div#searchResults {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
   }
-}
+} */
 
 /* SCROLL-INDICATOR ENDS */
 

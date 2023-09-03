@@ -10,7 +10,6 @@
 <body>
 <div class="framer"> 
   <img class="RAB" src="img/ecj3-3ss-0000-layer-26.png" />
-  <img class="frame-background" src="./img/ecj3-3ss-0016-layer-25-2.png"  alt="Background">
   <div class="frame">
     <div class="overlap">
       <img class="overlap-1" data-speed="0.2" src="img/ecj3-3ss-0002-group-3.png" />
@@ -35,14 +34,24 @@
   </div>
   </div>
 
-  <div class="succeeding">
-    <p>By late afternoon, Jony called his wife, Munia Parveen, and said he had met Hira at the prison and was ready to go to the doctor. That would be the last time Parveen heard from him. The next morning, Parveen would discover his body at the morgue of the Dhaka Medical Hospital. A police press release claimed Jonny was killed during a “gunfight” and that he had admitted to bombing a police outpost, a charge his family says was fabricated.</p>
-    <p>By late afternoon, Jony called his wife, Munia Parveen, and said he had met Hira at the prison and was ready to go to the doctor. That would be the last time Parveen heard from him. The next morning, Parveen would discover his body at the morgue of the Dhaka Medical Hospital. A police press release claimed Jonny was killed during a “gunfight” and that he had admitted to bombing a police outpost, a charge his family says was fabricated.</p>
-    <p>By late afternoon, Jony called his wife, Munia Parveen, and said he had met Hira at the prison and was ready to go to the doctor. That would be the last time Parveen heard from him. The next morning, Parveen would discover his body at the morgue of the Dhaka Medical Hospital. A police press release claimed Jonny was killed during a “gunfight” and that he had admitted to bombing a police outpost, a charge his family says was fabricated.</p>
-    <p>By late afternoon, Jony called his wife, Munia Parveen, and said he had met Hira at the prison and was ready to go to the doctor. That would be the last time Parveen heard from him. The next morning, Parveen would discover his body at the morgue of the Dhaka Medical Hospital. A police press release claimed Jonny was killed during a “gunfight” and that he had admitted to bombing a police outpost, a charge his family says was fabricated.</p>
-    <p>By late afternoon, Jony called his wife, Munia Parveen, and said he had met Hira at the prison and was ready to go to the doctor. That would be the last time Parveen heard from him. The next morning, Parveen would discover his body at the morgue of the Dhaka Medical Hospital. A police press release claimed Jonny was killed during a “gunfight” and that he had admitted to bombing a police outpost, a charge his family says was fabricated.</p>
-
-  </div>
+  <article>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+    <p> paragraph </p>
+  </article>
 
 
 </body>
@@ -51,25 +60,23 @@
 
 <script>
 
-// const frame = document.querySelector('.frame');
-// const overlap = document.querySelector('.overlap');
-// const groupWrapper = document.querySelector('.group-wrapper');
-// const cloud1 = document.querySelector('#clouds_1');
-// const cloud2 = document.querySelector('#clouds_2');
-// const text = document.querySelector('#text');
-// const man = document.querySelector('#man');
+document.addEventListener('scroll', function() {
+  console.log("Scroll event detected");
+    const rabElement = document.querySelector('.RAB');
+    const bodyCountElement = document.querySelector('.BODY-COUNT');
+    const bodyCountTop = bodyCountElement.getBoundingClientRect().top;
 
-// window.addEventListener('scroll',()=>{
-//     let value = scrollY;
-//     overlap.style.top = `-${value/0.7}px`
-
-//     mountainRight.style.left = `${value/0.7}px`
-//     cloud1.style.left = `${value*2}px`
-//     text.style.bottom = `-${value}px`;
-//     man.style.height = `${window.innerHeight - value}px`
-// })
-
-
+    if (bodyCountTop <= 0) {
+        rabElement.style.position = 'sticky'; 
+        rabElement.style.bottom = 'auto';
+        bodyCountElement.style.position = 'fixed';
+        bodyCountElement.style.top = '0';
+    } else {
+        rabElement.style.position = 'fixed';
+        rabElement.style.bottom = '0';
+        bodyCountElement.style.position = 'sticky';
+    }
+});
 
 
 </script>
