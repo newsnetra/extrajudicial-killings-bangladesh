@@ -368,7 +368,7 @@ header {
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: #000050;
+  color: #051341;
   margin: auto 6rem;
   position: relative;
 }
@@ -382,7 +382,7 @@ header {
 
 
 .right.people {
-  color: #000050;
+  color: #051341;
   margin: 0;
 }
 
@@ -605,7 +605,7 @@ h2 {
   margin: 3rem auto;
   line-height: 1.45;
   font-size: 2rem;
-  color: #000050;
+  color: #051341;
 }
 
 h3 {
@@ -623,6 +623,7 @@ h3 {
   margin-bottom: -5px;
   line-height: 3rem;
   padding: 0.2rem;
+  color: #051341;
 
 }
 
@@ -732,7 +733,7 @@ img {
 a {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: #000050;
+  text-decoration-color: #051341;
   text-underline-offset: 6px;
   text-decoration-thickness: 3.5px;
 }
@@ -923,7 +924,7 @@ h1 {}
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: #000050;
+  color: #051341;
 }
 
 
@@ -1196,7 +1197,7 @@ h1 {}
 }
 
 #footer {
-  background: rgba(0, 0, 80, 0.7);
+  background: #051341;
   color: #fff;
   padding-top: 68px;
   padding-bottom: 68px;
@@ -1605,12 +1606,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: #000050;
+  fill: #051341;
 
 }
 
 .bar:first-child {
-  fill: #000050;
+  fill: #051341;
 }
 
 .barVisual .container {
@@ -1689,7 +1690,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #000;
   /* White text color */
-  border: solid 2px #000050;
+  border: solid 2px #051341;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -1711,7 +1712,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: #000050;
+  background-color: #051341;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -1723,7 +1724,7 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #000050;
+  background-color: #051341;
   opacity: 0.7;
   /* Slightly darker shade on hover */
 }
@@ -1739,7 +1740,7 @@ g .domain {
 
 .tooltip p {
   text-transform: none;
-  color: #000050;
+  color: #051341;
   line-height: 1;
   padding: 0;
 
