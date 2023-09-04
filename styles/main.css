@@ -2316,7 +2316,7 @@ code {
 @media screen and (max-width: 414px) and (orientation: portrait) {
 
   .cards {
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .frame .BODY-COUNT {
