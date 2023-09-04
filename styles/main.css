@@ -990,7 +990,7 @@ h1 {}
 }
 
 .wrapper_line {
-  width: 45%;
+  width: 100%;
   margin: 0 auto 4rem auto;
   display: grid;
   justify-content: center;
