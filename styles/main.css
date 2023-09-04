@@ -1194,14 +1194,29 @@ h1 {}
 #footer div.copyright {
   font-family: monospace;
   font-size: 12px;
-  font-style: italic;
+  display: flex;
   color: #ffffff;
   clear: both;
   padding-top: 5px;
+
 }
 
 .copyright span {
   font-style: normal;
+}
+
+.copyright p {
+  color: white;
+  font-family: monospace;
+  max-width: unset;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+.copyright img {
+  display: inline;
+  width: 28px;
+  height: 28px;
 }
 
 #footer {
