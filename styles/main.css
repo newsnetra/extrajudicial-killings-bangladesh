@@ -2170,6 +2170,9 @@ code {
     /* Hide the left and right sides completely */
   }
 
+  .force_image-table td {
+    padding: 10px;
+  }
 
   #footer-inner {
     margin-top: -50px;
@@ -2383,6 +2386,10 @@ code {
 
   .ejk_title {
     margin: 0 auto 1rem auto;
+  }
+
+  .force_image-table td {
+    padding: 5px;
   }
 
   #footer div.logo img {
