@@ -121,6 +121,7 @@ header {
 
 .BODY-COUNT {
   max-width: 100vw;
+  max-width: 100vh;
   left: 0;
   right: 0;
   text-align: center;
