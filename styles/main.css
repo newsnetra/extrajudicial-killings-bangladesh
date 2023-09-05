@@ -129,10 +129,10 @@ header {
   font-family: "bodycount", self-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 4vw;
+  font-size: 8vw;
   text-align: center;
   letter-spacing: 0;
-  padding-top: 30px;
+  padding-top: 8vh;
 }
 .BODY-COUNT.fixed {
   padding-right: 15px;  /* or whatever the scrollbar width is */
@@ -2106,8 +2106,8 @@ code {
   }
 
   /* Adjust the BODY-COUNT font-size for mobile */
-  .frame .BODY-COUNT {
-    font-size: 6vw;
+  .BODY-COUNT {
+    font-size: 8vh;
     line-height: 12vw;
   }
 
@@ -2334,15 +2334,15 @@ code {
   }
 }
 
-@media screen and (max-width: 414px) and (orientation: portrait) {
+@media screen and (max-width: 428px) and (orientation: portrait) {
 
   .cards {
     max-width: 100%;
   }
 
   .frame .BODY-COUNT {
-    font-size: 8vw;
-    line-height: 16vw;
+    font-size: 8vh;
+    line-height: 8vh;
   }
 
   .frame .overlap-1 {
