@@ -328,7 +328,7 @@ header {
   font-size: 25px;
   font-weight: 300;
   max-width: unset;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .peopleyeardescription {
@@ -343,7 +343,7 @@ header {
 }
 
 .descrow {
-  display: grid;
+  display: block;
   grid-template-columns: 30% 70%;
   margin-bottom: 1.5rem;
 }
@@ -983,8 +983,8 @@ h1 {}
   width: 100%;
   box-sizing: border-box;
   margin-top: 4rem;
-  /* border-top: 1px solid #c4c5c8; */
-  padding-bottom: 2rem;
+  border-top: 1px solid #c4c5c8;
+  padding: 2rem 0;
   border-bottom: 1px solid #c4c5c8;
   /* border-radius: 50%/100px 100px 0 0; */
 }
