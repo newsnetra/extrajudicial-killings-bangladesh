@@ -1,6 +1,17 @@
-html {
-  overflow-anchor: none;
+
+
+/* Add at the top of your CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+
+body, html {
+  overflow-y: scroll;
+}
+
 
 body {
   width: 100%;
