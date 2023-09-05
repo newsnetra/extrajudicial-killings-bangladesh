@@ -159,7 +159,7 @@ header {
   width: 100vw;
   height: 200vh;
   position: relative;
-  overflow: hidden;
+  overflow-y: overlay;
 
 
 }
