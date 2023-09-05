@@ -136,6 +136,9 @@ header {
   letter-spacing: 0;
   padding-top: 30px;
 }
+.BODY-COUNT.fixed {
+  padding-right: 15px;  /* or whatever the scrollbar width is */
+}
 
 .rab-container {
   height: 200px;

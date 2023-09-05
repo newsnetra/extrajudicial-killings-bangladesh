@@ -972,9 +972,28 @@
 <script src="https://russellsamora.github.io/scrollama/scrollama.min.js"></script>
 <script>
 
-  let ticking = false;
+let ticking = false;
 
-  function updateStyles() {
+// Function to calculate scrollbar width
+function getScrollbarWidth() {
+    const outer = document.createElement('div');
+    outer.style.visibility = 'hidden';
+    outer.style.overflow = 'scroll';
+    document.body.appendChild(outer);
+
+    const inner = document.createElement('div');
+    outer.appendChild(inner);
+
+    const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
+
+    outer.parentNode.removeChild(outer);
+    return scrollbarWidth;
+}
+
+// Apply this when toggling position
+const scrollbarWidth = getScrollbarWidth();
+
+function updateStyles() {
     const overlapRect = document.querySelector('.overlap').getBoundingClientRect();
     const groupWrapperRect = document.querySelector('.group-wrapper').getBoundingClientRect();
     const rabElement = document.querySelector('.RAB');
@@ -982,58 +1001,59 @@
 
     // RAB Image Behavior
     if (overlapRect.bottom <= 0) {
-      const rabOffset = -overlapRect.bottom;
-      rabElement.style.bottom = `${rabOffset}px`;
+        const rabOffset = -overlapRect.bottom;
+        rabElement.style.bottom = `${rabOffset}px`;
     } else {
-      rabElement.style.bottom = '0px';
+        rabElement.style.bottom = '0px';
     }
 
     // BODY-COUNT Behavior
     if (groupWrapperRect.top <= 0) {
-      bodyCountElement.style.width = '100vw';
-      bodyCountElement.style.height = '100vh';
-      bodyCountElement.style.position = 'fixed';
-      bodyCountElement.style.top = '0px';
-      bodyCountElement.style.left = '0px';
-      bodyCountElement.style.right = '0px';
-      bodyCountElement.style.marginLeft = '0';
-      bodyCountElement.style.marginRight = '0';
+        bodyCountElement.style.position = 'fixed';
+        bodyCountElement.style.top = '0px';
+        bodyCountElement.style.left = '0px';
+        bodyCountElement.style.right = '0px';
+        bodyCountElement.style.width = `calc(100% - ${scrollbarWidth}px)`;
+        bodyCountElement.style.marginLeft = 'auto';
+        bodyCountElement.style.marginRight = 'auto';
 
-      const colorChangePercentage = (groupWrapperRect.top / groupWrapperRect.height) * -1;
-      const redValue = Math.floor(255 - (colorChangePercentage * 255));
-      const greenValue = redValue;
-      const blueValue = Math.floor(colorChangePercentage * 80);
-      bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+        const colorChangePercentage = (groupWrapperRect.top / groupWrapperRect.height) * -1;
+        const redValue = Math.floor(255 - (colorChangePercentage * 255));
+        const greenValue = redValue;
+        const blueValue = Math.floor(colorChangePercentage * 80);
+        bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
     } else {
-      bodyCountElement.style.position = 'relative';
-      bodyCountElement.style.color = "#fff";
+        bodyCountElement.style.position = 'relative';
+        bodyCountElement.style.width = '100%';
+        bodyCountElement.style.color = "#fff";
     }
 
     if (groupWrapperRect.bottom <= 0) {
-      const bodyCountOffset = groupWrapperRect.bottom;
-      bodyCountElement.style.top = `${bodyCountOffset}px`;
+        const bodyCountOffset = groupWrapperRect.bottom;
+        bodyCountElement.style.top = `${bodyCountOffset}px`;
     }
 
     // Parallax effect for the images
     const framerImages = document.querySelectorAll('.framer img');
     framerImages.forEach(img => {
-      const speed = parseFloat(img.getAttribute('data-speed') || '0');
-      const offset = window.scrollY * speed;
-      img.style.transform = `translateY(-${offset}px)`;
+        const speed = parseFloat(img.getAttribute('data-speed') || '0');
+        const offset = window.scrollY * speed;
+        img.style.transform = `translateY(-${offset}px)`;
     });
 
     // Reset the ticking flag when done
     ticking = false;
-  }
+}
 
-  document.addEventListener('scroll', function () {
+document.addEventListener('scroll', function () {
     console.log("Update Styles Ran!");
     // Only call updateStyles if it hasn't been scheduled
     if (!ticking) {
-      window.requestAnimationFrame(updateStyles);
-      ticking = true;
+        window.requestAnimationFrame(updateStyles);
+        ticking = true;
     }
-  });
+});
+
 
 
 
