@@ -970,15 +970,22 @@ h1 {
   margin: auto;
 }
 
+.quote-container img {
+  display: block;
+  margin: auto;
+
+}
+
 .quote-sign {
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 30%;
 }
 
 blockquote {
   position: absolute;
   top: 60%;
+  left:30%;
 }
 
 blockquote p {
@@ -1012,7 +1019,6 @@ cite {
   margin-left: 50%;
   margin-top: 0;
 }
-
 
 
 /* CUSTOM FONT STARTS */
