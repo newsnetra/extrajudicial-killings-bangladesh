@@ -80,21 +80,21 @@ function StrikeThrough(index) {
 // SVG graph tally animation
 
 
-var observer = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target);
-      var frames = entry.target.querySelectorAll("#frame1, #frame2, #frame3, #frame4, #frame5");
-      frames.forEach(function (frame, index) {
-        frame.style.animation = "dash 1s linear forwards";
-        frame.style.animationDelay = (index + 1) + "s";
-      });
-    }
-  });
-});
+// var observer = new IntersectionObserver(function (entries) {
+//   entries.forEach(function (entry) {
+//     if (entry.isIntersecting) {
+//       observer.unobserve(entry.target);
+//       var frames = entry.target.querySelectorAll("#frame1, #frame2, #frame3, #frame4, #frame5");
+//       frames.forEach(function (frame, index) {
+//         frame.style.animation = "dash 1s linear forwards";
+//         frame.style.animationDelay = (index + 1) + "s";
+//       });
+//     }
+//   });
+// });
 
-var svgElement = document.querySelector(".svg_line");
-observer.observe(svgElement);
+// var svgElement = document.querySelector(".svg_line");
+// observer.observe(svgElement);
 
 
 
@@ -120,8 +120,6 @@ Table STARTS
 ***************************************/
 
 (function ($) {
-
-
   $(document).ready(function () {
     var table = $('#example').DataTable({
       "pageLength": 13, // or 14
@@ -152,7 +150,7 @@ Table STARTS
         }
       ],
 
-      "order": [[3, 'desc']],
+      "order": [[2, 'desc']],
 
  
 
