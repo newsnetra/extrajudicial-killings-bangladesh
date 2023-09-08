@@ -2393,7 +2393,7 @@ code {
 @media screen and (max-width: 428px) and (orientation: portrait) {
 
   .cards {
-    max-width: 100%;
+    max-width: 99%;
   }
 
   .quote-sign {
