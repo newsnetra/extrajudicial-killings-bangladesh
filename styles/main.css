@@ -1285,10 +1285,13 @@ cite {
 
 .copyright p {
   color: white;
-  font-family: monospace;
+  font-family: 'National', monospace;
   max-width: unset;
   margin: 0 10px;
-  font-size: 13px;
+  font-size: 17px;
+  display: inline;
+  line-height: unset;
+  vertical-align: middle;
 }
 
 .copyright img {
@@ -1296,6 +1299,12 @@ cite {
   width: 28px;
   height: 28px;
 }
+.cc-yy
+{
+  display: inline;
+}
+
+
 
 #footer {
   background: #051341;
