@@ -896,6 +896,7 @@ svg {
 h1 {
   font-size: unset;
   margin: unset;
+  font-weight: normal;
 }
 
 
