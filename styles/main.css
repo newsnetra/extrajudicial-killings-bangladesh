@@ -38,7 +38,7 @@ header {
   color: #fff;
   align-items: center;
   display: flex;
-  font-family: "museo-sans", Helvetica, sans-serif;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   height: var(--nav-height);
   justify-content: space-between;
   left: 0;
@@ -623,7 +623,7 @@ p {
 }
 
 h2 {
-  font-family: "museo-sans", Helvetica, sans-serif;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-weight: 700;
   font-style: normal;
   max-width: 45%;
@@ -634,7 +634,7 @@ h2 {
 }
 
 h3 {
-  font-family: "museo-sans", Helvetica, sans-serif;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   color: #000000;
   margin: 3rem auto 1rem auto;
   font-style: normal;
@@ -999,7 +999,7 @@ blockquote p {
   border-radius: 0px;
   margin: 0;
   max-width: 100%;
-  font-family: "museo-sans", "Helvetica", sans-serif;
+  font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-weight: 700;
   line-height: unset;
   display: inline;
@@ -1274,7 +1274,7 @@ cite {
 }
 
 #footer .list h3 {
-  font-family: "museo-sans", "Helvetica", sans-serif;
+  font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -1795,7 +1795,7 @@ g .domain {
 
 .chart_meta h3 {
   font-size: 16px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
   color: #000000;
   line-height: 1.62;
   max-width: 100%;
@@ -1959,7 +1959,7 @@ g .domain {
 
 .force_overlay-text {
   font-size: 3vw;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
   top: 70%;
 }
 
