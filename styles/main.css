@@ -2099,7 +2099,7 @@ code {
 
 
 
-@media (aspect-ratio: 16/9) {
+@media screen and (max-width: 2560px) and (orientation: portrait) {
 
   .BODY-COUNT {
     padding-top: 6vw;
