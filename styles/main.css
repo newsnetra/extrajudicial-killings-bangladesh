@@ -2449,9 +2449,12 @@ code {
 
 @media screen and (max-width: 428px) and (orientation: portrait) {
 
-  .hero {
-    padding-top: 20vh;
+  .BODY-COUNT {
+    font-size: 8vh;
+    line-height: 8vh;
+    padding-top: 9vh;
   }
+
 
   .cards {
     max-width: 99%;
@@ -2461,11 +2464,7 @@ code {
     top: 43%;
   }
 
-  .frame .BODY-COUNT {
-    font-size: 8vh;
-    line-height: 8vh;
-  }
-
+  
   .frame .overlap-1 {
     max-width: 29vw;
   }
