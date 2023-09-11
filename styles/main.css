@@ -2099,6 +2099,18 @@ code {
 
 
 
+@media (aspect-ratio: 16/9) {
+
+  .BODY-COUNT {
+    padding-top: 6vw;
+  }
+
+  .hero {
+    padding-top: 50vh;
+  }
+
+}
+
 
 @media screen and (max-width: 912px) and (orientation: portrait) {
 
