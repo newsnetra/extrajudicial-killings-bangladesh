@@ -34,7 +34,7 @@ header {
 
 
 .nav {
-  background: #000;
+  background: #022e55;
   color: #fff;
   align-items: center;
   display: flex;
@@ -648,7 +648,7 @@ h3 {
   margin-bottom: -5px;
   line-height: 3rem;
   padding: 0.2rem;
-  color: #de3501;
+  color: #022e55;
 
 }
 
@@ -664,11 +664,9 @@ h3 {
   line-height: 1.44;
   font-weight: normal;
   max-width: 45%;
-
   overflow-wrap: break-word;
   margin: 1rem auto;
   text-align: center;
-
 }
 
 
@@ -687,7 +685,7 @@ h3 {
 }
 
 .byline {
-  color: #000000;
+  color: #000;
   display: block;
   font-family: 'Publico Text Web', Georgia, 'Times New Roman', Times, serif;
   font-size: 1rem;
@@ -994,7 +992,7 @@ blockquote p {
   color: #ffffff;
   font-size: 30px;
   overflow-wrap: normal;
-  background-color: #000000;
+  background-color: #022e55;
   
   padding: 5px;
   border-radius: 0px;
@@ -1045,7 +1043,7 @@ cite {
 }
 
 .quote-author span {
-  color: black;
+  color: #022e55;
   font-family: 'National', monospace;
   background-color: white;
   font-size: 20px;
