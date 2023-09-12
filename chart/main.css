@@ -79,6 +79,7 @@ h3 {
 
 p {
   font-family: "Bebas Neue", Helvetica, sans-serif;
+  letter-spacing: 1px;
 }
 
 .tooltip {
@@ -107,6 +108,7 @@ p {
   fill: black;
   /* Font color */
   font-size: 13px;
+  letter-spacing: 1px;
   /* Font size */
 }
 
@@ -149,6 +151,7 @@ p {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow-wrap: break-word;
+  letter-spacing: 1px;
 }
 
 .chart-tooltip span {
