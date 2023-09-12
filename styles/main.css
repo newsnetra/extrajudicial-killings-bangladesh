@@ -1778,8 +1778,7 @@ g .domain {
   max-width: 75%;
   display: block;
   margin: 45px auto;
-  font-family: "Bebas Neue", helvetica, helvetica-neue, arial, sans-serif;
-  letter-spacing: 1px;
+
 }
 
 
@@ -1809,6 +1808,7 @@ g .domain {
   text-align: left;
   margin-bottom: 0;
   font-weight: normal;
+  letter-spacing: 0;
 }
 
 .barVisual p {
