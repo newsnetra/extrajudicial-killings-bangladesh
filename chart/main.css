@@ -43,10 +43,11 @@ section#graph {
 }
 
 h3 {
-  font-family: '"Inter", Helvetica, sans-serif';
+  font-family: "Inter", Helvetica, sans-serif;
   font-size: 25px;
   font-weight: 300;
   margin: 10px 0;
+  
 }
 
 
@@ -78,8 +79,8 @@ h3 {
 }
 
 p {
-  font-family: "Bebas Neue", Helvetica, sans-serif;
-  letter-spacing: 1px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
 }
 
 .tooltip {
@@ -104,11 +105,11 @@ p {
 
 .annotation {
   font-weight: 500;
-  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   fill: black;
   /* Font color */
   font-size: 13px;
-  letter-spacing: 1px;
+  
   /* Font size */
 }
 
@@ -143,7 +144,7 @@ p {
   text-align: left;
   padding: 10px 20px;
   font-size: 110%;
-  font-family: "Bebas Neue", Helvetica, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.55);
   pointer-events: none;
@@ -151,7 +152,7 @@ p {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow-wrap: break-word;
-  letter-spacing: 1px;
+  
 }
 
 .chart-tooltip span {
