@@ -551,8 +551,8 @@ p.note b {
   font-family: 'National', Helvetica, sans-serif;
 }
 
-p.note s {
-  color: #fdbaaa;
+p.note i {
+  color: #de3501;
 }
 
 /* SCROLLAMA ENDS */
