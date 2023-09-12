@@ -1346,7 +1346,7 @@ cite {
 
 
 #footer {
-  background: #de3501;
+  background: #022e55;
   color: #fff;
   padding-top: 68px;
   padding-bottom: 68px;
@@ -1733,13 +1733,13 @@ g .domain {
 
 .barVisual .text {
   font-size: 13.5px;
-  fill: #000000;
+  fill: #022e55;
   font-weight: 600;
 }
 
 .barVisual text {
   font-size: 13.5px;
-  fill: #000000;
+  fill: #022e55;
   font-family: 'National', Helvetica, sans-serif;
 }
 
@@ -1755,12 +1755,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: #de3501;
+  fill: #022e55;
 
 }
 
 .bar:first-child {
-  fill: #de3501;
+  fill: #022e55;
 }
 
 .barVisual .container {
@@ -1839,7 +1839,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #000;
   /* White text color */
-  border: solid 2px #de3501;
+  border: solid 2px #022e55;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -1861,7 +1861,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: #de3501;
+  background-color: #022e55;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -1873,8 +1873,8 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #de3501;
-  opacity: 0.7;
+  background-color: #034076;
+  
   /* Slightly darker shade on hover */
 }
 
@@ -1889,7 +1889,7 @@ g .domain {
 
 .tooltip p {
   text-transform: none;
-  color: #de3501;
+  color: #022e55;
   line-height: 1;
   padding: 0;
 
