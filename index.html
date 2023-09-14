@@ -44,6 +44,13 @@
 
   <div class="framer">
     <div class="noise"></div>
+    <div class="scroller1">
+      <div class="scroll-type6">
+        <div class="scroll-icon">
+          <svg class="svg-inline--fa fa-angle-down fa-w-10 fa-2x" aria-hidden="true" data-prefix="fas" data-icon="angle-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path></svg><!-- <i class="fas fa-angle-down fa-2x"></i> -->
+        </div>
+      </div>
+      </div>
     <div class="frame">
       <div class="overlap">
         <img class="overlap-1" data-speed="0.1" src="cover/img/ecj3-3ss-0002-group-3.webp"
@@ -52,10 +59,11 @@
           style="transform: translateY(0px);">
         <img class="overlap-3" data-speed="1.5" src="cover/img/ecj3-3ss-0006-group-6.webp"
           style="transform: translateY(0px);">
-        <img class="overlap-4" data-speed="0.8" src="cover/img/ecj3-3ss-0007-group-16.webp"
-          style="transform: translateY(0px);">
         <img class="overlap-5" data-speed="0.1" src="cover/img/ecj3-3ss-0003-group-4.webp"
           style="transform: translateY(0px);">
+          <img class="overlap-4" data-speed="0.8" src="cover/img/ecj3-3ss-0007-group-16.webp"
+          style="transform: translateY(0px);">
+
         <img class="overlap-6" data-speed="0.2" src="cover/img/ecj3-3ss-0001-group-2.webp"
           style="transform: translateY(0px);">
         <img class="overlap-7" data-speed="0.3" src="cover/img/ecj3-3ss-0004-group-15.webp"
@@ -63,6 +71,9 @@
         <img class="overlap-8" data-speed="1.4" src="cover/img/ecj3-3ss-0008-group-17.webp"
           style="transform: translateY(0px);">
       </div>
+
+    
+      
       <div class="rab-container">
         <img class="RAB" src="cover/img/ecj3-3ss-0000-layer-26.webp" />
       </div>
@@ -192,7 +203,7 @@
         have killed suspects in &ldquo;crossfires&rdquo; or &ldquo;gunfights&rdquo;. Ironically, their assertion also
         meant that the occurrence of the deaths was uncontested, giving credence to press reports that formed the basis
         of the dataset used for this story. Netra News verified all but 49 of the 2,598 incidents gathered by the Asian
-        Human Rights Commission in Hong Kong and has decided to release a shortened and refined version of the dataset
+        Human Rights Commission in Hong Kong and has decided to release a shortened and <a href="/#table1">the refined version of the dataset</a> 
         alongside the story.</p>
 
       <p>Prime Minister Sheikh Hasina&rsquo;s reign has seen an increasingly autocratic shift, with substantial
@@ -217,7 +228,7 @@
         dramatic drop in extrajudicial killings since the announcement of the sanctions.
       </p>
 
-      <aside class="table1">
+      <aside id="table1">
         <div class="selectFilter">
           <div class="optionsField">
             <label for="filterSelect">Filter by agency:</label>
@@ -812,7 +823,7 @@
               archived news or other reports. We could not verify 49 cases because the news outlet cited to have
               reported those cases do no longer maintain an archive.</p>
 
-            <p>The &ldquo;connotation&rdquo; and &ldquo;identity&rdquo; columns in the table don&rsquo;t aim to present
+            <p>The &ldquo;connotation&rdquo; and &ldquo;identity&rdquo; columns in <a href="/#table1">the table</a> don&rsquo;t aim to present
               definitive truths. Instead, the connotations draw from post-event statements made by security forces about
               the
               victims, providing readers with an insight into the justifications offered by these forces. </p>
@@ -1039,21 +1050,22 @@
 
       const colorChangePercentage = (groupWrapperRect.top / groupWrapperRect.height) * -1;
 
-      // Calculate new color values based on the difference and the change percentage
-      const redValue = Math.floor(222 + (colorChangePercentage * -221));
-      const greenValue = Math.floor(53 + (colorChangePercentage * -25));
-      const blueValue = Math.floor(1 + (colorChangePercentage * 51));
+// Calculate new color values based on the difference and the change percentage
+const redValue = Math.floor(255 + (colorChangePercentage * -33));
+const greenValue = Math.floor(255 + (colorChangePercentage * -202));
+const blueValue = Math.floor(255 + (colorChangePercentage * -254));
 
-      bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-    } else {
-      bodyCountElement.style.position = 'relative';
-      bodyCountElement.style.color = "#de3501";  // Set starting color here
-    }
+bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+} else {
+  bodyCountElement.style.position = 'relative';
+  bodyCountElement.style.color = "#ffffff";  // Set starting color here
+}
 
-    if (groupWrapperRect.bottom <= 0) {
-      const bodyCountOffset = groupWrapperRect.bottom;
-      bodyCountElement.style.top = `${bodyCountOffset}px`;
-    }
+if (groupWrapperRect.bottom <= 0) {
+  const bodyCountOffset = groupWrapperRect.bottom;
+  bodyCountElement.style.top = `${bodyCountOffset}px`;
+}
+
 
 
     // Parallax effect for the images
