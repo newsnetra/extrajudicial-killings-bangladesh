@@ -1065,11 +1065,6 @@ h1 {
 
 }
 
-.quote-sign {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-}
 
 blockquote {
   top: 60%;
@@ -1110,24 +1105,9 @@ blockquote p {
   padding: 0 45%;
   color: white;
   font-weight: 100;
-  font-family: 'National';
-  
+  font-family: 'National', monospace;
 
 }
-
-
-
-/* blockquote:before {
-  display: block;
-  padding-left: 10px;
-  content: "\201C";
-  font-size: 13em;
-  position: absolute;
-  top: -18px; 
-  color: white;
-} */
-
-
 
 
 cite {
@@ -1160,8 +1140,8 @@ cite {
 
 @font-face {
   font-family: 'Publico Text Web';
-  src: url('PublicoText-Roman-Web.woff2') format('woff2'),
-    url('PublicoText-Roman-Web.woff') format('woff');
+  src: url('../assets/fonts/PublicoText-Roman-Web.woff2') format('woff2'),
+    url('../assets/fonts/PublicoText-Roman-Web.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -1170,14 +1150,14 @@ cite {
 
 @font-face {
   font-family: 'National';
-  src: url('test-national-book.woff2') format('woff2');
+  src: url('../assets/fonts/national-book.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'National';
-  src: url('test-national-bold.woff2') format('woff2');
+  src: url('../assets/fonts/test-national-bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
 }
