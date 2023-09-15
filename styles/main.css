@@ -689,8 +689,8 @@ h3 {
 
 .scroll-type6 {
 
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     background: #000000;
@@ -710,8 +710,8 @@ h3 {
 .scroll-type6::before {
   display: block;
   content: "";
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: radial-gradient(circle at center, transparent 10%, #000 10%); /* Starts with transparent and then immediately starts with white */
   position: absolute;
@@ -1809,7 +1809,7 @@ SCROLL-INDICATOR STARTS */
 }
 
 .share-button img {
-  width: 2rem;
+  width: 2.5rem;
   padding: 0.5rem;
 }
 
