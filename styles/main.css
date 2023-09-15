@@ -2209,6 +2209,17 @@ code {
 
 
 
+@media screen and (max-width: 2650px) {
+
+.bquote-sign {
+  padding: 0 48%;
+}
+
+  blockquote {
+    padding: 0 35%;
+  }
+}
+
 
 
 @media screen and (max-width: 912px) and (orientation: portrait) {
