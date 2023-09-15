@@ -99,6 +99,8 @@ header {
   position: relative;
   /* Ensure children with position:sticky work correctly */
   background-color: #111111;
+  width: 100%;
+  height: 100%;
 }
 
 .RAB {
@@ -676,88 +678,88 @@ h3 {
 
 
 
-
-
 .scroller1 {
-  margin: auto;
-  flex-wrap: wrap;
+  height: 100%; /* ensure that the body takes the full viewport height */
+  margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .scroll-type6 {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  background: transparent;
-  border: 5px solid #e1e1e1;
-align-items: center;
-display:flex;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #000000;
+    border: 5px solid transparent;
+  position: absolute; /* or fixed if you want it to stay centered even on scroll */
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
+.scroll-icon svg {
+  color: white;
+}
 .scroll-type6::before {
   display: block;
   content: "";
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #e1e1e1;
+  background: radial-gradient(circle at center, transparent 10%, #000 10%); /* Starts with transparent and then immediately starts with white */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   animation: scale 1.6s ease-in infinite;
-  z-index: -1;
- 
 }
 
 @keyframes scale {
   0% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1);
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) scale(1);
   }
   40% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%) scale(1.2);
+      opacity: 1;
+      transform: translateX(-50%) translateY(-50%) scale(1.2);
   }
   100% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-50%) scale(2);
+      opacity: 0;
+      transform: translateX(-50%) translateY(-50%) scale(2);
   }
 }
+
+
 .scroll-icon {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 
-/* .scroll-type6 .scroll-icon svg {
-  color: #333333;
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
 }
 
-svg:not(:root).svg-inline--fa {
-  overflow: visible;
+.scroll-icon {
+    animation: bounce 2s infinite;
 }
-
-
-.svg-inline--fa.fa-w-10 {
-  width: 0.625em;
-}
-.fa-2x {
-  font-size: 2em;
-}
-.svg-inline--fa {
-  display: inline-block;
-  font-size: inherit;
-  height: 1em;
-  overflow: visible;
-  vertical-align: -0.125em;
-} */
 
 
 
