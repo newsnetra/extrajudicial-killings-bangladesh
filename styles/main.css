@@ -1164,46 +1164,6 @@ cite {
 /* CUSTOM FONT ENDS */
 
 
-.scroll-to-top{
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	opacity: 0;
-	visibility: hidden;
-	width: 10px;
-	height: 40px;
-	z-index: 251;
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 10px 40px;
-	cursor: pointer;
-	background-image: url('http://www.ivang-design.com/svg-load/parallax/arrow-up.png');
-	transform: translateY(-15px);
-	-webkit-transition: all 250ms linear;
-	transition: all 250ms linear; 
-}
-.scroll-to-top:hover{
-	bottom: 32px;
-}
-.scroll-to-top.active-arrow{
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
-}
-
-
-/* #Media
-================================================== */
-
-@media (max-width: 1200px) { 
-  .scroll-to-top{
-    right: 13px;
-  } 
-  .case-study-images li .case-study-title{
-    left: 13px;
-  }
-}
-
 
 
 
