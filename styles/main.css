@@ -2512,7 +2512,7 @@ code {
 
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .chart1 {
@@ -2643,12 +2643,6 @@ code {
 
   }
 
-  h2,
-  .ejk_subtitle,
-  .peopleyeartitle {
-    font-size: 1.2rem !important;
-    max-width: 100%;
-  }
 
   .author_date,
   .grids,
@@ -2658,6 +2652,12 @@ code {
   .quote-container,
   p {
     max-width: 90%;
+  }
+
+
+  .ejk_subtitle,
+  .peopleyeartitle {
+    font-size: 1.5rem;
   }
 
   .force_image-table {
