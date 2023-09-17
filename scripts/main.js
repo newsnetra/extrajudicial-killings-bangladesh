@@ -130,16 +130,7 @@ Table STARTS
       language: {
         info: ''
       },
-      ajax: {
-        url: 'data.json',
-        complete: function() {
-            // Ensure the data is drawn in the table
-            table.draw();
-
-            // Trigger a click on the first row after the data is loaded
-            $('#example tbody tr:first').trigger('click');
-        }
-    },
+      ajax: 'data.json',
 
       columns: [
         { data: 'name', "width": "35%" }, // Added width here
