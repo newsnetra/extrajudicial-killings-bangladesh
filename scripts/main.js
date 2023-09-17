@@ -1,42 +1,42 @@
 // external links opens in a new tab //
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll('a');
 
   links.forEach(link => {
-      // Check if the href starts with "http" or "https://"
-      if (link.getAttribute('href') && link.getAttribute('href').startsWith('http')) {
-          link.setAttribute('target', '_blank'); // Open in a new tab
-          link.setAttribute('rel', 'noopener noreferrer'); // Security measures
-      }
+    // Check if the href starts with "http" or "https://"
+    if (link.getAttribute('href') && link.getAttribute('href').startsWith('http')) {
+      link.setAttribute('target', '_blank'); // Open in a new tab
+      link.setAttribute('rel', 'noopener noreferrer'); // Security measures
+    }
   });
 });
 
 
 // show more tab //
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const expandingBox = document.getElementById('expandingBox');
   const boxContent = document.getElementById('boxContent');
   const toggleBtn = document.getElementById('toggleBtn');
-  
+
   let isOpen = false; // Initial state: closed
   const closedHeight = getComputedStyle(boxContent).getPropertyValue("--closed-height").trim();
-  
+
   // Set initial closed state
   boxContent.style.setProperty("--max-height", closedHeight);
 
   toggleBtn.addEventListener('click', toggle);
 
   function toggle() {
-      if (!isOpen) {
-          boxContent.style.setProperty("--max-height", `${boxContent.scrollHeight}px`);
-          toggleBtn.textContent = "- Collapse";
-      } else {
-          boxContent.style.setProperty("--max-height", closedHeight);
-          toggleBtn.textContent = "+ Expand";
-      }
+    if (!isOpen) {
+      boxContent.style.setProperty("--max-height", `${boxContent.scrollHeight}px`);
+      toggleBtn.textContent = "- Collapse";
+    } else {
+      boxContent.style.setProperty("--max-height", closedHeight);
+      toggleBtn.textContent = "+ Expand";
+    }
 
-      isOpen = !isOpen;
+    isOpen = !isOpen;
   }
 });
 
@@ -130,7 +130,16 @@ Table STARTS
       language: {
         info: ''
       },
-      ajax: 'data.json',
+      ajax: {
+        url: 'data.json',
+        complete: function() {
+            // Ensure the data is drawn in the table
+            table.draw();
+
+            // Trigger a click on the first row after the data is loaded
+            $('#example tbody tr:first').trigger('click');
+        }
+    },
 
       columns: [
         { data: 'name', "width": "35%" }, // Added width here
@@ -152,7 +161,7 @@ Table STARTS
 
       "order": [[2, 'desc']],
 
- 
+
 
       drawCallback: function (settings) {
         var api = this.api();
@@ -163,6 +172,8 @@ Table STARTS
         }
         $('#searchResults').text(info);
       }
+
+      
 
     });
 
@@ -184,31 +195,31 @@ Table STARTS
     // });
 
 
-    // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'tr', function() {
+
+
+    $('#example tbody').on('click', 'tr', function () {
       var tr = $(this).closest('tr');
       var row = table.row(tr);
-  
+      var wasShown = row.child.isShown();  // Check if the row was previously expanded
+
       // First, collapse any other expanded rows
-      table.rows().every(function() {
-          if (this.child.isShown()) {
-              this.child.hide();
-              $(this.node()).removeClass('shown');
-          }
+      table.rows().every(function () {
+        if (this.child.isShown()) {
+          this.child.hide();
+          $(this.node()).removeClass('shown');
+        }
       });
-  
-      // Toggle the clicked row's expanded state
-      if (row.child.isShown()) {
-          // This row is already open - close it
-          row.child.hide();
-          tr.removeClass('shown');
+
+      // Toggle the clicked row's expanded state only if it wasn't previously shown
+      if (wasShown) {
+        tr.removeClass('shown');
       } else {
-          // Open this row
-          row.child(format(row.data())).show();
-          tr.addClass('shown');
+        row.child(format(row.data())).show();
+        tr.addClass('shown');
       }
-  });
-  
+    });
+
+
 
     $('#filterSelect').on('change', function () {
       var selectedValue = $(this).val();
