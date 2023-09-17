@@ -12659,7 +12659,7 @@
       {
         "victim_id": 897,
         "incident_id": 774,
-        "name": "Saidur Rahman [Daily Star and Daily Sun calling him Saidul Islam]",
+        "name": "Saidur Rahman",
         "connotation": "The political opposition",
         "identity": "Reportedly affiliated with the Bangladesh Jamaat-e-Islami or its sister organization(s)",
         "type": "crossfire",
@@ -14409,7 +14409,7 @@
       {
         "victim_id": 1023,
         "incident_id": 897,
-        "name": "Toufiqul Islam [Should be Mohammed Javed, also used in description box]",
+        "name": "Mohammed Javed",
         "connotation": "Extremism",
         "identity": "Allegedly tied with the Jamaat-ul-Mujahideen Bangladesh (JMB)",
         "type": "other",
@@ -16915,7 +16915,7 @@
       {
         "victim_id": 1195,
         "incident_id": 1068,
-        "name": "Biplob Kumar Bepary allias Bipul",
+        "name": "Biplob Kumar Bepary",
         "connotation": "Extremism",
         "identity": "Allegedly tied with one of the armed leftist extremist groups operating in the Southern region",
         "type": "crossfire",
@@ -25749,7 +25749,7 @@
       {
         "victim_id": 1842,
         "incident_id": 1647,
-        "name": "Nozir Ahmed Prakash and Abdul Amin",
+        "name": "Nozir Ahmed Prakash",
         "connotation": "Drug",
         "identity": "Allegedly tied with an organized robbery gang",
         "type": "crossfire",
