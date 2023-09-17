@@ -122,7 +122,7 @@ Table STARTS
 (function ($) {
   $(document).ready(function () {
     var table = $('#example').DataTable({
-      "pageLength": 13, // or 14
+      "pageLength": 10, // or 14
       "lengthChange": false,
       select: true, // enable select extension
       searching: true,

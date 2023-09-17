@@ -1564,6 +1564,8 @@ table.dataTable td span.type_c.gunshot {
 
 div.info-container {
   padding: 10px 20px;
+  background-color: #fcf4ee;
+  font-style: oblique;
 }
 
 div.info-container p {
