@@ -185,20 +185,30 @@ Table STARTS
 
 
     // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'tr', function () {
+    $('#example tbody').on('click', 'tr', function() {
       var tr = $(this).closest('tr');
       var row = table.row(tr);
-
+  
+      // First, collapse any other expanded rows
+      table.rows().every(function() {
+          if (this.child.isShown()) {
+              this.child.hide();
+              $(this.node()).removeClass('shown');
+          }
+      });
+  
+      // Toggle the clicked row's expanded state
       if (row.child.isShown()) {
-        // This row is already open - close it
-        row.child.hide();
-        tr.removeClass('shown');
+          // This row is already open - close it
+          row.child.hide();
+          tr.removeClass('shown');
       } else {
-        // Open this row
-        row.child(format(row.data())).show();
-        tr.addClass('shown');
+          // Open this row
+          row.child(format(row.data())).show();
+          tr.addClass('shown');
       }
-    });
+  });
+  
 
     $('#filterSelect').on('change', function () {
       var selectedValue = $(this).val();
