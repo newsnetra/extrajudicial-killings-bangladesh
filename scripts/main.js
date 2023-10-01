@@ -74,7 +74,7 @@ function StrikeThrough(index) {
 
   window.setTimeout(function () {
     StrikeThrough(index + 1);
-  }, 50);
+  }, 25);
 }
 
 // SVG graph tally animation
