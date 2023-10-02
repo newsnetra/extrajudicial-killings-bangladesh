@@ -683,7 +683,8 @@ color: #727272;
 
 
 .right-card ul li {
-  list-style: decimal-leading-zero;
+  list-style-position: inside;
+  list-style-type: disclosure-closed;
   padding-top: 15px;
 }
 
