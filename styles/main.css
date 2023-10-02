@@ -676,7 +676,9 @@ color: #727272;
   font-size: 19px;
   font-family: 'National', monospace;
   padding: 15px;
-  border: 1px solid #cac7c3;
+  border: 1px solid;
+  box-shadow: 5px 5px 0px 0 #de3501;
+  border-color: #de3501;
 }
 
 
