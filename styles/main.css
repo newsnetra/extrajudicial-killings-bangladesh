@@ -377,7 +377,7 @@ header {
   font-size: 1.5rem;
   color: #727272;
   border: 0.5px solid #727272;
-  font-family: monospace;
+  font-family: 'National', monospace;
 }
 
 .y2013 {
@@ -651,6 +651,13 @@ h3 {
   font-weight: 100;
 }
 
+.tableh3 {
+  text-align: center;
+font-size: 25px;
+letter-spacing: 1px;
+color: #727272;
+}
+
 .mainarticle::first-letter {
   float: left;
   font-size: 4rem;
@@ -660,6 +667,22 @@ h3 {
   padding: 0.2rem;
   color: #011c34;
 
+}
+
+.right-card {
+  max-width: 25%;
+  float: right;
+  margin: 20px 10% 20px 5%;
+  font-size: 19px;
+  font-family: 'National', monospace;
+  padding: 15px;
+  border: 1px solid #cac7c3;
+}
+
+
+.right-card ul li {
+  list-style: decimal-leading-zero;
+  padding-top: 15px;
 }
 
 .ejk_meta {
@@ -674,7 +697,7 @@ h3 {
   line-height: 1.50;
   font-weight: 500;
   max-width: 60%;
-  margin: 1rem auto;
+  margin: 2rem auto;
   text-align: center;
   letter-spacing: 0px;
 }
@@ -1034,7 +1057,7 @@ h1 {
 .text {
   font-size: 1rem;
   font-weight: 300;
-  font-family: monospace;
+  font-family: 'National', monospace;
   color: #727272;
 
 }
@@ -1387,7 +1410,7 @@ cite {
 }
 
 #footer div.copyright {
-  font-family: monospace;
+  font-family: 'National', monospace;
   font-size: 12px;
   display: flex;
   color: #ffffff;
@@ -1445,7 +1468,7 @@ div.logo {
 /* TABLE STARTS */
 #table1 {
   max-width: 75%;
-  margin: 4rem auto;
+  margin: 2rem auto;
   font-family: 'National', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.2;
@@ -1482,7 +1505,7 @@ table.dataTable td span.arrow-icon:before {
   display: block;
   color: #000;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'National', monospace;
   line-height: 1.2;
   content: "";
   border-right: 2px solid;
@@ -2391,6 +2414,10 @@ code {
 
 @media screen and (max-width: 820px) and (orientation: portrait) {
 
+  .right-card {
+    max-width: 35%;
+  }
+
 #footer {
   padding: 50px 0 10px 0;
 }
@@ -2647,6 +2674,10 @@ code {
 
   .ejk_title {
     margin: 0 auto 1rem auto;
+  }
+
+  .right-card {
+    max-width: 95%;
   }
 
   .force_image-table td {
