@@ -672,8 +672,8 @@ color: #727272;
 .right-card {
   max-width: 25%;
   float: right;
-  margin: 20px 10% 20px 5%;
-  font-size: 19px;
+  margin: 20px 5% 20px 5%;
+  font-size: 15px;
   font-family: 'National', monospace;
   padding: 15px;
   border: 1px solid;
@@ -685,7 +685,7 @@ color: #727272;
 .right-card ul li {
   list-style-position: inside;
   list-style-type: disclosure-closed;
-  padding-top: 15px;
+  padding: 15px 0px;
 }
 
 .ejk_meta {
