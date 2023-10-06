@@ -669,24 +669,195 @@ color: #727272;
 
 }
 
-.right-card {
-  max-width: 25%;
-  float: right;
-  margin: 20px 5% 20px 5%;
-  font-size: 15px;
-  font-family: 'National', monospace;
-  padding: 15px;
-  border: 1px solid;
-  box-shadow: 5px 5px 0px 0 #de3501;
-  border-color: #de3501;
+
+
+
+/* right card starts */
+
+.transition {
+  transition: all 0.25s ease-in-out;
 }
 
+.flipIn {
+  animation: flipdown 0.5s ease both;
+}
+
+.no-select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.right-card {
+  
+  float: right;
+  margin: 90px 0;
+  box-shadow: 5px 5px 0px 0 #de3501;
+  background-color: transparent;
+  max-width: 25%;
+  padding: 20px;
+  border: 1px solid #de3501;
+  margin: 90px 5%;
+}
+
+
+
+
+.right-card h3 {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  animation: flipdown 0.5s ease both;
+  max-width: unset;
+  margin: 0px 0px 20px 0px;
+}
+
+.right-card h3 span {
+  background-color: #de3501;
+  color: white;
+  padding: 2px;
+}
+
+.right-card h4 {
+  color: #022e55;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 300;
+  font-family: 'Inter', serif;
+  display: block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  max-width: unset;
+  margin-right: 10px;
+
+ 
+}
+
+.right-card p {
+  color: #000000;
+  font-family: 'National', monospace;
+  font-size: 15px;
+  line-height: 22px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  max-width: unset;
+
+}
+
+.right-card ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
 
 .right-card ul li {
-  list-style-position: inside;
-  list-style-type: disclosure-closed;
-  padding: 15px 0px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px dotted lightslategray;
+  animation: flipdown 0.5s ease both;
 }
+
+.right-card ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+
+.right-card ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+
+.right-card ul li:nth-of-type(3) {
+  animation-delay: 1.0s;
+}
+
+.right-card ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.right-card ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+
+.right-card ul li i:before, ul li i:after {
+  content: "";
+  transition: all 0.25s ease-in-out;
+  position: absolute;
+  background-color: rgba(255, 104, 115, 1);
+  width: 3px;
+  height: 9px;
+}
+
+.right-card ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+
+.right-card ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+.right-card ul li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+ 
+  opacity: 0;
+}
+
+.right-card ul li input[type="checkbox"]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.right-card ul li input[type="checkbox"]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+
+.right-card ul li input[type="checkbox"]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+
+
+/* right card ends */
+
+
 
 .ejk_meta {
 
@@ -874,7 +1045,7 @@ a {
   text-decoration: underline;
   text-decoration-color: #de3501;
   text-underline-offset: 6px;
-  text-decoration-thickness: 3.5px;
+  text-decoration-thickness: 2px;
 }
 
 a:hover {
@@ -2371,7 +2542,7 @@ code {
   h2,
   h3,
   p {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   #table1,
@@ -2680,7 +2851,9 @@ code {
   }
 
   .right-card {
-    max-width: 95%;
+    max-width: 89%;
+    margin: 20px 5% 20px 4%;
+    float: none;
   }
 
   .force_image-table td {
