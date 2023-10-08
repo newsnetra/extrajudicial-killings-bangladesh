@@ -1041,7 +1041,7 @@ img {
 
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration-style: dashed;
   text-decoration-color: #de3501;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
