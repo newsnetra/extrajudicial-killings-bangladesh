@@ -2537,6 +2537,7 @@ code {
   .quote-container,
   h2,
   h3,
+  #footer-inner,
   p {
     max-width: 80%;
   }
@@ -2578,12 +2579,7 @@ max-width: 45%;
 
 }
 
-@media screen and (min-width: 801px) and (max-width: 1100px) and (orientation: portrait) {
-  #footer-inner {
-    margin: 0px 20px 0px 20px;
-  }
 
-}
 
 
 
@@ -2751,7 +2747,7 @@ max-width: 45%;
  
 
   .barVisual {
-    max-width: 90%;
+    max-width: 95%;
     margin: auto;
   }
 
@@ -2879,9 +2875,9 @@ max-width: 45%;
   .ejk_subtitle,
   h3,
   h2,
-  .quote-container,
+  .quote-container, #footer-inner,
   p {
-    max-width: 90%;
+    max-width: 95%;
   }
 
 
@@ -2895,8 +2891,17 @@ max-width: 45%;
   }
 
   .force_image-table {
-    max-width: 95%;
+    max-width: 100%;
   }
+
+  .force_overlay-number {
+    font-size: 3vh;
+  }
+
+  .force_overlay-text {
+    font-size: 2.5vh;
+  }
+
 }
 
 
