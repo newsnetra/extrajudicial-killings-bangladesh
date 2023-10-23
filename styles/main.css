@@ -2770,7 +2770,7 @@ max-width: 45%;
   }
 }
 
-@media screen and (max-width: 428px) and (orientation: portrait) {
+@media screen and (max-width: 450px) and (orientation: portrait) {
 
   .BODY-COUNT {
     font-size: 8vh;
