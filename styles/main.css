@@ -687,6 +687,8 @@ color: #022e55;
 }
 
 
+
+
 .right-card {
   
   float: right;
@@ -716,7 +718,11 @@ color: #022e55;
   background-color: #de3501;
   color: white;
   padding: 2px;
+  display: inline-block; 
+  transform: skewY(-1deg); 
 }
+
+
 
 .right-card h4 {
   color: #022e55;
@@ -760,9 +766,21 @@ color: #022e55;
   padding: 0;
   margin: 0;
   padding-top: 10px;
-  border-top: 1px dotted lightslategray;
   animation: flipdown 0.5s ease both;
 }
+
+.right-card ul li::after {
+  content: '';        /* Necessary for the pseudo-element to show */
+    display: block;
+    width: 60%;         /* Set the width to half of the parent element */
+    height: 2px;        /* Height of the border */
+    background: lightslategray;  /* Border color */
+    position: absolute;
+    bottom: 0;          /* Position the "border" at the bottom of the parent element */
+    left: 40%; 
+    margin-bottom: -10px;       
+}
+
 
 .right-card ul li:nth-of-type(1) {
   animation-delay: 0.5s;
@@ -783,7 +801,7 @@ color: #022e55;
 .right-card ul li i {
   position: absolute;
   transform: translate(-6px, 0);
-  margin-top: 16px;
+  margin-top: 8px;
   right: 0;
 }
 
@@ -2877,7 +2895,7 @@ max-width: 45%;
   h2,
   .quote-container, #footer-inner,
   p {
-    max-width: 95%;
+    max-width: 92%;
   }
 
 
