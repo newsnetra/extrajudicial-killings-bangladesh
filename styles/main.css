@@ -392,7 +392,7 @@ header {
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: #de3501;
+  color: #F85846;
   margin: auto 6rem;
   position: relative;
 }
@@ -406,7 +406,7 @@ header {
 
 
 .right.people {
-  color: #de3501;
+  color: #F85846;
   margin: 0;
 }
 
@@ -544,7 +544,7 @@ p.note {
 }
 
 p.note b {
-  color: crimson;
+  color: #F73019;
   font-weight: bold;
   font-style: normal;
   text-decoration: none;
@@ -552,7 +552,7 @@ p.note b {
 }
 
 p.note i {
-  color: #de3501;
+  color: #F85846;
 }
 
 /* SCROLLAMA ENDS */
@@ -638,7 +638,7 @@ h2 {
   margin: 4rem auto 1rem auto;
   line-height: 1.45;
   font-size: 2.5rem;
-  color: #de3501;
+  color: #F85846;
   letter-spacing: 0.5px;
 }
 
@@ -692,13 +692,14 @@ color: #022e55;
 .right-card {
   
   float: right;
-  box-shadow: 5px 5px 0px 0 #de3501;
+  box-shadow: 3px 3px 0px 0 #F85846;
   background-color: transparent;
   max-width: 25%;
   padding: 20px;
-  border: 1px solid #de3501;
+  border: 1px solid #F85846;
   margin: 40px 5%;
 }
+
 
 
 
@@ -714,8 +715,11 @@ color: #022e55;
   margin: 0px 0px 20px 0px;
 }
 
+
+
+
 .right-card h3 span {
-  background-color: #de3501;
+  background-color: #F85846;
   color: white;
   padding: 2px;
   display: inline-block; 
@@ -723,20 +727,32 @@ color: #022e55;
 }
 
 
+.right-card h3::before {
+  content: '';
+    display: block;
+    width: 25%;
+    height: 5px;
+    background: lightgray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -10px;
+}
+
 
 .right-card h4 {
   color: #022e55;
   font-size: 18px;
   line-height: 23px;
   font-weight: 300;
-  font-family: 'Inter', serif;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   display: block;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   max-width: unset;
   margin-right: 10px;
-
- 
+  letter-spacing: 0.5px;
+  word-spacing: 1.5px;
 }
 
 .right-card p {
@@ -774,7 +790,7 @@ color: #022e55;
     display: block;
     width: 60%;         /* Set the width to half of the parent element */
     height: 2px;        /* Height of the border */
-    background: lightslategray;  /* Border color */
+    background: lightgray;  /* Border color */
     position: absolute;
     bottom: 0;          /* Position the "border" at the bottom of the parent element */
     left: 40%; 
@@ -989,11 +1005,12 @@ color: #022e55;
 }
 
 .byline {
-  color: #000;
+  color: #022e55;
   display: block;
-  font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+  font-family: "Bebas Neue", Helvetica, sans-serif;
   font-size: 1rem;
-
+  letter-spacing: 0.8px;
+  word-spacing: 2px;
 }
 
 .byline a,
@@ -1060,7 +1077,7 @@ img {
 a {
   color: inherit;
   text-decoration-style: dashed;
-  text-decoration-color: #de3501;
+  text-decoration-color: #F85846;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1257,7 +1274,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: #de3501;
+  color: #F85846;
 }
 
 
