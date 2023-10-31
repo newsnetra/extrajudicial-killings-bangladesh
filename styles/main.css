@@ -2479,20 +2479,20 @@ code {
 
   .frame .overlap-7 {
 
-    top: 22vh;
+    top: 42vh;
     left: 5vw;
     max-width: 25vw;
   }
 
   .frame .overlap-1 {
-    top: 20vh;
-    left: 33vw;
+    top: 25vh;
+    left: 20vw;
     max-width: 25vw;
   }
 
   .frame .overlap-3 {
     top: 55vh;
-    left: 65vw;
+    left: 75vw;
     max-width: 20vw;
   }
 
@@ -2511,7 +2511,7 @@ code {
 
   .frame .overlap-8 {
 
-    top: 35vh;
+    top: 55vh;
     left: 3vw;
     max-width: 22vw;
   }
@@ -2561,7 +2561,6 @@ code {
   .BODY-COUNT {
     font-size: 8vh;
     line-height: 12vw;
-    padding-top: 9vh;
   }
 
 
@@ -2805,10 +2804,19 @@ max-width: 45%;
 
 @media screen and (max-width: 450px) and (orientation: portrait) {
 
+  body {
+    --nav-height: 35px;
+  }
+  .nav-logo {
+    max-height: 20px;
+  }
+  nav-right {
+    font-size: 15px;
+  }
+
   .BODY-COUNT {
     font-size: 8vh;
     line-height: 8vh;
-    padding-top: 9vh;
   }
 
 
@@ -2830,7 +2838,8 @@ max-width: 45%;
   }
 
   .frame .overlap-3 {
-
+    top: 77vh;
+    left: 65vw;
     max-width: 23vw;
   }
 
@@ -2852,6 +2861,7 @@ max-width: 45%;
 
   .frame .overlap-8 {
     max-width: 24vw;
+    top: 75vh;
   }
 
 
