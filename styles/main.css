@@ -21,7 +21,7 @@ body {
   font-family: 'Publico Text Web', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  --nav-height: 30px;
+  --nav-height: 45px;
 
 }
 
@@ -59,9 +59,9 @@ header {
 
 
 .nav-right {
-  font-size: 15px;
+  font-size: 20px;
   justify-content: flex-start;
-  letter-spacing: .05em;
+  letter-spacing: 1.2px;
   margin-right: 1rem;
   text-transform: uppercase;
   white-space: nowrap;
@@ -78,7 +78,7 @@ header {
 
 .nav-logo {
   margin-left: 1rem;
-  max-height: 20px;
+  max-height: 30px;
   max-width: 100%;
   display: block;
 }
@@ -121,16 +121,16 @@ header {
   max-height: 100vh;
   text-align: center;
   letter-spacing: 0;
-  line-height: 7vw;
-  position: fixed;
+  line-height: 9vw;
+margin: auto;
   z-index: 1;
   font-family: "bodycount", self-serif;
   font-weight: 400;
   color: #fff;
-  font-size: 8vw;
+  font-size: 10vw;
   text-align: center;
   letter-spacing: 0;
-  padding-top: 18vh;
+  padding-top: 60vh;
   display: block;
 }
 
@@ -156,7 +156,7 @@ header {
 .frame {
   display: grid;
   width: 100%;
-  height: 200vh;
+  height: 150vh;
   position: relative;
   overflow-y: overlay;
 
@@ -600,7 +600,7 @@ main {
   h2,
   h3,
   p {
-    max-width: 48%;
+    max-width: 45%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -899,7 +899,7 @@ color: #022e55;
 
 .ejk_subtitle {
   color: #000000;
-  font-family: "Publico Text Web", Helvetica, sans-serif;
+  font-family: "National", Helvetica, sans-serif;
   font-size: 25px;
   line-height: 1.50;
   font-weight: 500;
@@ -1120,12 +1120,11 @@ article a[href^="https://netra.news"]::after {
   position: relative;
   text-align: center;
   width: 100%;
-
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  padding-top: 46vh;
   z-index: 1;
+  padding-top: 40vh;
 }
 
 .hero img,
@@ -2023,7 +2022,7 @@ SCROLL-INDICATOR STARTS */
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .share-button img {
