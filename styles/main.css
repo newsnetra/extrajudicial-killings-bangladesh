@@ -392,7 +392,7 @@ header {
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: #F85846;
+  color: #F73019;
   margin: auto 6rem;
   position: relative;
 }
@@ -406,7 +406,7 @@ header {
 
 
 .right.people {
-  color: #F85846;
+  color: #F73019;
   margin: 0;
 }
 
@@ -552,7 +552,7 @@ p.note b {
 }
 
 p.note i {
-  color: #F85846;
+  color: #F73019;
 }
 
 /* SCROLLAMA ENDS */
@@ -638,7 +638,7 @@ h2 {
   margin: 4rem auto 1rem auto;
   line-height: 1.45;
   font-size: 2.5rem;
-  color: #F85846;
+  color: #F73019;
   letter-spacing: 0.5px;
 }
 
@@ -692,11 +692,11 @@ color: #022e55;
 .right-card {
   
   float: right;
-  box-shadow: 3px 3px 0px 0 #F85846;
+  box-shadow: 3px 3px 0px 0 #F73019;
   background-color: transparent;
   max-width: 25%;
   padding: 20px;
-  border: 1px solid #F85846;
+  border: 1px solid #F73019;
   margin: 40px 5%;
 }
 
@@ -705,7 +705,7 @@ color: #022e55;
 
 
 .right-card h3 {
-  color: #000000;
+  color: #022e55;
   text-transform: uppercase;
   font-size: 25px;
   letter-spacing: 1.5px;
@@ -719,7 +719,7 @@ color: #022e55;
 
 
 .right-card h3 span {
-  background-color: #F85846;
+  background-color: #F73019;
   color: white;
   padding: 2px;
   display: inline-block; 
@@ -1077,7 +1077,7 @@ img {
 a {
   color: inherit;
   text-decoration-style: dashed;
-  text-decoration-color: #F85846;
+  text-decoration-color: #F73019;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1274,7 +1274,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: #F85846;
+  color: #F73019;
 }
 
 
@@ -2044,13 +2044,11 @@ g .domain {
 
 .barVisual .text {
   font-size: 13.5px;
-  fill: #022e55;
   font-weight: 600;
 }
 
 .barVisual text {
   font-size: 13.5px;
-  fill: #022e55;
   font-family: 'National', Helvetica, sans-serif;
 }
 
@@ -2066,12 +2064,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: #022e55;
+  fill: #F73019;
 
 }
 
 .bar:first-child {
-  fill: #022e55;
+  fill: #F73019;
 }
 
 .barVisual .container {
@@ -2096,19 +2094,19 @@ g .domain {
 }
 
 .chart_meta h2 {
-  font-family: 'Bebas Neue', Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 300;
   color: inherit;
   text-rendering: optimizelegibility;
-  margin: 10px auto;
+  margin: 10px auto 5px auto;
   max-width: unset;
-  letter-spacing: 0.5px;
+  letter-spacing: unset;
 }
 
 .chart_meta h3 {
   font-size: 16px;
-  font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Arial Narrow', Arial, sans-serif;
   color: #000000;
   line-height: 1.62;
   max-width: 100%;
@@ -2152,7 +2150,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #000;
   /* White text color */
-  border: solid 2px #022e55;
+  border: solid 2px #F73019;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -2174,7 +2172,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: #022e55;
+  background-color: #F73019;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -2186,7 +2184,8 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #034076;
+  background-color: #F73019;
+  color:white;
   
   /* Slightly darker shade on hover */
 }
