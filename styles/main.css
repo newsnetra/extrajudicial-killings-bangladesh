@@ -609,7 +609,7 @@ main {
 p {
   font-family: 'Publico Text Web', Georgia, serif;
   font-size: 20px;
- 
+ word-spacing: 1px;
   margin-bottom: 24px;
   color: #000000;
   font-variant-ligatures: normal;
@@ -2738,8 +2738,7 @@ max-width: 45%;
   blockquote p,
   .quote-author span,
   p {
-    font-size: 19px;
-    line-height: 25px;
+    line-height: 27px;
   }
 
   .ejk_meta {
