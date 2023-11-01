@@ -609,7 +609,7 @@ main {
 p {
   font-family: 'Publico Text Web', Georgia, serif;
   font-size: 20px;
- word-spacing: 1px;
+ word-spacing: 0.5px;
   margin-bottom: 24px;
   color: #000000;
   font-variant-ligatures: normal;
