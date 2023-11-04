@@ -2851,14 +2851,20 @@ max-width: 45%;
 
 @media screen and (max-width: 450px) and (orientation: portrait) {
 
-  body {
-    --nav-height: 35px;
+  .nav1 {
+    max-height: 35px;
   }
   .nav-logo {
-    max-height: 20px;
+    max-height: 25px;
+    margin-top: 5px;
   }
   .nav-right {
     font-size: 17px;
+  }
+
+
+  .one, .two, .three {
+    height: 2.5px;
   }
 
   .BODY-COUNT {
