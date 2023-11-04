@@ -1,3 +1,10 @@
+$(".menu-toggle").on('click', function() {
+  $(this).toggleClass("on");
+  $('.menu-section').toggleClass("on");
+  $("nav ul").toggleClass('hidden');
+});
+
+
 // external links opens in a new tab //
 
 document.addEventListener("DOMContentLoaded", function () {
