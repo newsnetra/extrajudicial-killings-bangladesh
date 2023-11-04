@@ -2740,9 +2740,6 @@ max-width: 45%;
     border-top: 0;
   }
 
-  #footer .list:nth-child(3n+1) {
-    margin-left: 20px;
-  }
 
   #footer .list h3 {
     margin: 0;
@@ -2775,7 +2772,6 @@ max-width: 45%;
 
   #footer div.copyright {
     font-size: 17px;
-    padding-left: 20px;
   }
 }
 
@@ -2854,9 +2850,6 @@ max-width: 45%;
   padding-top: 20px;
 }
 
-#footer .list:nth-child(3n+1) {
-  margin-left: unset;
-}
   
 }
 
