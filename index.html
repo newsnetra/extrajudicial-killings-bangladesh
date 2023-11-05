@@ -1323,12 +1323,7 @@ bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
     y.domain(data.map(d => d.district));
     x.domain([0, domainMax]);
 
-    var verticalLine = svg.append("line")
-      .attr("y1", 0)
-      .attr("y2", height)
-      .style("stroke", "black")
-      .style("stroke-width", 1.5)
-      .style("opacity", 0);
+
 
     svg.selectAll(".bar")
       .data(data)
@@ -1341,7 +1336,7 @@ bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
       .attr("height", barHeight)
       .on("mouseover", function (d) {
         tooltip.style("visibility", "visible");
-        tooltip.html("<p>In " + d.district + " district,</p><p>" + (d.rate || d.enrollment) + (d.rate ? " people were killed per 100,000 population." : " people were killed in total.") + "</p>");
+        tooltip.html("<p>In " + d.district + " district, " + (d.rate || d.enrollment) + (d.rate ? " people were killed per 100,000 population." : " people were killed in total.") + "</p>");
 
         verticalLine
           .attr("x1", x(d.rate || d.enrollment))

@@ -93,6 +93,7 @@ position: fixed;
   transition-duration: 0.3s;
 }
 
+
 nav ul {
   margin: 0;
   padding: 4em 0;
@@ -2241,22 +2242,19 @@ g .domain {
 }
 
 .tooltip {
-
-  border: 1px solid #000;
+  border: 1.5px solid black;
   padding: 4px;
   background-color: white;
-  font-size: 12px;
-  /* Makes sure tooltip content stays in a single line */
+  max-width: 10%;
 }
 
 .tooltip p {
   text-transform: none;
-  color: #022e55;
+  color: black;
   line-height: 1;
   padding: 0;
-
   font-family: 'National', Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   max-width: unset;
   margin: unset;
 }
