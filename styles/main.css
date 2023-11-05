@@ -105,14 +105,17 @@ position: fixed;
 
 
 nav ul {
-  margin: 0;
-  padding: 4em 0;
-  font-family: 'Open Sans', sans-serif;
+  margin: 45px 0;
+  font-family:'Bebas Neue', sans-serif;
   list-style: none;
   text-align: center;
   height: 100vh;
-  background-color: tomato;
+  background-color: #f2f3f0;
+  display: grid;
+  align-items: center;
 }
+
+
 
 nav ul.hidden {
   display: none;
@@ -121,15 +124,19 @@ nav ul.hidden {
 nav ul a {
   transition-duration: 0.5s;
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 3em;
   line-height: 1.5;
   width: 100%;
   display: block;
+
+  
 }
 
 nav ul a:hover {
-  background-color: rgba(0,0,0,0.5);
+  /* background-color: rgba(0,0,0,0.5); */
+  background-color: tomato;
+
 }
 
 .menu-section.on {
@@ -137,7 +144,7 @@ nav ul a:hover {
   width: 100%;
   height: 100%;
   display: block;
-  background-color: rgba(0,0,0,0.5);
+  /* background-color: rgba(0,0,0,0.5); */
   position: absolute;
 }
 
@@ -1717,7 +1724,7 @@ cite {
 
 
 #footer {
-  background: #022e55;
+  background: black;
   color: #fff;
   padding: 50px 0px;
   overflow: hidden;
@@ -2877,6 +2884,10 @@ max-width: 45%;
     font-size: 17px;
   }
 
+  nav ul {
+    margin: 35px 0;
+  }
+
 
   .one, .two, .three {
     height: 2.5px;
@@ -2975,7 +2986,7 @@ max-width: 45%;
 
   #footer div.logo img {
 
-    max-width: 55%;
+    max-width: 35%;
   }
 
   figure {
