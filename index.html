@@ -1080,14 +1080,15 @@
       bodyCountElement.style.marginLeft = '0';
       bodyCountElement.style.marginRight = '0';
 
-      const colorChangePercentage = (groupWrapperRect.top / groupWrapperRect.height) * -1;
 
-      // Calculate new color values based on the difference and the change percentage
-      const redValue = Math.floor(255 + (colorChangePercentage * -33));
-      const greenValue = Math.floor(255 + (colorChangePercentage * -202));
-      const blueValue = Math.floor(255 + (colorChangePercentage * -254));
+      const colorChangePercentage = Math.max(0, Math.min(1, (groupWrapperRect.top / groupWrapperRect.height) * -1));
+// Calculate new color values based on the difference and the change percentage
+const redValue = Math.floor(255 + (colorChangePercentage * 0)); // Red doesn't change.
+const greenValue = Math.floor(255 + (colorChangePercentage * -156));
+const blueValue = Math.floor(255 + (colorChangePercentage * -184));
 
-      bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+
     } else {
       bodyCountElement.style.position = 'relative';
       bodyCountElement.style.color = "#ffffff";  // Set starting color here

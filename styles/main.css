@@ -52,8 +52,8 @@ position: fixed;
 }
 
 .menu-toggle {
-  width: 40px;
-  height: 30px;
+  width: 35px;
+  height: 20px;
   position: absolute;
   right: 25px;
   cursor: pointer;
@@ -76,9 +76,9 @@ position: fixed;
 
 .one {
   width: 100%;
-  height: 5px;
+  height: 3px;
   background: white;
-  margin: 7.5px auto 6px auto;
+  margin: 12px auto 6px auto;
   backface-visibility: hidden;
   transition-duration: 0.3s;  
 }
@@ -86,7 +86,7 @@ position: fixed;
 .two,
 .three {
   width: 100%;
-  height: 5px;
+  height: 3px;
   background: white;
   margin: 6px auto;
   backface-visibility: hidden;
@@ -100,7 +100,7 @@ nav ul {
   list-style: none;
   text-align: center;
   height: 100vh;
-  background-color: #F73019;
+  background-color: tomato;
 }
 
 nav ul.hidden {
@@ -441,7 +441,7 @@ margin: auto;
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: #F73019;
+  color: tomato;
   margin: auto 6rem;
   position: relative;
 }
@@ -455,7 +455,7 @@ margin: auto;
 
 
 .right.people {
-  color: #F73019;
+  color: tomato;
   margin: 0;
 }
 
@@ -593,7 +593,7 @@ p.note {
 }
 
 p.note b {
-  color: #F73019;
+  color: tomato;
   font-weight: bold;
   font-style: normal;
   text-decoration: none;
@@ -601,7 +601,7 @@ p.note b {
 }
 
 p.note i {
-  color: #F73019;
+  color: tomato;
 }
 
 /* SCROLLAMA ENDS */
@@ -689,7 +689,7 @@ h2 {
   margin: 4rem auto 1rem auto;
   line-height: 1.45;
   font-size: 2.5rem;
-  color: #F73019;
+  color: tomato;
   letter-spacing: 0.5px;
 }
 
@@ -743,11 +743,11 @@ color: #022e55;
 .right-card {
   
   float: right;
-  box-shadow: 3px 3px 0px 0 #F73019;
+  box-shadow: 3px 3px 0px 0 tomato;
   background-color: transparent;
   max-width: 25%;
   padding: 20px;
-  border: 1px solid #F73019;
+  border: 1px solid tomato;
   margin: 40px 5%;
 }
 
@@ -770,7 +770,7 @@ color: #022e55;
 
 
 .right-card h3 span {
-  background-color: #F73019;
+  background-color: tomato;
   color: white;
   padding: 2px;
   display: inline-block; 
@@ -1128,7 +1128,7 @@ img {
 a {
   color: inherit;
   text-decoration-style: dashed;
-  text-decoration-color: #F73019;
+  text-decoration-color: tomato;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1323,7 +1323,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: #F73019;
+  color: tomato;
 }
 
 
@@ -1627,7 +1627,7 @@ cite {
   font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #f43305;
+  color: tomato;
   text-align: left;
   margin: 5px 0px;
   letter-spacing: 0.5px;
@@ -2114,12 +2114,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: #F73019;
+  fill: tomato;
 
 }
 
 .bar:first-child {
-  fill: #F73019;
+  fill: tomato;
 }
 
 .barVisual .container {
@@ -2200,7 +2200,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #000;
   /* White text color */
-  border: solid 2px #F73019;
+  border: solid 2px tomato;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -2222,7 +2222,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: #F73019;
+  background-color: tomato;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -2234,7 +2234,7 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #F73019;
+  background-color: tomato;
   color:white;
   
   /* Slightly darker shade on hover */
@@ -2426,7 +2426,7 @@ g .domain {
 
 .return-link,
 sup {
-  color: #f43305;
+  color: tomato;
   font-family: 'National', 'Arial Narrow', Arial, sans-serif;
 
 }
