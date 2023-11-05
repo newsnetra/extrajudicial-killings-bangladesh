@@ -11,6 +11,16 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 46 85/var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+}
 
 
 
@@ -658,15 +668,18 @@ main {
 
 p {
   font-family: 'Publico Text Web', Georgia, serif;
-  font-size: 20px;
- word-spacing: 0.5px;
-  margin-bottom: 24px;
-  color: #000000;
-  font-variant-ligatures: normal;
-  line-height: 30px;
-  font-stretch: 100%;
-  word-wrap: break-word;
-    text-rendering: auto;
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: #000000;
+    font-variant-ligatures: normal;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    -webkit-text-size-adjust: 100%;
+    line-height: 30px;
+    font-stretch: 100%;
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .iframe_c {
