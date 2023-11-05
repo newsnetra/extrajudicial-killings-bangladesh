@@ -2871,6 +2871,10 @@ max-width: 45%;
     height: 2.5px;
   }
 
+  .one {
+    margin: 7.8px auto 6px auto;
+  }
+
   .BODY-COUNT {
     font-size: 8vh;
     line-height: 8vh;
