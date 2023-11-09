@@ -51,6 +51,7 @@ header {
 position: fixed;
   width: 100%;
   z-index: 100;
+  align-items: center;
   
 }
 
@@ -71,6 +72,7 @@ position: fixed;
   position: absolute;
   right: 20px;
   cursor: pointer;
+  top: 0px;
 }
 
 .menu-toggle.on .one {
@@ -155,8 +157,6 @@ nav ul a:hover {
 .nav-interactive {
   position: absolute;
   left: 20px; 
-  height: 45px;
-  line-height: 45px; 
   color: white; 
   font-family: "Bebas Neue", Helvetica, sans-serif;
   font-weight: 400;
