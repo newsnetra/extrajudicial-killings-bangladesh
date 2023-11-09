@@ -197,7 +197,7 @@
       <div class="author_date">
         <span class="byline"><a class="name" href="https://netra.news/authors/nazmul-ahasan/">Nazmul
             Ahasan</a></span>
-        <time datetime="2023-05-13">May 13, 2023</time>
+        <time datetime="2023-11-10">November 10th 2023</time>
       </div>
 
     </div>
@@ -862,7 +862,7 @@
 
         <p id="footnote-3"><sup>3</sup>
           The original AHRC dataset contained an entry of 61 unidentified individuals. These individuals were allegedly
-          killed during the dispersal of Hefajat-e-Islami activists from their sit-in in Dhaka on May 5, 2013. However,
+          killed during the dispersal of Hefajat-e-Islami activists from their sit-in in Dhaka on May 5th 2013. However,
           no information was available to describe the nature of the incident. A Bangladesh court recently jailed two
           rights campaigners over their documentation of the incident.
           <a href="#footnote-ref-3" class="return-link">↩</a>
@@ -1075,12 +1075,13 @@
 
 
       const colorChangePercentage = Math.max(0, Math.min(1, (groupWrapperRect.top / groupWrapperRect.height) * -1));
-      // Calculate new color values based on the difference and the change percentage
-      const redValue = Math.floor(255 + (colorChangePercentage * 0)); // Red doesn't change.
-      const greenValue = Math.floor(255 + (colorChangePercentage * -156));
-      const blueValue = Math.floor(255 + (colorChangePercentage * -184));
 
-      bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+// Calculate new color values based on the difference and the change percentage
+const redValue = Math.floor(255 + (colorChangePercentage * (219 - 255))); // Transition to red 219
+const greenValue = Math.floor(255 + (colorChangePercentage * (29 - 255))); // Transition to green 29
+const blueValue = Math.floor(255 + (colorChangePercentage * (8 - 255))); // Transition to blue 8
+
+bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
 
     } else {
       bodyCountElement.style.position = 'relative';
