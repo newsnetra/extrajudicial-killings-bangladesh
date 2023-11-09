@@ -16,10 +16,8 @@ html {
 }
 
 ::selection {
-  --tw-bg-opacity: 1;
-  background-color: rgb(13, 12, 15/var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255/var(--tw-text-opacity));
+  background-color: rgb(219, 29, 8); /* Background color for selected text */
+  color: white; /* Text color for selected text */
 }
 
 
@@ -141,7 +139,7 @@ nav ul a {
 
 nav ul a:hover {
   /* background-color: rgba(0,0,0,0.5); */
-  background-color: #F73019;
+  background-color: #DB1D08;
 
 }
 
@@ -477,7 +475,7 @@ margin: auto;
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: #F73019;
+  color: #DB1D08;
   margin: auto 6rem;
   position: relative;
 }
@@ -491,7 +489,7 @@ margin: auto;
 
 
 .right.people {
-  color: #F73019;
+  color: #DB1D08;
   margin: 0;
 }
 
@@ -629,7 +627,7 @@ p.note {
 }
 
 p.note b {
-  color: #F73019;
+  color: #DB1D08;
   font-weight: bold;
   font-style: normal;
   text-decoration: none;
@@ -637,7 +635,7 @@ p.note b {
 }
 
 p.note i {
-  color: #F73019;
+  color: #DB1D08;
 }
 
 /* SCROLLAMA ENDS */
@@ -728,7 +726,7 @@ h2 {
   margin: 4rem auto 1rem auto;
   line-height: 1.45;
   font-size: 2.5rem;
-  color: #F73019;
+  color: #DB1D08;
   letter-spacing: 0.5px;
 }
 
@@ -782,11 +780,11 @@ color: #0d0c0f;
 .right-card {
   
   float: right;
-  box-shadow: 3px 3px 0px 0 #F73019;
+  box-shadow: 3px 3px 0px 0 #DB1D08;
   background-color: transparent;
   max-width: 25%;
   padding: 20px;
-  border: 1px solid #F73019;
+  border: 1px solid #DB1D08;
   margin: 40px 5%;
 }
 
@@ -809,7 +807,7 @@ color: #0d0c0f;
 
 
 .right-card h3 span {
-  background-color: #F73019;
+  background-color: #DB1D08;
   color: white;
   padding: 2px;
   display: inline-block; 
@@ -1167,7 +1165,7 @@ img {
 a {
   color: inherit;
   text-decoration-style: dashed;
-  text-decoration-color: #F73019;
+  text-decoration-color: #DB1D08;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1275,7 +1273,7 @@ svg {
 
 #frame5 {
   fill: none;
-  stroke: #F73019;
+  stroke: #DB1D08;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke-dasharray: 135;
@@ -1362,7 +1360,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: #F73019;
+  color: #DB1D08;
 }
 
 
@@ -1666,7 +1664,7 @@ cite {
   font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #F73019;
+  color: #DB1D08;
   text-align: left;
   margin: 5px 0px;
   letter-spacing: 0.5px;
@@ -2153,12 +2151,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: #F73019;
+  fill: #DB1D08;
 
 }
 
 .bar:first-child {
-  fill: #F73019;
+  fill: #DB1D08;
 }
 
 .barVisual .container {
@@ -2239,7 +2237,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #0d0c0f;
   /* White text color */
-  border: solid 2px #F73019;
+  border: solid 2px #DB1D08;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -2261,7 +2259,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: #F73019;
+  background-color: #DB1D08;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -2273,7 +2271,7 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #F73019;
+  background-color: #DB1D08;
   color:white;
   
   /* Slightly darker shade on hover */
@@ -2462,7 +2460,7 @@ g .domain {
 
 .return-link,
 sup {
-  color: #F73019;
+  color: #DB1D08;
   font-family: 'National', 'Arial Narrow', Arial, sans-serif;
 
 }
