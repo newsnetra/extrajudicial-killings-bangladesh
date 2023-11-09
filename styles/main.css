@@ -1664,7 +1664,7 @@ cite {
   font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #DB1D08;
+  color: #ffffff;
   text-align: left;
   margin: 5px 0px;
   letter-spacing: 0.5px;
@@ -1681,7 +1681,7 @@ cite {
 #footer .list li
 
 {
-  color: #fff;
+  color: #f2f3f0;
   padding-top: 2px;
   font-weight: 400;
   font-size: 15px;
@@ -1717,7 +1717,7 @@ cite {
 }
 
 .copyright p {
-  color: white;
+  color: #f2f3f0;
   font-family: 'National', monospace;
   max-width: unset;
   margin: 0 10px;
