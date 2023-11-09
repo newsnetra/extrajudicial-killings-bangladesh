@@ -780,11 +780,9 @@ color: #0d0c0f;
 .right-card {
   
   float: right;
-  /* box-shadow: 3px 3px 0px 0 #DB1D08; */
   background-color: transparent;
   max-width: 25%;
   padding: 10px;
-  /* border: 1px solid #DB1D08; */
   margin: 40px 5%;
 }
 
