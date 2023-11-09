@@ -17,7 +17,7 @@ html {
 
 ::selection {
   --tw-bg-opacity: 1;
-  background-color: rgb(2 46 85/var(--tw-bg-opacity));
+  background-color: rgb(13, 12, 15/var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255/var(--tw-text-opacity));
 }
@@ -139,7 +139,7 @@ nav ul a {
 
 nav ul a:hover {
   /* background-color: rgba(0,0,0,0.5); */
-  background-color: #e7131a;
+  background-color: #F73019;
 
 }
 
@@ -477,7 +477,7 @@ margin: auto;
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: #e7131a;
+  color: #F73019;
   margin: auto 6rem;
   position: relative;
 }
@@ -491,7 +491,7 @@ margin: auto;
 
 
 .right.people {
-  color: #e7131a;
+  color: #F73019;
   margin: 0;
 }
 
@@ -629,7 +629,7 @@ p.note {
 }
 
 p.note b {
-  color: #e7131a;
+  color: #F73019;
   font-weight: bold;
   font-style: normal;
   text-decoration: none;
@@ -637,7 +637,7 @@ p.note b {
 }
 
 p.note i {
-  color: #e7131a;
+  color: #F73019;
 }
 
 /* SCROLLAMA ENDS */
@@ -728,7 +728,7 @@ h2 {
   margin: 4rem auto 1rem auto;
   line-height: 1.45;
   font-size: 2.5rem;
-  color: #e7131a;
+  color: #F73019;
   letter-spacing: 0.5px;
 }
 
@@ -782,11 +782,11 @@ color: #0d0c0f;
 .right-card {
   
   float: right;
-  box-shadow: 3px 3px 0px 0 #e7131a;
+  box-shadow: 3px 3px 0px 0 #F73019;
   background-color: transparent;
   max-width: 25%;
   padding: 20px;
-  border: 1px solid #e7131a;
+  border: 1px solid #F73019;
   margin: 40px 5%;
 }
 
@@ -809,7 +809,7 @@ color: #0d0c0f;
 
 
 .right-card h3 span {
-  background-color: #e7131a;
+  background-color: #F73019;
   color: white;
   padding: 2px;
   display: inline-block; 
@@ -1167,13 +1167,13 @@ img {
 a {
   color: inherit;
   text-decoration-style: dashed;
-  text-decoration-color: #e7131a;
+  text-decoration-color: #F73019;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
 
 a:hover {
-  text-decoration-color: rgba(0, 0, 80, 0.7);
+  text-decoration-color: #0d0c0f;
 
 }
 
@@ -1275,7 +1275,7 @@ svg {
 
 #frame5 {
   fill: none;
-  stroke: #e7131a;
+  stroke: #F73019;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke-dasharray: 135;
@@ -1362,7 +1362,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: #e7131a;
+  color: #F73019;
 }
 
 
@@ -1666,7 +1666,7 @@ cite {
   font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #e7131a;
+  color: #F73019;
   text-align: left;
   margin: 5px 0px;
   letter-spacing: 0.5px;
@@ -2153,12 +2153,12 @@ g .domain {
 }
 
 .barVisual .bar {
-  fill: #e7131a;
+  fill: #F73019;
 
 }
 
 .bar:first-child {
-  fill: #e7131a;
+  fill: #F73019;
 }
 
 .barVisual .container {
@@ -2239,7 +2239,7 @@ g .domain {
   /* Color taken from your bar fill */
   color: #0d0c0f;
   /* White text color */
-  border: solid 2px #e7131a;
+  border: solid 2px #F73019;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -2261,7 +2261,7 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: #e7131a;
+  background-color: #F73019;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
@@ -2273,7 +2273,7 @@ g .domain {
 }
 
 .barVisual button:hover {
-  background-color: #e7131a;
+  background-color: #F73019;
   color:white;
   
   /* Slightly darker shade on hover */
@@ -2462,7 +2462,7 @@ g .domain {
 
 .return-link,
 sup {
-  color: #e7131a;
+  color: #F73019;
   font-family: 'National', 'Arial Narrow', Arial, sans-serif;
 
 }
