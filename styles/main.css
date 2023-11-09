@@ -135,7 +135,7 @@ nav ul a {
 
 nav ul a:hover {
   /* background-color: rgba(0,0,0,0.5); */
-  background-color: tomato;
+  background-color: #e7131a;
 
 }
 
@@ -449,7 +449,7 @@ margin: auto;
 
 .y2013 {
   margin: 2rem 0px;
-  color: #000;
+  color: #0d0c0f;
 }
 
 .people {
@@ -459,7 +459,7 @@ margin: auto;
   line-height: 2rem;
   overflow-wrap: break-word;
   text-align: center;
-  color: tomato;
+  color: #e7131a;
   margin: auto 6rem;
   position: relative;
 }
@@ -473,7 +473,7 @@ margin: auto;
 
 
 .right.people {
-  color: tomato;
+  color: #e7131a;
   margin: 0;
 }
 
@@ -559,7 +559,7 @@ figure p {
 
 .step {
   margin: 0 auto 2rem auto;
-  color: #000000;
+  color: #0d0c0f;
   background-color: transparent;
 }
 
@@ -576,7 +576,7 @@ figure p {
   padding: 10px 15px;
   background-color: rgba(255, 255, 255, .95);
   margin: auto;
-  border: 1px solid #000;
+  border: 1px solid #0d0c0f;
 }
 
 .cards h4 {
@@ -598,7 +598,7 @@ figure p {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
-  color: #000;
+  color: #0d0c0f;
   -webkit-font-smoothing: antialiased;
   font-family: 'National', Arial, Helvetica, sans-serif;
 }
@@ -611,7 +611,7 @@ p.note {
 }
 
 p.note b {
-  color: tomato;
+  color: #e7131a;
   font-weight: bold;
   font-style: normal;
   text-decoration: none;
@@ -619,7 +619,7 @@ p.note b {
 }
 
 p.note i {
-  color: tomato;
+  color: #e7131a;
 }
 
 /* SCROLLAMA ENDS */
@@ -677,7 +677,7 @@ p {
   font-family: 'Publico Text Web', Georgia, serif;
     font-size: 20px;
     margin-bottom: 24px;
-    color: #000000;
+    color: #0d0c0f;
     font-variant-ligatures: normal;
     font-variation-settings: normal;
     font-feature-settings: normal;
@@ -710,13 +710,13 @@ h2 {
   margin: 4rem auto 1rem auto;
   line-height: 1.45;
   font-size: 2.5rem;
-  color: tomato;
+  color: #e7131a;
   letter-spacing: 0.5px;
 }
 
 h3 {
   font-family: "Bebas Neue", Helvetica, sans-serif;
-  color: #000000;
+  color: #0d0c0f;
   margin: 3rem auto 1rem auto;
   font-style: normal;
   letter-spacing: 0.5px;
@@ -764,11 +764,11 @@ color: #022e55;
 .right-card {
   
   float: right;
-  box-shadow: 3px 3px 0px 0 tomato;
+  box-shadow: 3px 3px 0px 0 #e7131a;
   background-color: transparent;
   max-width: 25%;
   padding: 20px;
-  border: 1px solid tomato;
+  border: 1px solid #e7131a;
   margin: 40px 5%;
 }
 
@@ -791,7 +791,7 @@ color: #022e55;
 
 
 .right-card h3 span {
-  background-color: tomato;
+  background-color: #e7131a;
   color: white;
   padding: 2px;
   display: inline-block; 
@@ -828,7 +828,7 @@ color: #022e55;
 }
 
 .right-card p {
-  color: #000000;
+  color: #0d0c0f;
   font-family: 'National', monospace;
   font-size: 15px;
   line-height: 22px;
@@ -970,7 +970,7 @@ color: #022e55;
 }
 
 .ejk_subtitle {
-  color: #000000;
+  color: #0d0c0f;
   font-family: "National", Helvetica, sans-serif;
   font-size: 25px;
   line-height: 1.50;
@@ -999,7 +999,7 @@ color: #022e55;
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    background: #000000;
+    background: #0d0c0f;
     border: 5px solid transparent;
   position: absolute; /* or fixed if you want it to stay centered even on scroll */
   top: 25%;
@@ -1019,7 +1019,7 @@ color: #022e55;
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, transparent 10%, #000 10%); /* Starts with transparent and then immediately starts with white */
+  background: radial-gradient(circle at center, transparent 10%, #0d0c0f 10%); /* Starts with transparent and then immediately starts with white */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1149,7 +1149,7 @@ img {
 a {
   color: inherit;
   text-decoration-style: dashed;
-  text-decoration-color: tomato;
+  text-decoration-color: #e7131a;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
 }
@@ -1188,7 +1188,7 @@ article a[href^="https://netra.news"]::after {
 
 
 .hero {
-  color: #000000;
+  color: #0d0c0f;
   position: relative;
   text-align: center;
   width: 100%;
@@ -1234,7 +1234,7 @@ svg {
 #frame4,
 #frame5 {
   fill: none;
-  stroke: #000000;
+  stroke: #0d0c0f;
   stroke-miterlimit: 10;
   stroke-width: 0.15rem;
   stroke-dasharray: 135;
@@ -1257,7 +1257,7 @@ svg {
 
 #frame5 {
   fill: none;
-  stroke: #FF0000;
+  stroke: #e7131a;
   stroke-miterlimit: 10;
   stroke-width: 2px;
   stroke-dasharray: 135;
@@ -1310,7 +1310,7 @@ h1 {
   max-width: 75%;
   margin: 20px auto;
   background-color: #f2f3f0;
-  color: #000000;
+  color: #0d0c0f;
 
 }
 
@@ -1344,7 +1344,7 @@ h1 {
   font-size: 5rem;
   font-weight: 700;
   font-family: 'bodycount', cursive;
-  color: tomato;
+  color: #e7131a;
 }
 
 
@@ -1504,7 +1504,7 @@ cite {
 }
 
 .credits-content a {
-  color: #000000 !important;
+  color: #0d0c0f !important;
   font-weight: 500;
   text-decoration: dashed;
   text-decoration-line: underline;
@@ -1648,7 +1648,7 @@ cite {
   font-family: "Bebas Neue", "Helvetica", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: tomato;
+  color: #e7131a;
   text-align: left;
   margin: 5px 0px;
   letter-spacing: 0.5px;
@@ -1750,7 +1750,7 @@ div.logo {
   font-family: 'National', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.2;
-  color: #000000;
+  color: #0d0c0f;
   background-color: #f2f3f0;
   font-variant: tabular-nums;
 }
@@ -1781,7 +1781,7 @@ table.dataTable td span.arrow-icon:before {
   width: 7px;
   margin-top: 0px;
   display: block;
-  color: #000;
+  color: #0d0c0f;
   box-sizing: border-box;
   font-family: 'National', monospace;
   line-height: 1.2;
@@ -1898,7 +1898,7 @@ div.single_c {
 
 .selectFilter {
   background-color: #f4f4f4;
-  color: #000000;
+  color: #0d0c0f;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -2062,8 +2062,8 @@ SCROLL-INDICATOR STARTS */
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 1px solid #000;
-  border-right: 1px solid #000;
+  border-bottom: 1px solid #0d0c0f;
+  border-right: 1px solid #0d0c0f;
   transform: rotate(45deg);
   margin: -10px;
   animation: animate 2s infinite;
@@ -2130,17 +2130,17 @@ g .domain {
 
 #text {
   font-size: 12px;
-  fill: #000000;
+  fill: #0d0c0f;
   font-family: 'National', Helvetica, sans-serif;
 }
 
 .barVisual .bar {
-  fill: tomato;
+  fill: #e7131a;
 
 }
 
 .bar:first-child {
-  fill: tomato;
+  fill: #e7131a;
 }
 
 .barVisual .container {
@@ -2178,7 +2178,7 @@ g .domain {
 .chart_meta h3 {
   font-size: 16px;
   font-family: 'Arial Narrow', Arial, sans-serif;
-  color: #000000;
+  color: #0d0c0f;
   line-height: 1.62;
   max-width: 100%;
   margin-top: 0;
@@ -2219,9 +2219,9 @@ g .domain {
 .barVisual button {
   background-color: transparent;
   /* Color taken from your bar fill */
-  color: #000;
+  color: #0d0c0f;
   /* White text color */
-  border: solid 2px tomato;
+  border: solid 2px #e7131a;
   border-radius: 2px;
   /* Rounded corners */
   padding: 10px 15px;
@@ -2243,19 +2243,19 @@ g .domain {
 
 
 .barVisual button.active {
-  background-color: tomato;
+  background-color: #e7131a;
   color: white;
   /* Slightly darker shade for the active chart's button */
 }
 
 .barVisual button.inactive {
   background-color: transparent;
-  color: #000;
+  color: #0d0c0f;
   /* Black text color */
 }
 
 .barVisual button:hover {
-  background-color: tomato;
+  background-color: #e7131a;
   color:white;
   
   /* Slightly darker shade on hover */
@@ -2444,7 +2444,7 @@ g .domain {
 
 .return-link,
 sup {
-  color: tomato;
+  color: #e7131a;
   font-family: 'National', 'Arial Narrow', Arial, sans-serif;
 
 }
