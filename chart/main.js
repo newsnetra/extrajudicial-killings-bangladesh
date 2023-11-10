@@ -828,7 +828,7 @@ $(document).ready(function () {
       return this.getTotalLength();
     })
     .transition() // Apply a transition
-    .duration(2000) // Duration of the animation
+    // .duration(2000) // Duration of the animation
     .attr("stroke-dashoffset", 0)
     .style("stroke-width", strokeWidth);
 
