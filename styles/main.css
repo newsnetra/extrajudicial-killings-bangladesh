@@ -255,7 +255,7 @@ margin: auto;
   bottom: 0;
   z-index: 1;
   pointer-events: none;
-  background: transparent url('https://interactive.netra.news/ejk/assets/cover/noise-transparent.png');
+  background: transparent url('./assets/cover/noise-transparent.png');
   opacity: 0.6;
   width: 100%;
   height: 100%;
