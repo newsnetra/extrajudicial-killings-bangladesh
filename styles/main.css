@@ -1910,7 +1910,7 @@ div.single_c {
 }
 
 .selectFilter {
-  background-color: #f4f4f4;
+  background-color: transparent;
   color: #0d0c0f;
   border-radius: 5px;
   display: flex;
