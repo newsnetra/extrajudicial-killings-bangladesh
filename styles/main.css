@@ -2278,7 +2278,7 @@ g .domain {
   border: 1.5px solid #0d0c0f;
   padding: 4px;
   background-color: white;
-  max-width: 10%;
+  max-width: 15vh;
 }
 
 .tooltip p {
