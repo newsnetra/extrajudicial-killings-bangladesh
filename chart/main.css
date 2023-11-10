@@ -97,7 +97,7 @@ p {
 
 
 .highlight {
-  fill: gray;
+  fill: #fd8d3c;
   opacity: 0.2;
 }
 
@@ -150,7 +150,6 @@ p {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   overflow-wrap: break-word;
-  
 }
 
 .chart-tooltip span {
@@ -198,7 +197,7 @@ p {
   display: none;
 }
 
-.x.axis text {
+.axis text {
   fill: #000;
 }
 
@@ -225,7 +224,7 @@ p {
 
 #line1 path,
 .cube .graph path {
-  stroke-width: 1;
+  stroke-width: 2.5;
   fill: transparent;
   z-index: 99999;
 }

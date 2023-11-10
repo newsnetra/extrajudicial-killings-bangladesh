@@ -676,7 +676,7 @@ $(document).ready(function () {
     var chartHeight = document.getElementById('line1').clientHeight;
     graph.style.height = chartHeight + 'px';
   }
-  
+
 
   //IE can't animate stroke - needs this disabled.
 
@@ -684,50 +684,39 @@ $(document).ready(function () {
   var margin = { top: 20, right: 20, bottom: 50, left: 20 },
     width = ww - margin.right - margin.left,
     height = 500 - margin.top - margin.bottom;
-  
+
   // Update the parent container's height to match the SVG's
   $(".wrapper").height(height + margin.top + margin.bottom);
-  
-  var x = d3.time.scale().range([0, width]);
 
+  var x = d3.scaleTime().range([0, width]);
+  var y = d3.scaleLinear().range([height, 0]);
+  var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-  var y = d3.scale.linear()
-    .range([height, 0]);
-
-  var color = d3.scale.category10();
-
-  var xAxis = d3.svg.axis()
-    .scale(x)
-    .tickFormat(d3.time.format("%Y")) // Change the date format here
-    .tickSize(10, 1)
-    .orient("bottom");
-
+  var xAxis = d3.axisBottom(x)
+    .tickFormat(d3.timeFormat("%Y")) // Change the date format here
+    .tickSize(10, 1);
 
   if (ww < 700) {
-    var xAxis = d3.svg.axis()
-      .scale(x)
+    xAxis = d3.axisBottom(x)
       .ticks(5)
-      .tickSize(10, 5)
-      .orient("bottom");
+      .tickSize(10, 5);
   }
 
-  var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
+  var yAxis = d3.axisLeft(y)
     .tickSize(-width, 0); // Make it cover the full width of the chart
 
-  var line = d3.svg.line()
-    .interpolate("step-after")
+  var line = d3.line()
+    .curve(d3.curveStepAfter)
     .x(function (d) { return x(d.month); })
     .y(function (d) { return y(+d.people); });
 
-    var svg = d3.select("#line1").append("svg")
+  var svg = d3.select("#line1").append("svg")
     .attr("id", "travel-chart")
     .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
     .attr("preserveAspectRatio", "xMinYMin meet")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-  
+
 
 
   var transports;
@@ -759,13 +748,11 @@ $(document).ready(function () {
   var incident = transports[1];
 
   x.domain(d3.extent(data, function (d) { return d.month; }));
-
-  // .clamp(true);
-
   y.domain([
     d3.min(transports, function (c) { return d3.min(c.values, function (v) { return v.people; }); }),
     d3.max(transports, function (c) { return d3.max(c.values, function (v) { return v.people; }); })
   ]);
+
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + 1.05 * height + ")")
@@ -817,11 +804,11 @@ $(document).ready(function () {
 
 
   var strokeWidth;
-if (window.innerWidth < 800) {
+  if (window.innerWidth < 800) {
     strokeWidth = 1; // Reduced stroke width for smaller screens
-} else {
+  } else {
     strokeWidth = 3; // Normal stroke width for larger screens
-}
+  }
 
 
   var city = svg.selectAll(".city")
@@ -829,34 +816,43 @@ if (window.innerWidth < 800) {
     .enter().append("g")
     .attr("class", "city");
 
-    var p1 = city.append("path") //Add the 3 coloured lines for transport type
+  city.append("path")
     .attr("class", "transline")
-    .attr("id", function (d) { return d.name; }) // ID of transport type
-    .attr("d", function (d) { return line(d.values); }) //data of all Y values
-    .each(function () {
+    .attr("id", function (d) { return d.name; })
+    .attr("d", function (d) { return line(d.values); })
+    .attr("stroke-dasharray", function () {
       var totalLength = this.getTotalLength();
-      d3.select(this)
-        .attr("stroke-dasharray", totalLength + " " + totalLength)
-        .attr("stroke-dashoffset", totalLength);
+      return totalLength + " " + totalLength;
     })
-    .style("stroke-width", strokeWidth); // Use the variable instead of a fixed value
+    .attr("stroke-dashoffset", function () {
+      return this.getTotalLength();
+    })
+    .transition() // Apply a transition
+    .duration(2000) // Duration of the animation
+    .attr("stroke-dashoffset", 0)
+    .style("stroke-width", strokeWidth);
+
+
 
   var handleLine = svg.append("rect")
-  .attr("class", "line")
-  .attr("height", (height + 20))
-  .attr("transform", "translate(0,-5)")
-  .attr("width", 1)
-  .attr("fill", "#000");
+    .attr("class", "line")
+    .attr("height", (height + 20))
+    .attr("transform", "translate(0,-5)")
+    .attr("width", 1)
+    .attr("fill", "#000");
 
 
   var handle = svg.append("svg:image")
-    .attr("xlink:href", "../assets/icons/pistol.svg")//christmas ball handle
+    .attr("href", "../assets/icons/pistol.svg")//christmas ball handle
     .attr("width", 50)
     .attr("height", 50)
     .attr("transform", "translate(-15," + (height + 15) + ")");
 
   var handleText = svg.append("text")
-    .style({ "fill": "#000", "font-size": "14px", "text-anchor": "middle", "display": "none" })
+    .style("fill", "#000")
+    .style("font-size", "14px")
+    .style("text-anchor", "middle")
+    .style("display", "none")
     .attr("transform", "translate(1," + (height + 40) + ")");
 
 
@@ -880,96 +876,120 @@ if (window.innerWidth < 800) {
 
   //** Create a invisible rect for mouse tracking
   var hoverRect = svg.append('rect')
-    .attr('width', width)
-    .attr('height', height)
-    .attr('fill', 'none')
-    .style('pointer-events', 'all')
-    .on('mousemove', mouseMove)
-    .on('mouseout', mouseOut)
-    .on('touchmove', mouseMove)
-    .on('touchend', mouseOut);
+  .attr('class', 'hover-rect')
+  .attr('width', width)
+  .attr('height', height)
+  .style('fill', 'none')
+  .style('pointer-events', 'all')
+  .on('mousemove', mouseMove)
+  .on('mouseout', mouseOut);
+
 
   //** Init Tooltip
 
- 
 
 
-  
-  var toolTip = d3.select("#line1").append('div')
-    .attr('class', 'chart-tooltip');
-
-    var circle1 = svg.append("circle")
+  var circle1 = svg.append("circle")
     .style("fill", "#d94801")
     .style("stroke", "#d94801")
     .style("opacity", 0) // set to 0 as default
     .attr("r", 4); // radius of the circle
-  
+
   var circle2 = svg.append("circle")
     .style("fill", "#fd8d3c")
     .style("stroke", "#fd8d3c")
     .style("opacity", 0) // set to 0 as default
     .attr("r", 4); // radius of the circle
 
-    function mouseMove() {
-      handleLine.style("opacity", 1);
-      var mouse = d3.mouse(this),
-        mouseX = mouse[0],
-        mouseY = mouse[1],
-        value = x.invert(mouseX);
-    
-      // Set the day and time to the start of the month
-      value.setUTCDate(1);
-      value.setUTCHours(0, 0, 0, 0);
-    
-      var date = d3.time.format.utc("%B %Y")(value);
-    
-      // Find the closest month in the data
-      var closestMonth = data.reduce((prev, curr) => Math.abs(curr.month - value) < Math.abs(prev.month - value) ? curr : prev);
-    
-      if (closestMonth) {
-        var monthVictim = closestMonth.victim;
-        var monthIncident = closestMonth.incident;
-    
-        // Set circle1 position
-        circle1.attr("cx", mouseX)  // x position is same as the mouse's x position
-               .attr("cy", y(monthVictim))  // y position is the corresponding y-value of the data point for line 1
-               .style("opacity", 1);  // make the circle visible
-    
-        // Set circle2 position
-        circle2.attr("cx", mouseX)  // x position is same as the mouse's x position
-               .attr("cy", y(monthIncident))  // y position is the corresponding y-value of the data point for line 2
-               .style("opacity", 1);  // make the circle visible
-    
-        //** Display tool tip
-        toolTip
-          .style('visibility', 'visible')
-          .style("left", (20 + mouseX + "px"))
-          .style("top", (mouseY + "px"))  // the top position is the mouse's y position
-          .html("In " + date + ", security forces killed <span class='textB'>" + monthVictim.toLocaleString() + "</span> people in <span class='textP'>" + monthIncident.toLocaleString() + "</span> deadly incidents.");
-    
-        handle.attr("x", (mouseX + "px"));
-        handleText.attr("x", (mouseX + "px")).html(date);
-    
-        handleLine.attr("x", (mouseX + "px")); //
-      }
-      
-      var leftLimit = width - 180;
-      if (mouseX >= leftLimit) {
-        toolTip.style("left", (mouseX - 140 + "px"));
-      }
-    } // end mouseMove
-    
+  var toolTip = d3.select("#line1").append('div')
+    .attr('class', 'chart-tooltip');
+
+    var handleWidth = 50; // The width of the handle image
+var handleHeight = 50; // The height of the handle image
+
+
+function mouseMove(event) {
+  console.log('mouseMove event triggered');
+
+
+  var mouse = d3.mouse(this); // 'this' should be the SVG element
+  var mouseX = mouse[0];
+  var mouseY = mouse[1];
+
+  // Invert the x-scale to get the date from the x-coordinate
+  var value = x.invert(mouseX);
   
-  function mouseOut() {
-      toolTip.style('visibility', 'hidden');
-      circle1.style("opacity", 0); // hide circle1
-      circle2.style("opacity", 0); // hide circle2
-      var totalVictim = 0,
-        totalIncident = 0;//reset values
-         // Hide the handle line
-  handleLine.style("opacity", 0);
+  // Set the day and time to the start of the month
+  value.setUTCDate(1);
+  value.setUTCHours(0, 0, 0, 0);
+
+  var date = d3.timeFormat("%B %Y")(value);
+  
+  // Find the closest month in the data
+  var closestMonth = data.reduce((prev, curr) => Math.abs(curr.month - value) < Math.abs(prev.month - value) ? curr : prev);
+
+  if (closestMonth) {
+    var monthVictim = closestMonth.victim;
+    var monthIncident = closestMonth.incident;
+
+     // Assuming handleWidth and handleHeight are the actual dimensions of the handle image
+     var handleWidth = 50; // The width of the handle image
+     var handleHeight = 50; // The height of the handle image
+
+     handleLine.style('opacity', 1);
+
+    circle1.attr("cx", mouseX)
+           .attr("cy", y(monthVictim))
+           .style("opacity", 1);
+
+    circle2.attr("cx", mouseX)
+           .attr("cy", y(monthIncident))
+           .style("opacity", 1);
+
+    var svgRect = svg.node().getBoundingClientRect();
+    var tooltipX = mouseX + svgRect.left + 20; // Offset from mouse X
+    var tooltipY = mouseY + svgRect.top; // Offset from mouse Y
+
     
+
+    // Adjust if near the right edge of the SVG
+    var rightEdge = svgRect.right;
+    if (tooltipX + 180 > rightEdge) {
+      tooltipX = rightEdge - 180;
+    }
+
+    toolTip.style('visibility', 'visible')
+           .style("left", tooltipX + "px")
+           .style("top", tooltipY + "px")
+           .html("In " + date + ", security forces killed <span class='textB'>" +
+                 monthVictim.toLocaleString() + "</span> people in <span class='textP'>" +
+                 monthIncident.toLocaleString() + "</span> deadly incidents.");
+
+                 handle.attr('x', mouseX - 0.5)
+       
+           // Update the handle line's position
+           handleLine.attr('x', mouseX - 0.5)
+                     .attr('height', height);
+       
+
+              console.log('Handle new position:', handle.attr('x'), handle.attr('y'));
+
   }
-  
+} // end mouseMove
+
+
+
+
+  function mouseOut() {
+    toolTip.style('visibility', 'hidden');
+    circle1.style("opacity", 0); // hide circle1
+    circle2.style("opacity", 0); // hide circle2
+    // var totalVictim = 0,
+    //   totalIncident = 0;//reset values
+    // Hide the handle line
+    handleLine.style("opacity", 0);
+
+  }
+
 
 });
