@@ -1108,8 +1108,6 @@ bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
   }
 
   document.addEventListener('scroll', function () {
-    console.log("Update Styles Ran!");
-    // Only call updateStyles if it hasn't been scheduled
     if (!ticking) {
       window.requestAnimationFrame(updateStyles);
       ticking = true;
