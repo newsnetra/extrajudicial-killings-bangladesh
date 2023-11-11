@@ -2132,8 +2132,9 @@ g .domain {
 }
 
 .barVisual text {
-  font-size: 13.5px;
-  font-family: 'National', Helvetica, sans-serif;
+  color: #0d0c0f;
+  font-size: 10px;
+  font-family: 'Inter', Helvetica, sans-serif;
 }
 
 .barVisual svg {

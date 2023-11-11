@@ -191,7 +191,9 @@ p {
 }
 
 .axis text {
-  fill: #000;
+  fill: #0d0c0f;
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 10px;
 }
 
 /*#92C7E2;}*/
