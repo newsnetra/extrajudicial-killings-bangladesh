@@ -319,15 +319,29 @@ span[data="incident"] {
 }
 
 
-.transline#incident,
-.textP {
+.transline#incident
+ {
   stroke: #fd8d3c;
-  color: #fd8d3c;
 }
 
-.transline#victim,
+.textP {
+  color: white;
+  background: #fd8d3c;
+  font-weight: 700;
+  padding: 2px 3.5px;
+  border-radius: 10px;
+}
+
+.transline#victim {
+  stroke: #DB1D08;
+}
+
 .textB {
-  stroke: #F73019;
+  color: white;
+  background: #DB1D08;
+  font-weight: 700;
+  padding: 2px 3.5px;
+  border-radius: 10px;
 }
 
 @media (max-width: 820px) {

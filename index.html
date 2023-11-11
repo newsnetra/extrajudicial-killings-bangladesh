@@ -1294,7 +1294,7 @@ bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
     var tickValues;
     if (domainMax === 350) {
       tickValues = [0, 100, 200, 300, 400, 500];
-    } else if (domainMax === 15) {
+    } else if (domainMax === 12) {
       tickValues = [0, 3, 6, 9, 12, 15];
     } else {
       tickValues = x.ticks();  // Default tick generation
@@ -1330,7 +1330,12 @@ bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
       .attr("height", barHeight)
       .on("mouseover", function (d) {
         tooltip.style("visibility", "visible");
-        tooltip.html("<p>In " + d.district + " district, " + (d.rate || d.enrollment) + (d.rate ? " people were killed per 100,000 population." : " people were killed in total.") + "</p>");
+        tooltip.html("<p>In " + d.district + " district, " 
+    + "<span class='" + (d.rate ? "rate_k" : "actual_k") + "'>" 
+    + (d.rate || d.enrollment) + "</span>" 
+    + (d.rate ? " people were killed per 100,000 population." : " people were killed in total.") 
+    + "</p>");
+
 
         verticalLine
           .attr("x1", x(d.rate || d.enrollment))
@@ -1381,11 +1386,11 @@ bodyCountElement.style.color = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
     width = containerWidth - margin.left - margin.right;
 
     drawChart(enrollmentData, 'container', 350);
-    drawChart(enrollmentRate, 'container2', 15);
+    drawChart(enrollmentRate, 'container2', 12);
   });
 
   drawChart(enrollmentData, 'container', 350);
-  drawChart(enrollmentRate, 'container2', 15);
+  drawChart(enrollmentRate, 'container2', 12);
 
   function showChart(chartId) {
     var btnChart1 = document.getElementById('btn-chart1');

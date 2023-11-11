@@ -2275,21 +2275,34 @@ g .domain {
 }
 
 .tooltip {
-  border: 1.5px solid #0d0c0f;
-  padding: 4px;
-  background-color: white;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.55);
   max-width: 15vh;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  overflow-wrap: break-word;
 }
 
 .tooltip p {
   text-transform: none;
-  color: #0d0c0f;
+  color: white;
   line-height: 1;
   padding: 0;
-  font-family: 'National', Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 110%;
   max-width: unset;
   margin: unset;
+  text-align: left;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+
+.actual_k, .rate_k {
+  color: white;
+  background: #DB1D08;
+  font-weight: 700;
+  padding: 3.5px 3.5px;
+  border-radius: 10px;
 }
 
 .barVisual .axis path,
