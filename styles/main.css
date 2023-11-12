@@ -2350,7 +2350,7 @@ g .domain {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #f2f3f0;
+  color: #ffffff;
   font-weight: lighter;
   background-color: transparent;
   padding: 2px 5px;
@@ -2359,7 +2359,7 @@ g .domain {
 
 
 .force_overlay-number {
-  font-size: 3vw;
+  font-size: 4vw;
   font-family: 'bodycount', cursive;
   top: 45%;
 
@@ -2664,9 +2664,13 @@ code {
   .quote-container,
   h2,
   h3,
-  #footer-inner,
+  #footer-inner, .force_image-table,
   p {
     max-width: 80%;
+  }
+
+  .force_overlay-number {
+    font-size: 4vh;  
   }
 
   .right-card {
@@ -3051,7 +3055,7 @@ max-width: 45%;
   }
 
   .force_overlay-number {
-    font-size: 3vh;
+    font-size: 3.5vh;
   }
 
   .force_overlay-text {
