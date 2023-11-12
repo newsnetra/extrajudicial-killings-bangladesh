@@ -715,7 +715,8 @@ $(document).ready(function () {
     .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
     .attr("preserveAspectRatio", "xMinYMin meet")
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    
 
 
 
@@ -756,13 +757,16 @@ $(document).ready(function () {
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + 1.05 * height + ")")
-    .call(xAxis);
+    .call(xAxis)
+    .on('mousemove', mouseMove)
+    .on('mouseout', mouseOut);
 
 
   // Create yAxis first
   svg.append("g")
     .attr("class", "y axis")
     .call(yAxis);
+    
 
   // Then create gridlines and apply styles directly
   svg.append("g")
@@ -832,8 +836,6 @@ $(document).ready(function () {
     .attr("stroke-dashoffset", 0)
     .style("stroke-width", strokeWidth);
 
-
-
   var handleLine = svg.append("rect")
     .attr("class", "line")
     .attr("height", (height + 20))
@@ -841,12 +843,13 @@ $(document).ready(function () {
     .attr("width", 1)
     .attr("fill", "#000");
 
-
   var handle = svg.append("svg:image")
     .attr("href", "../assets/icons/pistol.svg")//christmas ball handle
     .attr("width", 50)
     .attr("height", 50)
-    .attr("transform", "translate(-15," + (height + 15) + ")");
+    .attr("transform", "translate(-15," + (height + 15) + ")")
+    .on('mousemove', mouseMove)
+    .on('mouseout', mouseOut);
 
   var handleText = svg.append("text")
     .style("fill", "#000")
@@ -885,6 +888,7 @@ $(document).ready(function () {
   .on('mouseout', mouseOut);
 
 
+
   //** Init Tooltip
 
 
@@ -904,14 +908,9 @@ $(document).ready(function () {
   var toolTip = d3.select("#line1").append('div')
     .attr('class', 'chart-tooltip');
 
-    var handleWidth = 50; // The width of the handle image
-var handleHeight = 50; // The height of the handle image
-
+    
 
 function mouseMove(event) {
-  console.log('mouseMove event triggered');
-
-
   var mouse = d3.mouse(this); // 'this' should be the SVG element
   var mouseX = mouse[0];
   var mouseY = mouse[1];
@@ -964,15 +963,11 @@ function mouseMove(event) {
            .html("In " + date + ", security forces killed <span class='textB'>" +
                  monthVictim.toLocaleString() + "</span> people in <span class='textP'>" +
                  monthIncident.toLocaleString() + "</span> deadly incidents.");
-
-                 handle.attr('x', mouseX - 0.5)
+                 handle.attr('x', mouseX)
        
            // Update the handle line's position
-           handleLine.attr('x', mouseX - 0.5)
+           handleLine.attr('x', mouseX)
                      .attr('height', height);
-       
-
-              console.log('Handle new position:', handle.attr('x'), handle.attr('y'));
 
   }
 } // end mouseMove
@@ -988,6 +983,7 @@ function mouseMove(event) {
     //   totalIncident = 0;//reset values
     // Hide the handle line
     handleLine.style("opacity", 0);
+
 
   }
 
