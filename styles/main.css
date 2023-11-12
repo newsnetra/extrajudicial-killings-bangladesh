@@ -2326,7 +2326,7 @@ g .domain {
 /* FORCE IMAGE-TABLE STARTS */
 
 .force_image-table {
-  max-width: 48%;
+  max-width: 45%;
   border-collapse: collapse;
   margin: 30px auto;
 }
