@@ -775,8 +775,8 @@ $(document).ready(function () {
     .selectAll(".tick line");
 
   var dateRanges = [
-    { start: new Date(2012, 12, 1), end: new Date(2013, 5, 1), text: 'The 2013-14 pre-election period' },
-    { start: new Date(2018, 3, 1), end: new Date(2018, 8, 1), text: 'The 2018-19 post-election period' }
+    { start: new Date(2012, 12, 1), end: new Date(2013, 5, 1), text: 'The 2013-14 election period' },
+    { start: new Date(2018, 3, 1), end: new Date(2018, 8, 1), text: 'The 2018-19 election period' }
   ];
 
   dateRanges.forEach(function (range) {
